@@ -1,32 +1,55 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
+﻿define a = Character("Augusto")
+define d = Character("Dante")
+define h = Character("Helena")
+define ic = Character("Ícaro")
+define isa = Character("Isabel")
 define r = Character("Rocha")
+define s = Character("Sofia")
+define v = Character("Vitória")
 
+# Personagens neutros
+
+image augusto normal = im.Scale("augusto.png", 575, 540)
+image dante normal = im.Scale("dante.png", 575, 540)
+image helena normal = im.Scale("helena.png", 575, 540)
+image icaro normal = im.Scale("icaro.png", 575, 540)
+image isabel normal = im.Scale("isabel.png", 610, 540)
 image rocha normal = im.Scale("rocha.png", 680, 540)
+image sofia normal = im.Scale("sofia.png", 635, 540)
+image vitoria normal = im.Scale("vitoria.png", 575, 540)
 
-# The game starts here.
+# Personagens felizes
+
+# Personagens tristes
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    # Capítulo 1
+    
+    scene quarto-dante
 
-    scene centro
+    show dante normal at truecenter
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    d "Ócio, finalmente!"
 
-    show rocha normal at truecenter
+    show dante normal at Position(xpos = 0.3, ypos = 0.5)
 
-    # These display lines of dialogue.
+    show helena normal at Position(xpos = 0.7, ypos = 0.75)
 
-    r "Prazer em conhecê-lo, Dante. Espero que aproveite sua estadia."
+    h "Olá, Dante?"
 
-    # This ends the game.
+    h "Oi, Dante! Sou a Helena, lembra de mim? Achei seu número por acaso na internet. Como estão as coisas?"
+
+    d "Helena?! Quanto tempo! Claro que me lembro de você. Faz tempo mesmo. Estou muito bem, e com você?"
+
+    d "Acabei de entrar de férias, mas confesso que não ando fazendo muita coisa. Por onde você anda?"
+
+    h "Já faz alguns anos vim morar num vilarejo com meus pais. Eles decidiram largar a vida corrida da capital. Eu amo morar aqui, é lindo! Vou te mandar umas fotos."
+
+    d "Uau! Esse lugar é fera demais! Me lembra um pouco aquela viagem que fizemos para Goiás na época de escola, lembra?"
+
+    h "Sim, realmente. Aqui é extremamente calmo e as pessoas são maravilhosas!"
+    
+    h "Já que está de férias, não gostaria de prestar uma visita? Juro por Deus que você vai amar!"
 
     return
