@@ -1,3 +1,5 @@
 /.vscode
 /errors.txt
 /log.txt
+/game/.vscode
+traceback.txt
