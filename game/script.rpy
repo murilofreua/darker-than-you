@@ -12,14 +12,14 @@ define vozFeminina = Character("Voz feminina")
 
 # Personagens neutros
 
-image augusto normal = im.Scale("augusto.png", 575, 540)
-image dante normal = im.Scale("dante.png", 575, 540)
-image helena normal = im.Scale("helena.png", 575, 540)
-image icaro normal = im.Scale("icaro.png", 575, 540)
-image isabel normal = im.Scale("isabel.png", 610, 540)
-image rocha normal = im.Scale("rocha.png", 680, 540)
-image sofia normal = im.Scale("sofia.png", 635, 540)
-image vitoria normal = im.Scale("vitoria.png", 575, 540)
+image augusto normal = im.Scale("neutros/augusto.png", 575, 540)
+image dante normal = im.Scale("neutros/dante.png", 575, 540)
+image helena normal = im.Scale("neutros/helena.png", 575, 540)
+image icaro normal = im.Scale("neutros/icaro.png", 575, 540)
+image isabel normal = im.Scale("neutros/isabel.png", 610, 540)
+image rocha normal = im.Scale("neutros/rocha.png", 680, 540)
+image sofia normal = im.Scale("neutros/sofia.png", 635, 540)
+image vitoria normal = im.Scale("neutros/vitoria.png", 575, 540)
 
 # Personagens felizes
 
