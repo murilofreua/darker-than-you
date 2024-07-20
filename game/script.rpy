@@ -24,6 +24,7 @@ image rocha normal = im.Scale("neutros/rocha.png", 680, 540)
 image sofia normal = im.Scale("neutros/sofia.png", 635, 540)
 image vitoria normal = im.Scale("neutros/vitoria.png", 575, 540)
 image padre normal = im.Scale("neutros/padre.png", 575, 540)
+image pedro normal = im.Scale("neutros/pedro.png",680,540)
 
 # Personagens felizes
 

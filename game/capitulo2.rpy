@@ -54,7 +54,7 @@ label capitulo2:
 
     narrador "até chegarem na porta da Igreja da Misericórdia, uma bela igreja antiga."
 
-    scene igreja-fora
+    scene igreja-fora-dia
 
     narrador "Apesar de Dante de não ser muito religioso..."
 
@@ -82,7 +82,7 @@ label capitulo2:
 
     scene padaria-dentro
 
-    #show pedro normal at posicao_direita with dissolve
+    show pedro normal at posicao_direita with dissolve
 
     pedro "Olha quem veio! Helena, você trouxe um visitante especial, não é? "
 
@@ -106,14 +106,14 @@ label capitulo2:
         "Sorrir confuso":
             narrador "Dante olhou para Helena e Vitória, ainda rindo, e sorriu confuso"
 
-    # hide pedro normal 
+    hide pedro normal 
     hide dante normal
     hide helena normal
-    # with dissolve
+    with dissolve
 
     narrador "Seu Pedro, com seu semblante acolhedor, guiou o trio até uma mesa perto da janela, de onde se podia ver a praça principal começando a se iluminar com as luzes da noite."
     
-    #show pedro normal at posicao_centro with dissolve
+    show pedro normal at posicao_centro with dissolve
 
     pedro "Hoje temos pão de queijo fresquinho, broa de milho, e bolos variados — anunciou Seu Pedro, com um sorriso orgulhoso."
 
@@ -123,9 +123,9 @@ label capitulo2:
 
     helena "Parece uma ótima escolha! Vou querer um pouco de tudo, para experimentar."
 
-    #hide pedro normal with dissolve
+    hide pedro normal with dissolve
 
-    show vitoria normal at posicao_centro with dissolve
+    show vitoria normal at posicao_centro with dissolve 
 
     vitoria "Dante, você vai adorar o festival!"
 
@@ -137,7 +137,7 @@ label capitulo2:
 
     dante "Parece incrível!"
 
-    #show pedro normal at top with dissolve 
+    show pedro normal at top behind vitoria
     
     narrador "Logo, Seu Pedro retornou com uma bandeja cheia de delícias, e os três começaram a comer, rindo e conversando sobre a vida no vilarejo e relembrando histórias de infância. A tarde caía e Dante sentiu-se mais relaxado e feliz do que em muito tempo."
 
@@ -149,9 +149,9 @@ label capitulo2:
 
     hide vitoria normal with dissolve
 
-    #hide pedro normal with dissolve
+    hide pedro normal with dissolve
 
-    #scene centro-final-tarde
+    scene centro-final-tarde
 
     narrador "A brisa da tarde assoprava fria e o céu se estendia como uma folha de ouro sob suas cabeças, e iluminava resplandecia toda a cidade"
 
@@ -285,7 +285,7 @@ label capitulo2:
     hide vitoria normal 
     with dissolve
 
-    #scene quarto-helena
+    scene quarto-helena
 
     show helena normal at posicao_direita with dissolve
 
@@ -308,22 +308,6 @@ label capitulo2:
     hide helena normal
 
     with dissolve
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-    
 
     return
 
