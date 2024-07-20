@@ -3,3 +3,5 @@
 /log.txt
 /game/.vscode
 traceback.txt
+game/script.rpyc
+game/*.rpyc

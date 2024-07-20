@@ -99,5 +99,7 @@ label start:
     #call capitulo1
 
     call capitulo2
+
+    call capitulo3
     
 return
