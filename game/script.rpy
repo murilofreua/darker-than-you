@@ -10,6 +10,7 @@ define indefinido = Character("")
 define telefoneDoDante = Character("Telefone do Dante")
 define vozFeminina = Character("Voz feminina")
 define narrador = Character("Narrador")
+define pedro = Character("Pedro")
 
 # Personagens neutros
 
@@ -96,7 +97,7 @@ define historia = Historia()
 
 label start:
 
-    #call capitulo1
+    call capitulo1
 
     call capitulo2
 
