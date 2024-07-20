@@ -1,0 +1,39 @@
+call entrarMenuDante
+
+    menu:
+        "Sim, claro!":
+            call retomarMenuDante
+            show helena normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+            helena "Ótimo, aqui tem muios lugares bonitos, qual deles você quer ver primeiro?"
+            dante "*Checa a notificação e olha novamente as fotos para escolher"
+            hide helena normal 
+            call entrarMenuDante
+            menu:
+                
+                "Igreja":
+                    call retomarMenuDante
+                    $ historia.incr_peso_ruim()
+                    show helena normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+                    helena "Beleza, iremos visitar a Grande Igreja primeiro!"
+
+                "Padaria":
+                    call retomarMenuDante
+                    $ historia.incr_peso_bom()
+                    show helena normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+                    helena "Beleza, iremos visitar a deliciosa Padaria primeiro!"
+
+                "Entrada da Floresta":
+                    call retomarMenuDante
+                    $ historia.incr_peso_normal()
+                    show helena normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+                    helena "Beleza, iremos visitar a aconchegante Floresta primeiro!"
+
+
+        "Não sei, é muito longe?":
+            call retomarMenuDante
+            show helena normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+            helena "Tem um ônibus direto daí para o vilarejo! Sai todo domingo"
+            dante "Ahh sim! Então posso ir tranquilamente"
+            helena "Todo domingo tem a missa aqui e catedral é muito linda!"
+            dante "Então vou querer ver a ver primeiro!"
+            helena "Combinado!"  
