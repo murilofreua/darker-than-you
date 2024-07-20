@@ -54,7 +54,6 @@ label capitulo2:
 
     narrador "Apesar de não ser muito religioso..."
 
-    play 
 
     narrador "Dante sentiu uma sensação estranha enquanto olhava para ela, como se alguma energia misteriosa o atraísse."
 
