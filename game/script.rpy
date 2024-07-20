@@ -11,6 +11,7 @@ define telefoneDoDante = Character("Telefone do Dante")
 define vozFeminina = Character("Voz feminina")
 define narrador = Character("Narrador")
 define pedro = Character("Pedro")
+define padre = Character("Padre Iohann")
 
 # Personagens neutros
 
@@ -22,6 +23,7 @@ image isabel normal = im.Scale("neutros/isabel.png", 610, 540)
 image rocha normal = im.Scale("neutros/rocha.png", 680, 540)
 image sofia normal = im.Scale("neutros/sofia.png", 635, 540)
 image vitoria normal = im.Scale("neutros/vitoria.png", 575, 540)
+image padre normal = im.Scale("neutros/padre.png", 575, 540)
 
 # Personagens felizes
 
