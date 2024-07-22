@@ -256,4 +256,8 @@ label capitulo3:
 
     narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos, esperando que o dia seguinte trouxesse mais respostas, e talvez, mais perguntas."
 
+    menu:
+        "Dormir":
+            dante "ZzZzZzZz"
+
     return
