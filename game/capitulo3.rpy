@@ -1,6 +1,10 @@
 image cozinha = "images/cenarios/cozinha.png"
 image igreja-dentro = "images/cenarios/igreja-dentro.png"
 image quarto-dante = "images/cenarios/quarto-dante.png"
+image sacristia = "images/cenarios/sacristia.png"
+image corredor = "images/cenarios/igreja-corredor.png"
+image torre-do-sino = "images/cenarios/torre-do-sino.png"
+image centro = "images/cenarios/centro.png"
 
 
 label capitulo3:
@@ -113,7 +117,7 @@ label capitulo3:
 
     narrador "O grupo caminhou pelos corredores, admirando as obras de arte e as relíquias históricas."
 
-    # scene sacristia
+    scene sacristia
 
     narrador "Ao chegarem à sacristia, notaram um antigo livro de registros, que parecia estar ali há séculos."
 
@@ -127,23 +131,30 @@ label capitulo3:
 
     narrador "Algo no livro parecia despertar uma memória distante, mas ele não conseguiu identificar o quê."
 
-    # SCENE de corredor
+    scene corredor
 
     # SOM DE VENTO
 
     narrador "Enquanto se dirigiam para sair, um barulho suave, quase imperceptível, chamou a atenção de Dante. Parecia vir de uma sala adjacente. Ele olhou para o padre, que imediatamente desviou o olhar."
 
+    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+
     dante "O que foi isso?"
+
+    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     padre "Oh, nada de mais. Apenas o vento batendo nas janelas. Esta igreja é antiga, sabe?"
 
     narrador "Dante não estava totalmente convencido, mas decidiu não insistir. O grupo continuou a explorar a igreja até que Padre Iohann sugeriu uma visita à torre do sino."
 
+    show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
+    show vitoria normal at Position(xpos = 0.5, ypos = 0.75) with dissolve
+
     padre "A vista lá de cima é magnífica. Vocês deveriam ver."
 
     narrador "A escada para a torre era estreita e íngreme."
 
-    # SCENE Vista da torre do sino
+    scene torre-do-sino
     # Som de vendo com um pouco de barulho de povoado
 
     narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego. O vilarejo parecia um cenário de conto de fadas, cercado por colinas verdejantes e banhado pela luz suave da manhã."
@@ -182,7 +193,7 @@ label capitulo3:
     hide helena normal with dissolve
     hide vitoria normal with dissolve
 
-    # scene praca-principal
+    scene centro
 
     narrador "Helena, Vitória e Dante decidiram aproveitar o resto do dia explorando o vilarejo."
 
@@ -193,7 +204,7 @@ label capitulo3:
     narrador "Enquanto caminhavam de volta para a praça principal, Helena virou-se para Dante e disse:"
 
     show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-    show dante normal at Position(xpos = 0.5, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.8, ypos = 0.75) with dissolve
 
     helena "O que achou do Padre Iohann? Ele é uma figura interessante, não é?"
 
@@ -213,6 +224,6 @@ label capitulo3:
 
     stop sound
 
-    narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos, esperando que o dia seguinte trouxesse mais respostas — e talvez, mais perguntas."
+    narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos, esperando que o dia seguinte trouxesse mais respostas, e talvez, mais perguntas."
 
     return
