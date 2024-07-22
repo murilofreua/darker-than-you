@@ -103,13 +103,18 @@ label capitulo3:
     show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
     show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
 
-    dante "Padre Iohann, ouvimos algumas histórias sobre luzes estranhas perto da igreja. O senhor sabe de algo?"
+    menu:
+    "Perguntar sobre as luzes estranhas":
+        dante "Padre Iohann, ouvimos algumas histórias sobre luzes estranhas perto da igreja. O senhor sabe de algo?"
 
-    narrador "O padre franziu a testa levemente antes de responder, seus olhos se tornando ainda mais profundos e misteriosos."
+        narrador "O padre franziu a testa levemente antes de responder, seus olhos se tornando ainda mais profundos e misteriosos."
 
-    padre "Sim, soube dessas histórias. Alguns fiéis relataram ter visto essas luzes, mas não temos nenhuma explicação concreta. Estamos investigando, mas até agora, nada de anormal foi encontrado."
+        padre "Sim, soube dessas histórias. Alguns fiéis relataram ter visto essas luzes, mas não temos nenhuma explicação concreta. Estamos investigando, mas até agora, nada de anormal foi encontrado."
 
-    narrador "Dante notou um leve tremor na mão do padre enquanto ele falava. Helena, tentando aliviar o clima, sugeriu que explorassem a igreja e seu entorno."
+        narrador "Dante notou um leve tremor na mão do padre enquanto ele falava. Helena, tentando aliviar o clima, sugeriu que explorassem a igreja e seu entorno."
+
+    "Não perguntar sobre as luzes estranhas":
+        pass
 
     hide padre normal with dissolve
     hide dante normal with dissolve
@@ -127,9 +132,13 @@ label capitulo3:
 
     padre "Este livro contém registros antigos da nossa igreja. É uma verdadeira relíquia. Alguns dizem que ele guarda segredos sobre o passado do vilarejo."
 
-    narrador "Dante, curioso, folheou algumas páginas, notando nomes e eventos registrados ao longo dos anos."
+    menu:
+        "Folhear livro":
+            narrador "Dante, curioso, folheou algumas páginas, notando nomes e eventos registrados ao longo dos anos."
 
-    narrador "Algo no livro parecia despertar uma memória distante, mas ele não conseguiu identificar o quê."
+            narrador "Algo no livro parecia despertar uma memória distante, mas ele não conseguiu identificar o quê."
+        "Não folhear livro":
+            pass
 
     scene corredor
 
@@ -137,15 +146,22 @@ label capitulo3:
 
     narrador "Enquanto se dirigiam para sair, um barulho suave, quase imperceptível, chamou a atenção de Dante. Parecia vir de uma sala adjacente. Ele olhou para o padre, que imediatamente desviou o olhar."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    menu:
+        "Perguntar sobre barulho":
+            show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
-    dante "O que foi isso?"
+            dante "O que foi isso?"
 
-    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+            show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
-    padre "Oh, nada de mais. Apenas o vento batendo nas janelas. Esta igreja é antiga, sabe?"
+            padre "Oh, nada de mais. Apenas o vento batendo nas janelas. Esta igreja é antiga, sabe?"
+  
+            narrador "Dante não estava totalmente convencido, mas decidiu não insistir."
 
-    narrador "Dante não estava totalmente convencido, mas decidiu não insistir. O grupo continuou a explorar a igreja até que Padre Iohann sugeriu uma visita à torre do sino."
+        "Ignorar barulho":
+            pass
+
+    narrador "O grupo continuou a explorar a igreja até que Padre Iohann sugeriu uma visita à torre do sino."
 
     show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.5, ypos = 0.75) with dissolve
@@ -174,19 +190,29 @@ label capitulo3:
 
     padre "Tenho que ajudar nos preparativos do festival da cidade. É um evento muito importante para nós."
 
-    dante "O festival parece ser incrível. O que exatamente você faz para ajudar, Padre Iohann?"
+    menu:
+        "Perguntar sobre o festival da cidade":
+                dante "O festival parece ser incrível. O que exatamente você faz para ajudar, Padre Iohann?"
 
-    padre "Na ornamentação e na organização da Missa de Domingo de Ramos. Também coordeno algumas atividades culturais que acontecem durante o festival."
+                padre "Na ornamentação e na organização da Missa de Domingo de Ramos. Também coordeno algumas atividades culturais que acontecem durante o festival."
 
-    vitoria "Isso deve ser bastante trabalho. Mas o festival é sempre um sucesso, graças a todos os esforços da comunidade."
+                vitoria "Isso deve ser bastante trabalho. Mas o festival é sempre um sucesso, graças a todos os esforços da comunidade."
 
-    dante "Estou ansioso para ver tudo isso de perto. Parece ser um evento muito especial."
+                dante "Estou ansioso para ver tudo isso de perto. Parece ser um evento muito especial."
 
-    helena "E é mesmo. O festival traz todos juntos, é uma celebração de nossa fé e cultura."
+                helena "E é mesmo. O festival traz todos juntos, é uma celebração de nossa fé e cultura."
 
-    dante "Se precisar de ajuda, pode contar comigo."
+                menu:
+                    "Sugerir ajuda":
+                            dante "Se precisar de ajuda, pode contar comigo."
 
-    padre "Agradeço muito, meu filho. Qualquer ajuda é bem-vinda. Espero que aproveite o festival e toda a experiência."
+                            padre "Agradeço muito, meu filho. Qualquer ajuda é bem-vinda. Espero que aproveite o festival e toda a experiência."
+                    
+                    "Não sugerir ajuda":
+                        pass
+
+        "Não perguntar sobre o festival da cidade":
+            pass
 
     hide padre normal with dissolve
     hide dante normal with dissolve
@@ -208,7 +234,11 @@ label capitulo3:
 
     helena "O que achou do Padre Iohann? Ele é uma figura interessante, não é?"
 
-    dante "Sim, muito interessante. Há algo nele que me intriga."
+    menu:
+        "Sim, muito interessante. Há algo nele que me intriga.":
+            dante "Sim, muito interessante. Há algo nele que me intriga."
+        "Sim, muito interessante. Gostei de conhece-lo"
+            dante "Sim, muito interessante. Gostei de conhece-lo"
 
     show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
