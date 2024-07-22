@@ -104,17 +104,17 @@ label capitulo3:
     show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
 
     menu:
-    "Perguntar sobre as luzes estranhas":
-        dante "Padre Iohann, ouvimos algumas histórias sobre luzes estranhas perto da igreja. O senhor sabe de algo?"
+        "Perguntar sobre as luzes estranhas":
+            dante "Padre Iohann, ouvimos algumas histórias sobre luzes estranhas perto da igreja. O senhor sabe de algo?"
 
-        narrador "O padre franziu a testa levemente antes de responder, seus olhos se tornando ainda mais profundos e misteriosos."
+            narrador "O padre franziu a testa levemente antes de responder, seus olhos se tornando ainda mais profundos e misteriosos."
 
-        padre "Sim, soube dessas histórias. Alguns fiéis relataram ter visto essas luzes, mas não temos nenhuma explicação concreta. Estamos investigando, mas até agora, nada de anormal foi encontrado."
+            padre "Sim, soube dessas histórias. Alguns fiéis relataram ter visto essas luzes, mas não temos nenhuma explicação concreta. Estamos investigando, mas até agora, nada de anormal foi encontrado."
 
-        narrador "Dante notou um leve tremor na mão do padre enquanto ele falava. Helena, tentando aliviar o clima, sugeriu que explorassem a igreja e seu entorno."
+            narrador "Dante notou um leve tremor na mão do padre enquanto ele falava. Helena, tentando aliviar o clima, sugeriu que explorassem a igreja e seu entorno."
 
-    "Não perguntar sobre as luzes estranhas":
-        pass
+        "Não perguntar sobre as luzes estranhas":
+            pass
 
     hide padre normal with dissolve
     hide dante normal with dissolve
@@ -237,7 +237,7 @@ label capitulo3:
     menu:
         "Sim, muito interessante. Há algo nele que me intriga.":
             dante "Sim, muito interessante. Há algo nele que me intriga."
-        "Sim, muito interessante. Gostei de conhece-lo"
+        "Sim, muito interessante. Prazer em conhece-lo":
             dante "Sim, muito interessante. Gostei de conhece-lo"
 
     show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
