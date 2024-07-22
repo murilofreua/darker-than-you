@@ -1,12 +1,3 @@
-image cozinha = "images/cenarios/cozinha.png"
-image igreja-dentro = "images/cenarios/igreja-dentro.png"
-image quarto-dante = "images/cenarios/quarto-dante.png"
-image sacristia = "images/cenarios/sacristia.png"
-image corredor = "images/cenarios/igreja-corredor.png"
-image torre-do-sino = "images/cenarios/torre-do-sino.png"
-image centro = "images/cenarios/centro.png"
-
-
 label capitulo3:
 
     scene cozinha 
