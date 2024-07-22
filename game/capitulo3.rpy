@@ -99,12 +99,13 @@ label capitulo3:
     hide dante normal with dissolve
     hide helena normal with dissolve
 
-    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-
     menu:
         "Perguntar sobre as luzes estranhas":
+
+            show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+            show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+            show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
+
             dante "Padre Iohann, ouvimos algumas histórias sobre luzes estranhas perto da igreja. O senhor sabe de algo?"
 
             narrador "O padre franziu a testa levemente antes de responder, seus olhos se tornando ainda mais profundos e misteriosos."
@@ -113,12 +114,12 @@ label capitulo3:
 
             narrador "Dante notou um leve tremor na mão do padre enquanto ele falava. Helena, tentando aliviar o clima, sugeriu que explorassem a igreja e seu entorno."
 
+            hide padre normal with dissolve
+            hide dante normal with dissolve
+            hide helena normal with dissolve
+
         "Não perguntar sobre as luzes estranhas":
             pass
-
-    hide padre normal with dissolve
-    hide dante normal with dissolve
-    hide helena normal with dissolve
 
     narrador "O grupo caminhou pelos corredores, admirando as obras de arte e as relíquias históricas."
 
