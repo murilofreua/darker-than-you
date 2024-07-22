@@ -238,7 +238,7 @@ label capitulo3:
     menu:
         "Sim, muito interessante. Há algo nele que me intriga.":
             dante "Sim, muito interessante. Há algo nele que me intriga."
-        "Sim, muito interessante. Prazer em conhece-lo":
+        "Sim, muito interessante. Gostei de conhece-lo":
             dante "Sim, muito interessante. Gostei de conhece-lo"
 
     show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
