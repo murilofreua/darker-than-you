@@ -1,8 +1,10 @@
 label capitulo1:
     # Capítulo 1
-
     
     scene quarto-dante
+
+    $ renpy.music.play("audio/Capitulo I.mp3", loop=True)
+    $ renpy.music.set_volume(0.4, channel='music')
 
     indefinido "..."
 
