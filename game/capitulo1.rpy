@@ -3,7 +3,7 @@ label capitulo1:
     
     scene quarto-dante
 
-    $ renpy.music.play("audio/Capitulo I.mp3", loop=True)
+    $ renpy.music.play("audio/Capitulos/Capitulo 1 - Parece um sonho merecido.mp3", loop=True)
     $ renpy.music.set_volume(0.2, channel='music')
 
     indefinido "..."
@@ -14,7 +14,7 @@ label capitulo1:
 
     dante "Finalmente!"
 
-    play sound "audio/ringtone.mp3"
+    play sound "audio/Sound effects/Objetos/Toque_celular_nokia_3310.mp3"
 
     telefoneDoDante "*tocando"
 

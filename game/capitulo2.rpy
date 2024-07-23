@@ -7,19 +7,23 @@ define posicao_centro = Position(xalign=0.50,yalign=0.5)
 
 label capitulo2:
 
+    $ renpy.music.play("audio/Capitulos/Capitulo 2 - uma vista calorosa.mp3", loop=True)
+    $ renpy.music.set_volume(0.2, channel='music')
+
     scene centro
 
     narrador "Dante sentia a sensação de voltar para o passado"
 
     narrador "A paisagem verdejante e as casas simples no estilo barroco europeu lembravam sua infância, passada numa pequena cidade no interior de Goiás"
 
+    show vitoria normal with dissolve:
+        yalign 0.50
+        xalign 0.65
+
     show helena normal with dissolve:
         yalign 0.50
         xalign 0.30
 
-    show vitoria normal with dissolve:
-        yalign 0.50
-        xalign 0.65
 
 
     indefinido "..."
