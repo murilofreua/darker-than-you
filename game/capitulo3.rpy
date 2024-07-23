@@ -194,17 +194,12 @@ label capitulo3:
 
                 helena "E é mesmo. O festival traz todos juntos, é uma celebração de nossa fé e cultura."
 
-                menu:
-                    "Sugerir ajuda":
-                            dante "Se precisar de ajuda, pode contar comigo."
+                dante "Se precisar de ajuda, pode contar comigo."
 
-                            padre "Agradeço muito, meu filho. Qualquer ajuda é bem-vinda. Espero que aproveite o festival e toda a experiência."
-                    
-                    "Não sugerir ajuda":
-                        pass
+                padre "Agradeço muito, meu filho. Qualquer ajuda é bem-vinda. Espero que aproveite o festival e toda a experiência."
 
         "Não perguntar sobre o festival da cidade":
-            pass
+            padre "Aguardo pela sua presença, Dante."
 
     hide padre normal with dissolve
     hide dante normal with dissolve

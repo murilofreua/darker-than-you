@@ -16,7 +16,12 @@ label capitulo4:
     
     padre "Bom dia, Dante. Estamos muito agradecidos por sua ajuda com o festival."
 
-    dante "Estou feliz em ajudar, Padre Iohann. O que precisa ser feito?"
+    menu:
+        "Estou feliz em ajudar, Padre Iohann. O que precisa ser feito?":
+            dante "Estou feliz em ajudar, Padre Iohann. O que precisa ser feito?"
+
+        "É um prazer estar aqui ajudando com a preparação da festa":
+            dante "É um prazer estar aqui ajudando com a preparação da festa"
 
     padre "Temos muitas coisas para organizar."
 
@@ -27,7 +32,7 @@ label capitulo4:
     hide padre normal with dissolve
     hide dante normal with dissolve
 
-    # scene festival-dia with dissolve
+    scene festival-dia
 
     narrador "Dante, Helena e Vitória se envolvem nas tarefas, conhecendo mais moradores do vilarejo durante o processo."
 
@@ -59,7 +64,7 @@ label capitulo4:
     hide sofia normal with dissolve
     hide dante normal with dissolve
 
-    # scene festival-noite with fade
+    scene festival-noite
 
     narrador "Finalmente, a noite do festival chega."
 
@@ -87,7 +92,11 @@ label capitulo4:
 
     narrador "Dante olha para Helena e Vitória, ambos concordando em ajudar novamente."
 
-    dante "Estaremos lá, Padre."
+    menu:
+        "Confirmar presença":
+            dante "Estaremos lá, Padre."
+        "Informar que não será possível comparecer":
+            dante "Lamento informar, mas não será possível que eu compareça, Padre"
 
     hide padre normal with dissolve
     hide helena normal with dissolve
@@ -105,10 +114,9 @@ label capitulo4:
 
     hide dante normal with dissolve
 
-    # scene festival-noite with fade
+    scene festival-noite
 
     narrador "Enquanto os três amigos conversam sobre a festa, Rocha, o policial, aproxima-se."
-
 
     show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
@@ -145,11 +153,25 @@ label capitulo4:
     show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
 
-    dante "Helena?"
+    menu:
+        "Chamar pela Helena":
+            dante "Helena?"
 
-    narrador "Ele bate na porta do quarto dela. Não há resposta."
+            narrador "... sem resposta"
+
+            menu:
+                "Chamar fervorosamente pela Helena":
+                    dante "Helenaaa!!!"
+
+                    narrador "... ainda sem resposta"
+
+    narrador "Ele bate na porta do quarto dela."
 
     vitoria "Ela deve estar na igreja."
+
+    menu:
+        "Espero que sim":
+            dante "Espero que sim"
 
     hide vitoria normal with dissolve
     hide dante normal with dissolve
@@ -172,7 +194,9 @@ label capitulo4:
     show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
     show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
-    dante "Padre Iohann, você viu Helena esta manhã?"
+    menu:
+        "Perguntar para o Padre sobre a Helena":
+            dante "Padre Iohann, você viu Helena esta manhã?"
 
     narrador "O padre parece pensativo."
 
@@ -189,7 +213,7 @@ label capitulo4:
 
     narrador "Eles voltam para a praça, onde encontram Rocha."
 
-    # scene praca
+    scene praca-principal
 
     show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
@@ -218,7 +242,11 @@ label capitulo4:
 
     vitoria "Ela não desapareceria assim."
 
-    dante "Eu sei. Algo está errado."
+    menu:
+        "Eu sei. Algo está errado.":
+            dante "Eu sei. Algo está errado."
+        "A Helena nunca desapareceu assim antes...":
+            dante "A Helena nunca desapareceu assim antes..."
 
     show padre normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
@@ -234,7 +262,7 @@ label capitulo4:
 
     narrador "A atmosfera do festival muda, tornando-se mais tensa e preocupada."
 
-    # scene praca
+    scene praca-principal
 
     show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
@@ -261,7 +289,9 @@ label capitulo4:
 
     narrador "Acorda suando frio, decidido a descobrir a verdade."
 
-    dante "Eu preciso ir até a igreja."
+    menu:
+        "Ir para Igreja":
+            dante "Eu preciso ir até a igreja."
 
     narrador "Diz Dante para si mesmo, saindo silenciosamente de casa."
 
@@ -277,11 +307,20 @@ label capitulo4:
 
     icaro "Dante, o que está fazendo aqui tão tarde?"
 
-    dante "Eu tive um sonho... vi Helena aqui."
+    menu:
+        "Contar sobre o sonho com a Helena":
+            dante "Eu tive um sonho... vi Helena aqui."
 
-    augusto "Nós também ouvimos coisas estranhas."
+            augusto "Nós também ouvimos coisas estranhas."
 
-    augusto "Vamos investigar juntos, mas por hora, você precisa descansar."
+            augusto "Vamos investigar juntos, mas por hora, você precisa descansar."
+
+        "Contar que perdeu o sono e está andando pela cidade":
+            dante "Acabou que eu perdi o sono e estou andando pela cidade enquanto o sono volta"
+
+            augusto "Entendo, nós ouvimos coisas estranhas e viemos investigar"
+
+            augusto "Caso queira investigar junto amanhã, está convidado. Mas por hora, você precisa descansar."
 
     dante "Sim, amanhã conversaremos melhor. Boa noite."
 
