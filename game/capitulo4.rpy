@@ -217,7 +217,7 @@ label capitulo4:
 
     show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-    show rocha normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show rocha normal at Position(xpos = 0.8, ypos = 0.75) with dissolve
 
     vitoria "Rocha, precisamos da sua ajuda. Helena desapareceu."
 
@@ -248,7 +248,7 @@ label capitulo4:
         "A Helena nunca desapareceu assim antes...":
             dante "A Helena nunca desapareceu assim antes..."
 
-    show padre normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     narrador "Padre Iohann tenta manter a calma, mas Dante percebe que ele também está preocupado."
 
@@ -271,7 +271,7 @@ label capitulo4:
 
     dante "Ela não pode ter ido longe. Alguém deve ter visto algo."
 
-    show rocha normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show rocha normal at Position(xpos = 0.8, ypos = 0.75) with dissolve
 
     rocha "Vamos continuar a busca pela manhã. Precisamos de mais luz."
 

@@ -132,7 +132,7 @@ label capitulo3:
         "Não folhear livro":
             pass
 
-    scene corredor
+    scene igreja-corredor
 
     # SOM DE VENTO
 
