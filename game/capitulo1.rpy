@@ -4,7 +4,7 @@ label capitulo1:
     scene quarto-dante
 
     $ renpy.music.play("audio/Capitulo I.mp3", loop=True)
-    $ renpy.music.set_volume(0.4, channel='music')
+    $ renpy.music.set_volume(0.2, channel='music')
 
     indefinido "..."
 
@@ -67,6 +67,8 @@ label capitulo1:
     with fade
 
     narrador "Animado por relembrar alguns de seus bons momentos com Helena, em horas de conversas, Dante decide visitar o vilarejo. Coloca seu tênis de corrida na mala e se prepara para conhecer o belo vilarejo de Encosta da Saudade."
+
+    $ renpy.music.stop(channel='music')
 
     return
 
