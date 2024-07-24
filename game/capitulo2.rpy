@@ -8,7 +8,7 @@ define posicao_centro = Position(xalign=0.50,yalign=0.5)
 label capitulo2:
 
     $ renpy.music.play("audio/Capitulos/Capitulo 2 - uma vista calorosa.mp3", loop=True)
-    $ renpy.music.set_volume(0.2, channel='music')
+    $ renpy.music.set_volume(0.06, channel='music')
 
     scene centro
 
@@ -16,21 +16,22 @@ label capitulo2:
 
     narrador "A paisagem verdejante e as casas simples no estilo barroco europeu lembravam sua infância, passada numa pequena cidade no interior de Goiás"
 
+    narrador "Ao descer do ônibus e olhar em volta, ficou impressionado pela beleza da cidade. O sol começava a se pôr, pintando o céu de tons dourados e fazendo com que as casas da vila parecessem ainda mais charmosas"
+
     show vitoria normal with dissolve:
         yalign 0.50
         xalign 0.65
 
-    show helena normal with dissolve:
+    show helena-vestido-azul-feliz with dissolve:
         yalign 0.50
         xalign 0.30
-
 
 
     indefinido "..."
 
     hide vitoria normal with dissolve
 
-    show helena normal at posicao_direita with move
+    show helena-vestido-azul-feliz at posicao_direita with move
 
     helena "Tão bom te ver!"
 
@@ -40,7 +41,7 @@ label capitulo2:
         "Abraçar":
             dante "Olá, Helena! Você mudou muito desde a última vez que nos vimos!"
     
-    hide helena normal with dissolve
+    hide helena-vestido-azul-feliz with dissolve
 
     show vitoria normal at posicao_direita with dissolve
 
@@ -62,7 +63,7 @@ label capitulo2:
 
     narrador "Apesar de Dante de não ser muito religioso..."
 
-    play sound "audio/trovão.mp3"
+    stop sound 
 
     narrador "O garoto sentiu uma sensação estranha enquanto olhava para a igreja, como se alguma energia misteriosa o atraísse."
 
@@ -70,7 +71,7 @@ label capitulo2:
 
     dante "Que bela igreja!"
 
-    show helena at posicao_direita with dissolve
+    show helena-vestido-azul-feliz at posicao_direita with dissolve
 
     helena "É incrível, né?"
 
@@ -80,17 +81,20 @@ label capitulo2:
 
     hide dante normal with dissolve
 
-    hide helena normal with dissolve
+    hide helena-vestido-azul-feliz normal with dissolve
 
     narrador "Após uma tarde de conversa, os três se dirigiram para a padaria favorita de Vitória, próxima à praça principal da cidade. Lá, foram recebidos por Seu Pedro, o padeiro."
 
     scene padaria-dentro
 
+    $ renpy.music.play("audio/Sound effects/pessoas/Homem_cantarolar_senior_trabalhando_corte.mp3", loop=True)
+    $ renpy.music.set_volume(0.3, channel='music')
+
     show pedro normal at posicao_direita with dissolve
 
     pedro "Olha quem veio! Helena, você trouxe um visitante especial, não é? "
 
-    show helena normal at posicao_centro with dissolve
+    show helena-vestido-azul-feliz at posicao_centro with dissolve
 
     helena "Ah, Seu Pedro! Este é o meu amigo Dante. Ele está aqui para passar alguns dias conosco."
 
@@ -102,9 +106,12 @@ label capitulo2:
         "Apertar a mão de Pedro":
             dante "Obrigado, Seu Pedro. É um prazer conhecer você."
 
-    pedro "O que querem comer? Aposto que estão morrendo de fo.."
+    pedro "O que querem comer? Aposto que estão morrendo de fome..."
+
+    play sound "audio/Sound effects/pessoas/Grupo_misto_rindo.mp3"
 
     narrador "Mal ele terminara a frase, Helena e Vitória riram em disparate, acompanhadas pelo padeiro"
+
 
     menu:
         "Sorrir confuso":
@@ -112,10 +119,12 @@ label capitulo2:
 
     hide pedro normal 
     hide dante normal
-    hide helena normal
+    hide helena-vestido-azul-feliz
     with dissolve
 
     narrador "Seu Pedro, com seu semblante acolhedor, guiou o trio até uma mesa perto da janela, de onde se podia ver a praça principal começando a se iluminar com as luzes da noite."
+
+    stop sound
     
     show pedro normal at posicao_centro with dissolve
 
@@ -123,12 +132,13 @@ label capitulo2:
 
     pedro "E claro, o café passado na hora, que não pode faltar."
 
-    show helena normal at posicao_direita 
+    show helena-vestido-azul-feliz at posicao_direita 
 
     helena "Parece uma ótima escolha! Vou querer um pouco de tudo, para experimentar."
 
     hide pedro normal with dissolve
-
+    $ renpy.music.set_volume(0.08, channel='music')
+    
     show vitoria normal at posicao_centro with dissolve 
 
     vitoria "Dante, você vai adorar o festival!"
@@ -143,22 +153,26 @@ label capitulo2:
 
     show pedro normal at top behind vitoria
     
+    $ renpy.music.set_volume(0.3, channel='music')
+
     narrador "Logo, Seu Pedro retornou com uma bandeja cheia de delícias, e os três começaram a comer, rindo e conversando sobre a vida no vilarejo e relembrando histórias de infância. A tarde caía e Dante sentiu-se mais relaxado e feliz do que em muito tempo."
 
     narrador "Depois de agradecer calorosamente a Seu Pedro e pagarem a conta, o trio se dirigiu à praça principal. "
 
     hide dante normal with dissolve
 
-    hide helena normal with dissolve
+    hide helena-vestido-azul-feliz with dissolve
 
     hide vitoria normal with dissolve
 
     hide pedro normal with dissolve
 
+    $ renpy.music.play("audio/Capitulos/Capitulo 2 - uma vista calorosa.mp3", loop=True)
+    $ renpy.music.set_volume(0.06, channel='music')
+
     scene centro-final-tarde
 
     narrador "A brisa da tarde assoprava fria e o céu se estendia como uma folha de ouro sob suas cabeças, e iluminava resplandecia toda a cidade"
-
 
     narrador "Caminhando pela praça, a atmosfera acolhedora do vilarejo os envolvia. Crianças corriam e brincavam, e grupos de amigos conversavam animadamente"
 
@@ -168,7 +182,7 @@ label capitulo2:
 
     sofia "Helena, Vitória! Quem é o rapaz?"
 
-    show helena normal at posicao_centro with dissolve
+    show helena-vestido-azul-feliz at posicao_centro with dissolve
 
     helena "Boa noite, Sofia"
 
@@ -188,7 +202,7 @@ label capitulo2:
 
     hide dante normal 
     hide vitoria normal 
-    hide helena normal 
+    hide helena-vestido-azul-feliz normal 
     hide sofia normal
     with dissolve
 
@@ -258,14 +272,14 @@ label capitulo2:
 
     narrador "Dante sentiu um arrepio percorrer sua espinha. Aquela Igreja já lhe causara uma sensação estranha durante o dia."
 
-    show helena normal at posicao_esquerda with dissolve
+    show helena-vestido-azul-feliz at posicao_esquerda with dissolve
 
     helena "Vamos ficar atentos, Rocha. Obrigada por nos avisar"
 
     rocha "Se precisarem de qualquer coisa, sabem onde me encontrar."
 
     hide rocha normal
-    hide helena normal
+    hide helena-vestido-azul-feliz
     hide dante normal
     hide vitoria normal
     with dissolve
@@ -280,18 +294,18 @@ label capitulo2:
 
     vitoria "Concordo. Mas vamos tentar não nos preocupar demais. Amanhã é um novo dia, e vamos descobrir mais sobre essa história."
 
-    show helena normal at posicao_centro 
+    show helena-vestido-azul-feliz at posicao_centro 
 
     helena "Sim, vamos descansar agora. Amanhã pode ser um dia longo"
 
-    hide helena normal
+    hide helena-vestido-azul-feliz
     hide dante normal
     hide vitoria normal 
     with dissolve
 
     scene quarto-helena
 
-    show helena normal at posicao_direita with dissolve
+    show helena-vestido-azul-feliz at posicao_direita with dissolve
 
     helena "Espero que goste do quarto. É simples, mas confortável"
 
@@ -309,9 +323,10 @@ label capitulo2:
 
     hide dante normal 
     
-    hide helena normal
+    hide helena-vestido-azul-feliz
 
     with dissolve
 
+    $ renpy.music.stop(channel='music')
     return
 

@@ -4,7 +4,7 @@ label capitulo1:
     scene quarto-dante
 
     $ renpy.music.play("audio/Capitulos/Capitulo 1 - Parece um sonho merecido.mp3", loop=True)
-    $ renpy.music.set_volume(0.2, channel='music')
+    $ renpy.music.set_volume(0.07, channel='music')
 
     indefinido "..."
 
