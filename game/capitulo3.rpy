@@ -9,12 +9,17 @@ label capitulo3:
     indefinido "..."
 
     play sound "audio/Sound effects/pessoas/Homem_acordando_alongamento_escandaloso_descansado_cena_descontração.mp3"
+    $ renpy.music.set_volume(0.125, channel='music')
 
     show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
 
     narrador "Ele se levantou, espreguiçando-se e ouvindo os sons suaves do vilarejo."
     
     stop sound
+
+    play sound "audio/Sound effects/Lugares/Capitulo 3 - inicio dos sinais de cansaço.mp3"
+    $ renpy.music.set_volume(0.3, channel='music')
+
 
     play sound "audio/Sound effects/Objetos/Panela_fritando_oléo_quente.mp3"
 

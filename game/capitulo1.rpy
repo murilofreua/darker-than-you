@@ -4,7 +4,7 @@ label capitulo1:
     scene quarto-dante
 
     $ renpy.music.play("audio/Capitulos/Capitulo 1 - Parece um sonho merecido.mp3", loop=True)
-    $ renpy.music.set_volume(0.07, channel='music')
+    $ renpy.music.set_volume(0.3, channel='music')
 
     indefinido "..."
 
@@ -46,33 +46,38 @@ label capitulo1:
 
     dante "He... Helena?"   
 
-    dante "Helena?! Quanto tempo! Claro que me lembro de você. Faz tempo mesmo. Estou muito bem, e com você? Acabei de entrar de férias, mas confesso que não ando fazendo muita coisa. Por onde você anda?"  
+    dante "Helena?! Quanto tempo! Claro que me lembro de você. Faz tempo mesmo."
+    dante "Estou muito bem, e com você? Acabei de entrar de férias, mas confesso que não ando fazendo muita coisa."
+    dante "Por onde você anda?"
 
-    helena "Já faz alguns anos vim morar num vilarejo com meus pais. Eles decidiram largar a vida da capital!"
+    helena "Já faz alguns anos vim morar num vilarejo com meus pais."
+    helena "Eles decidiram largar a vida da capital!"
 
     helena "Eu amo morar aqui, é lindo! Acabei de te mandar umas fotos, dá uma olhada!"
 
-    dante "*Olha a notificação e visualiza as fotos rapidamente"
+    narrador "Dante Olha a notificação e visualiza as fotos rapidamente"
 
-    dante " Uau! Esse lugar é fera demais! Me lembra um pouco aquela viagem que fizemos para Goiás na época de escola, lembra?"
+    dante " Uau! Esse lugar é fera demais!"
+    dante "Até me lembra um pouco aquela viagem que fizemos para Goiás na época de escola, lembra?"
 
     helena "Sim, realmente. Aqui é extremamente calmo e as pessoas são maravilhosas "
-
-    helena "Já que está de férias, não gostaria de prestar uma visita? Juro por Deus que você vai amar!"
+    helena "Já que está de férias, não gostaria de prestar uma visita?"
+    helena "Juro por Deus que você vai amar!"
 
     dante  "Sim, claro!"
 
-    hide dante normalmente
-    hide helena normal 
+    hide helena normal with fade
+
+    narrador "Animado por relembrar alguns de seus bons momentos com Helena, em horas de conversas, Dante decide visitar o vilarejo."
+    narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."
+    
+    hide dante normal
     with fade
 
-    narrador "Animado por relembrar alguns de seus bons momentos com Helena, em horas de conversas, Dante decide visitar o vilarejo. Coloca seu tênis de corrida na mala e se prepara para conhecer o belo vilarejo de Encosta da Saudade."
 
     $ renpy.music.stop(channel='music')
 
     return
-
-
 
 label entrarMenuDante:
 
