@@ -1,7 +1,5 @@
 label capitulo5:
-
-    label capitulo5:
-
+    
     scene igreja-fora-dia
 
     narrador "Dante começa a investigação no dia seguinte ao desaparecimento de Helena."
