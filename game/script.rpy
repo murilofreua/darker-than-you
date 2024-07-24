@@ -107,5 +107,11 @@ label start:
     call capitulo3
     
     call capitulo4
+
+    call capitulo5
+
+    call capitulo6
+
+    call capitulo7
     
 return
