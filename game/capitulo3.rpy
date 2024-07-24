@@ -1,14 +1,14 @@
 label capitulo3:
 
-    scene cozinha 
+    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3"
 
-    play sound "audio/sino_vento.mp3"
+    scene cozinha 
 
     narrador "O sol ainda estava nascendo quando Dante foi despertado por um som distante de sinos."
 
-    stop sound
+    indefinido "..."
 
-    play sound "audio/Waking_Up.mp3"
+    play sound "audio/Sound effects/pessoas/Homem_acordando_alongamento_escandaloso_descansado_cena_descontração.mp3"
 
     show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
 
@@ -16,9 +16,9 @@ label capitulo3:
     
     stop sound
 
-    narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
+    play sound "audio/Sound effects/Objetos/Panela_fritando_oléo_quente.mp3"
 
-    play sound "audio/Barulho_de_óleo_fritando.mp3"
+    narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
 
     show helena normal at Position(xpos = 0.65, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
@@ -32,7 +32,7 @@ label capitulo3:
         "Tive uma noite de sono péssima":
             dante "Dormi péssimo. Ao menos o cheiro de café está maravilhoso."
 
-    play sound "audio/bebendo café.mp3"
+    play sound "audio/Sound effects/pessoas/Pessoa_bebendo_café_xicará_garganta.mp3"
 
     narrador "Enquanto tomavam café, Helena e Vitória discutiam o plano do dia."
 
@@ -235,7 +235,7 @@ label capitulo3:
 
     narrador "O dia passou rapidamente, e à noite, enquanto estava deitado em sua cama, Dante refletia sobre tudo o que havia visto e ouvido."
 
-    play sound "audio/sino_vento.mp3"
+    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3"
 
     narrador "Antes de adormecer, ouviu novamente o som dos sinos da igreja, desta vez mais próximo, quase como um sussurro."
 
