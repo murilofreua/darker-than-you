@@ -40,6 +40,8 @@ label capitulo4:
     hide padre normal with dissolve
     hide dante normal with dissolve
 
+    $ renpy.music.play("audio/Capitulos/Capitulo 4.mp3", loop=True)
+
     scene festival-dia
 
     narrador "Dante, Helena e Vitória se envolvem nas tarefas, conhecendo mais moradores do vilarejo durante o processo."
@@ -73,8 +75,6 @@ label capitulo4:
     hide dante normal with dissolve
 
     scene festival-noite
-
-    $ renpy.music.play("audio/Capitulos/Capitulo 4.mp3", loop=True)
 
     narrador "Finalmente, a noite do festival chega."
 
