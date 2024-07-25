@@ -342,4 +342,5 @@ label capitulo4:
 
     narrador "Dante se despede dos seminaristas e, em casa, tem uma péssima noite de sono, ainda preocupado com Helena."
 
+    $ renpy.music.stop(channel='music')
     return
