@@ -100,6 +100,9 @@ init python:
 
         def maca_guardada(self):
             seff.maca = True
+
+        def get_peso_bom(self):
+            return self.ato_atual.caminho_atual.pesos_proximo_caminho
     
 define historia = Historia()
 
