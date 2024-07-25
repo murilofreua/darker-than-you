@@ -11,6 +11,7 @@ label capitulo6:
 
     menu:
         "Encontrar vestígios do ritual (Confiança Alta)":
+
             narrador "Eles encontram vestígios do ritual e evidências de que Helena foi levada para este local."
 
             narrador "A atmosfera é de mistério e revelação, com a sensação de que algo grandioso está prestes a ser desvendado."
@@ -47,6 +48,8 @@ label capitulo6:
 
     menu:
         "Consultar registros históricos (Confiança Alta)":
+
+            $ pesoFinal += 1;
 
             narrador "Eles encontram um registro detalhado sobre o relicário e o ritual."
 
@@ -89,6 +92,9 @@ label capitulo6:
             dante "Agora podemos entender o que está acontecendo."
 
         "Descobrir vestígios do ritual (Confiança Baixa)":
+
+            $ pesoFinal += 1;
+
             narrador "Eles encontram apenas fragmentos do ritual e pistas sobre o possível paradeiro de Helena."
 
             narrador "A sensação de frustração e desespero cresce."
@@ -101,5 +107,8 @@ label capitulo6:
     hide vitoria normal with dissolve
 
     narrador "A investigação os leva ao confronto final, onde todas as peças se encaixam."
+
+    # Todo, fazer a história fechando melhor
+    # Do nada ele ta achando o ritual...
 
     return

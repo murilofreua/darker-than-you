@@ -28,6 +28,9 @@ label capitulo5:
 
     menu:
         "Perguntar diretamente sobre Helena (Confiança Alta)":
+
+            $ pesoFinal += 1;
+
             dante "Padre Iohann, você viu Helena esta manhã?"
 
             narrador "O Padre Iohann, visivelmente aliviado, se oferece para ajudar."
@@ -64,6 +67,9 @@ label capitulo5:
 
     menu:
         "Perguntar sobre a noite do desaparecimento":
+
+            $ pesoFinal += 1;
+
             dante "Vocês viram algo na noite em que Helena desapareceu?"
 
             icaro "Eu ouvi murmúrios e vi uma figura encapuzada. Foi muito estranho."
@@ -71,6 +77,7 @@ label capitulo5:
             augusto "Eu vi uma sombra estranha que se movia rapidamente. Parecia... fora do comum."
 
         "Questionar sobre o Padre Iohann":
+
             dante "Vocês notaram algo estranho no comportamento do Padre Iohann?"
 
             icaro "Ele tem estado mais reservado ultimamente. Algo parece incomodá-lo."
@@ -132,6 +139,9 @@ label capitulo5:
 
     menu:
         "Investigar livros antigos (Confiança Alta)":
+
+            $ pesoFinal += 1;
+
             narrador "Dante encontra um livro sobre o relicário e rituais antigos, descobrindo uma referência a uma área secreta na igreja."
 
             dante "Isso pode ser importante. Preciso investigar essa área secreta."
