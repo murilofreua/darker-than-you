@@ -3,6 +3,10 @@ label capitulo4:
 
     scene igreja-fora-dia with fade
 
+    $ renpy.music.set_volume(0.125, channel='music')
+
+    narrador "Novamente o grupo é acordado pelo soar do sino da igreja"
+
     narrador "Os dias que antecedem o festival são intensos e cheios de atividades."
 
     narrador "Dante, Helena e Vitória se voluntariam para ajudar nos preparativos, e o vilarejo fervilha de excitação."
@@ -15,6 +19,7 @@ label capitulo4:
     show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
     
     padre "Bom dia, Dante. Estamos muito agradecidos por sua ajuda com o festival."
+
 
     menu:
         "Estou feliz em ajudar, Padre Iohann. O que precisa ser feito?":
@@ -31,6 +36,8 @@ label capitulo4:
 
     hide padre normal with dissolve
     hide dante normal with dissolve
+
+    $ renpy.music.stop(channel='music')
 
     scene festival-dia
 

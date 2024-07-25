@@ -58,14 +58,15 @@ label capitulo3:
 
     narrador "Dante assentiu, lembrando-se das palavras de Rocha sobre as luzes estranhas. Ele estava curioso para conhecer o Padre Iohann e descobrir mais sobre a igreja que tanto o intrigara."
 
-    $ renpy.music.play("audio/Capitulos/Capitulo 3 - inicio dos sinais de cansaço.mp3", loop=True)
-    $ renpy.music.set_volume(0.2, channel='music')
 
     narrador "Após o café, o trio seguiu em direção à igreja. O caminho era tranquilo, com poucas pessoas nas ruas, e a brisa fresca da manhã tornava a caminhada agradável."
 
     stop sound
 
     scene igreja-dentro
+
+    $ renpy.music.play("audio/Sound effects/Objetos/Celebração_católica_orgão_melodia_completa.mp3", loop=True)
+    $ renpy.music.set_volume(0.05, channel='music')
 
     narrador "Quando chegaram à igreja, Dante ficou impressionado novamente com sua arquitetura."
 
@@ -112,6 +113,8 @@ label capitulo3:
     hide augusto normal with dissolve
     hide dante normal with dissolve
     hide helena normal with dissolve
+
+    # todo aumentar parte
 
     menu:
         "Perguntar sobre as luzes estranhas":
@@ -174,13 +177,17 @@ label capitulo3:
 
     scene igreja-corredor
 
-    # SOM DE VENTO
+
+    ## Musica sinistra
+    $ renpy.music.set_volume(0.02, channel='music')
 
     narrador "Enquanto se dirigiam para sair, um barulho suave, quase imperceptível, chamou a atenção de Dante. Parecia vir de uma sala adjacente. Ele olhou para o padre, que imediatamente desviou o olhar."
 
     menu:
         "Perguntar sobre barulho":
             show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+
+            # som da minha pika
 
             dante "O que foi isso?"
 
@@ -195,32 +202,53 @@ label capitulo3:
 
     narrador "O grupo continuou a explorar a igreja até que Padre Iohann sugeriu uma visita à torre do sino."
 
+    padre "A vista lá de cima é magnífica."
+    padre "Vocês deveriam ver."
+
     show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.5, ypos = 0.75) with dissolve
 
-    padre "A vista lá de cima é magnífica. Vocês deveriam ver."
+    helena "Vamos lá, a vista é realmente linda"
+
+    play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3"
 
     narrador "A escada para a torre era estreita e íngreme."
 
     scene torre-do-sino
-    # Som de vendo com um pouco de barulho de povoado
 
-    narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego. O vilarejo parecia um cenário de conto de fadas, cercado por colinas verdejantes e banhado pela luz suave da manhã."
+    narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
 
+    stop sound
+
+    narrador "O vilarejo parecia um cenário de conto de fadas, cercado por colinas verdejantes e banhado pela luz suave da manhã."
     narrador "Enquanto admiravam a vista, Dante sentiu um arrepio ao lembrar-se das luzes estranhas."
-
     narrador "Algo naquele lugar parecia fora do comum, e ele estava determinado a descobrir o que era."
+
+    dante "A vista realmente é de tirar o fólego."
+    dante "Mas não consigo parar de pensar naquele barulho estranho, vou lá investigar."
+
+    vitoria "Você não pode ir sozinho Dante."
+    vitoria "Vamos descer todos juntos."
+
+    play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3"
+
+    narrador "Assim desce o grupo unido indo em peso ao causador do barulho."
 
     scene igreja-dentro
 
-    narrador "Quando desceram, Padre Iohann se despediu do grupo, dizendo que precisava atender a alguns afazeres."
+    narrador "Quando desceram, Padre Iohann prostravasse em frente a porta."
+
+    stop sound
 
     show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
     show helena normal at Position(xpos = 0.25, ypos = 0.75) with dissolve
     show dante normal at Position(xpos = 0.40, ypos = 0.75) with dissolve
 
-    padre "Tenho que ajudar nos preparativos do festival da cidade. É um evento muito importante para nós."
+    padre "Filhos, preciso fazer meus afazeres."
+    padre "teremos que encerrar essa visita, está ficando tarde e logo teremos a missa das sete."
+    padre "Tenho que ajudar também nos preparativos do festival da cidade."
+    padre "É um evento muito importante para nós."
 
     menu:
         "Perguntar sobre o festival da cidade":
@@ -228,7 +256,8 @@ label capitulo3:
 
                 padre "Na ornamentação e na organização da Missa de Domingo de Ramos. Também coordeno algumas atividades culturais que acontecem durante o festival."
 
-                vitoria "Isso deve ser bastante trabalho. Mas o festival é sempre um sucesso, graças a todos os esforços da comunidade."
+                helena "Isso deve ser bastante trabalho."
+                helena "Mas o festival é sempre um sucesso, graças a todos os esforços da comunidade."
 
                 dante "Estou ansioso para ver tudo isso de perto. Parece ser um evento muito especial."
 
@@ -254,7 +283,7 @@ label capitulo3:
 
     narrador "Algo naquela igreja o incomodava."
 
-    narrador "Enquanto caminhavam de volta para a praça principal, Helena virou-se para Dante e disse:"
+    narrador "Enquanto caminhavam de volta para a praça principal, Helena virou-se para Dante e disse:" #aqui
 
     show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
     show dante normal at Position(xpos = 0.8, ypos = 0.75) with dissolve
@@ -262,24 +291,39 @@ label capitulo3:
     helena "O que achou do Padre Iohann? Ele é uma figura interessante, não é?"
 
     menu:
-        "Sim, muito interessante. Há algo nele que me intriga.":
-            dante "Sim, muito interessante. Há algo nele que me intriga."
-        "Sim, muito interessante. Gostei de conhece-lo":
-            dante "Sim, muito interessante. Gostei de conhece-lo"
+        "Gostou de conhece-lo":
+            dante "Sim, muito interessante."
+            dante "Gostei de conhece-lo"
+        
+        "Achou evasivo":
+            dante "Sim, muito interessante."
+            dante "Há algo nele que me intriga."
 
     show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
-    vitoria "Ele é um homem bom, mas também parece carregar um grande fardo. Acho que há mais nele do que aparenta."
+    vitoria "Ele é um homem bom!"
+    vitoria "Mas também parece carregar um grande fardo"
+    vitoria "Acho que há mais nele do que aparenta."
 
-    scene quarto-dante
+    helena "Está ficando tarde, vamos descansar para amanhã"
 
-    narrador "O dia passou rapidamente, e à noite, enquanto estava deitado em sua cama, Dante refletia sobre tudo o que havia visto e ouvido."
+    narrador "Todos seguem rumo ao seu local de descanso e tiram o sono merecido depois do dia cansativo"
 
-    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3"
+    hide dante normal with dissolve
+    hide helena normal with dissolve
+    hide vitoria normal with dissolve
 
-    narrador "Antes de adormecer, ouviu novamente o som dos sinos da igreja, desta vez mais próximo, quase como um sussurro."
+    scene quarto-helena-noite
 
-    stop sound
+    show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
+
+    narrador "O dia passou rapidamente, e à noite, enquanto estava deitado em sua cama, Dante sonha sobre tudo o que havia visto e ouvido se imaginando em seu quarto."
+
+    $ renpy.music.play("audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3", loop=True)
+    $ renpy.music.set_volume(0.02, channel='music')
+
+
+    narrador "Antes de adormecer, ouviu novamente o som dos sinos da igreja, desta vez mais distante, quase como um sussurro."
 
     narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos, esperando que o dia seguinte trouxesse mais respostas, e talvez, mais perguntas."
 
