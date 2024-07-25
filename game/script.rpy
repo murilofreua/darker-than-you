@@ -16,15 +16,15 @@ define padre = Character("Padre Iohann")
 # Personagens neutros
 
 image augusto normal = im.Scale("neutros/augusto.png", 575, 540)
-image dante normal = im.Scale("neutros/dante.png", 575, 540)
+image dante normal = im.Scale("neutros/dante.png", 645, 590)
 image helena normal = im.Scale("neutros/helena.png", 575, 540)
 image icaro normal = im.Scale("neutros/icaro.png", 575, 540)
-image isabel normal = im.Scale("neutros/isabel.png", 610, 540)
+image isabel normal = im.Scale("neutros/isabel.png", 500, 420)
 image rocha normal = im.Scale("neutros/rocha.png", 680, 540)
-image sofia normal = im.Scale("neutros/sofia.png", 635, 540)
+image sofia normal = im.Scale("neutros/sofia.png", 635, 440)
 image vitoria normal = im.Scale("neutros/vitoria.png", 575, 540)
 image padre normal = im.Scale("neutros/padre.png", 745, 740)
-image pedro normal = im.Scale("neutros/pedro.png",680,540)
+image pedro normal = im.Scale("neutros/pedro.png", 780, 620)
 
 # Personagens felizes
 
