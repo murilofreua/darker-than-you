@@ -1,14 +1,7 @@
-
-define posicao_direita = Position(xalign=0.85, yalign=0.50)
-
-define posicao_esquerda = Position(xalign=0.15, yalign=0.5)
-
-define posicao_centro = Position(xalign=0.50,yalign=0.5)
-
 label capitulo2:
 
     $ renpy.music.play("audio/Capitulos/Capitulo 2 - uma vista calorosa.mp3", loop=True)
-    $ renpy.music.set_volume(0.3, channel='music')
+    $ renpy.music.set_volume(0.2, channel='music')
 
     scene centro
 
@@ -23,18 +16,18 @@ label capitulo2:
 
     show helena-vestido-azul-feliz with dissolve:
         yalign 0.50
-        xalign 0.30
+        xalign 0.40
 
 
     narrador "Helena estava radiante em um vestido azul, e lhe aguardava com um grande sorriso, acompanhada por uma amiga, que fora momentaneamente ofuscada pelo brilho de Helena."
 
     hide vitoria normal with dissolve
 
-    show helena-vestido-azul-feliz at posicao_direita with move
+    show helena-vestido-azul-feliz at Position(xalign=0.85, yalign=0.50) with move
 
     helena "Tão bom te ver!"
 
-    show dante normal at posicao_esquerda 
+    show dante normal at Position(xalign=0.15, yalign=0.5) 
 
     menu: 
         "Abraçar":
@@ -42,7 +35,7 @@ label capitulo2:
     
     hide helena-vestido-azul-feliz with dissolve
 
-    show vitoria normal at posicao_direita with dissolve
+    show vitoria normal at Position(xalign=0.85, yalign=0.50) with dissolve
 
     vitoria "Olá, Dante! Sou a Vitória, muito prazer"
 
@@ -50,7 +43,7 @@ label capitulo2:
         "Cumprimentar cordialmente":
             dante "Prazer Vitória, como é bom te conhecer!"
     
-    show helena-vestido-azul-feliz at posicao_centro
+    show helena-vestido-azul-feliz at Position(xalign=0.50,yalign=0.5)
 
     helena "Vamos começar nosso passeio amigos"
 
@@ -73,11 +66,11 @@ label capitulo2:
     narrador "Apesar de Dante de não ser muito religioso..."
     narrador "O garoto sentiu uma sensação estranha enquanto olhava para a igreja, como se alguma energia misteriosa o atraísse."
 
-    show dante at posicao_esquerda with dissolve
+    show dante at Position(xalign=0.15, yalign=0.5) with dissolve
 
     dante "Que bela igreja!"
 
-    show helena-vestido-azul-feliz at posicao_direita with dissolve
+    show helena-vestido-azul-feliz at Position(xalign=0.85, yalign=0.50) with dissolve
 
     helena "É incrível, né?"
     helena "A Igreja é símbolo deste lugar. Seus fundadores vieram da Europa e trouxeram a tradição católica aqui"
@@ -97,11 +90,11 @@ label capitulo2:
 
     narrador "Lá, foram recebidos por Seu Pedro, o padeiro."
     
-    show pedro normal at posicao_direita with dissolve
+    show pedro normal at Position(xalign=0.85, yalign=0.50) with dissolve
 
     pedro "Olha quem veio! Helena, você trouxe um visitante especial, não é? "
 
-    show helena-vestido-azul-feliz at posicao_centro with dissolve
+    show helena-vestido-azul-feliz at Position(xalign=0.50,yalign=0.5) with dissolve
 
     helena "Ah, Seu Pedro! Este é o meu amigo Dante. Ele está aqui para passar alguns dias conosco."
 
@@ -109,7 +102,7 @@ label capitulo2:
 
     hide helena-vestido-azul-feliz with dissolve
 
-    show dante normal at posicao_esquerda with dissolve
+    show dante normal at Position(xalign=0.15, yalign=0.5) with dissolve
 
     menu: 
         "Apertar a mão de Pedro":
@@ -131,7 +124,7 @@ label capitulo2:
             dante "Eu realmente estou com fome após a viagem, por que as risadas?"
 
             hide pedro normal
-            show helena-vestido-azul-feliz at posicao_direita with move
+            show helena-vestido-azul-feliz at Position(xalign=0.85, yalign=0.50) with move
 
             stop sound
 
@@ -154,12 +147,12 @@ label capitulo2:
 
     stop sound
     
-    show pedro normal at posicao_centro with dissolve
+    show pedro normal at Position(xalign=0.50,yalign=0.5) with dissolve
 
     pedro "Hoje temos pão de queijo fresquinho, broa de milho, e bolos variados — anunciou Seu Pedro, com um sorriso orgulhoso."
     pedro "E claro, o café passado na hora, que não pode faltar."
 
-    show helena-vestido-azul-feliz at posicao_direita 
+    show helena-vestido-azul-feliz at Position(xalign=0.85, yalign=0.50) 
 
     helena "Parece uma ótima escolha! Vou querer um pouco de tudo, para experimentar."
 
@@ -167,12 +160,12 @@ label capitulo2:
     hide helena-vestido-azul-feliz with dissolve
     $ renpy.music.set_volume(0.2, channel='music')
     
-    show vitoria normal at posicao_direita with dissolve 
+    show vitoria normal at Position(xalign=0.85, yalign=0.50) with dissolve 
 
     vitoria "Dante, você vai adorar o festival!"
     vitoria "É a melhor época do ano aqui: tem música, danças tradicionais, comidas típicas e até bingo!"
 
-    show dante normal at posicao_esquerda with dissolve
+    show dante normal at Position(xalign=0.15, yalign=0.5) with dissolve
 
     dante "Sou muito bom no bingo hein! Já estou ansioso!"
     dante "Parece incrível!"
@@ -206,11 +199,11 @@ label capitulo2:
 
     stop sound
 
-    show sofia normal at posicao_direita with dissolve
+    show sofia normal at Position(xalign=0.85, yalign=0.50) with dissolve
 
     sofia "Helena, Vitória! Quem é o rapaz?"
 
-    show helena-vestido-azul-feliz at posicao_esquerda with dissolve
+    show helena-vestido-azul-feliz at Position(xalign=0.15, yalign=0.5) with dissolve
 
     helena "Boa tarde, Sofia"
     helena "Este é Dante, um amigo meu de infância"
@@ -220,7 +213,7 @@ label capitulo2:
     sofia "Espero que goste da nossa cidade"
 
     hide helena-vestido-azul-feliz normal with dissolve
-    show dante normal at posicao_esquerda with dissolve
+    show dante normal at Position(xalign=0.15, yalign=0.5) with dissolve
 
     dante "Muito prazer em conhecê-la! Até agora, todos têm sido muito acolhedores."
 
@@ -232,13 +225,13 @@ label capitulo2:
     hide sofia normal
     with dissolve
 
-    show isabel normal at posicao_centro with dissolve
+    show isabel normal at Position(xalign=0.50,yalign=0.5) with dissolve
 
     isabel "Boa noite, meninas. Quem é este rapaz charmoso?"
 
-    show isabel normal at posicao_direita with move
+    show isabel normal at Position(xalign=0.85, yalign=0.50) with move
 
-    show vitoria normal at posicao_esquerda
+    show vitoria normal at Position(xalign=0.15, yalign=0.5)
 
     vitoria "Este é Dante, um amigo de infância da Helena. Ele está aqui para passar alguns dias conosco."
 
@@ -246,7 +239,7 @@ label capitulo2:
 
     hide vitoria normal with dissolve
 
-    show dante normal at posicao_esquerda with dissolve
+    show dante normal at Position(xalign=0.15, yalign=0.5) with dissolve
 
     menu:
         "Aceitar maçã e comer":
@@ -284,21 +277,21 @@ label capitulo2:
 
     narrador "Enquanto continuavam a conversar, Rocha, o policial, aproximou-se do grupo, acenando com um sorriso."
 
-    show rocha normal at posicao_centro with dissolve
+    show rocha normal at Position(xalign=0.50,yalign=0.5) with dissolve
     
     rocha "Boa noite, pessoal. Parece que temos um novo rosto na cidade"   
 
-    show rocha normal at posicao_direita with move
+    show rocha normal at Position(xalign=0.85, yalign=0.50) with move
 
-    show vitoria normal at posicao_esquerda with move
+    show vitoria normal at Position(xalign=0.15, yalign=0.5) with move
 
     vitoria "Boa noite, Rocha. Este é Dante, amigo de infância da Helena"  
 
     rocha "Prazer em conhecê-lo, Dante"
 
-    show vitoria normal at posicao_centro with move
+    show vitoria normal at Position(xalign=0.50,yalign=0.5) with move
 
-    show dante normal at posicao_esquerda with dissolve
+    show dante normal at Position(xalign=0.15, yalign=0.5) with dissolve
 
     menu:
         "Apertar mão de rocha firmemente":
@@ -327,35 +320,35 @@ label capitulo2:
     hide vitoria normal 
     with dissolve
 
-    show rocha normal at posicao_centro with move
+    show rocha normal at Position(xalign=0.50,yalign=0.5) with move
 
     rocha "Recebemos uma denúncia de que algumas pessoas viram luzes estranhas perto da Igreja nesta madrugada."
     rocha "Não sabemos o que pode ter causado isso, mas é algo que estamos investigando"
 
-    show rocha normal at posicao_direita with move
+    show rocha normal at Position(xalign=0.85, yalign=0.50) with move
     
-    show vitoria normal at posicao_esquerda with dissolve
+    show vitoria normal at Position(xalign=0.15, yalign=0.5) with dissolve
 
     vitoria "Luzes estranhas?" 
     vitoria " Como assim?"
 
     hide vitoria normal
 
-    show rocha normal at posicao_centro with move
+    show rocha normal at Position(xalign=0.50,yalign=0.5) with move
 
     rocha "Testemunhas dizem que pareciam pequenas esferas de luz flutuando ao redor da igreja, desaparecendo antes de poderem se aproximar"
     rocha "Eu sei que pode parecer estranho, mas estamos tratando isso como apenas rumores."
     rocha "Se virem algo, por favor, nos avisem imediatamente."
 
     hide rocha normal
-    show dante normal at posicao_esquerda
+    show dante normal at Position(xalign=0.15, yalign=0.5)
     with dissolve
 
     narrador "Dante sentiu um arrepio percorrer sua espinha. Aquela Igreja já lhe causara uma sensação estranha durante o dia."
 
     hide dante normal with dissolve
-    show helena-vestido-azul-feliz at posicao_esquerda with dissolve
-    show rocha normal at posicao_direita with dissolve
+    show helena-vestido-azul-feliz at Position(xalign=0.15, yalign=0.5) with dissolve
+    show rocha normal at Position(xalign=0.85, yalign=0.50) with dissolve
 
     helena "Vamos ficar atentos, Rocha. Obrigada por nos avisar"
 
@@ -368,17 +361,17 @@ label capitulo2:
 
     narrador "Depois da conversa com o policial, o grupo se despediu e continuou caminhando pela praça, com uma leve tensão no ar."
 
-    show dante normal at posicao_esquerda with dissolve
+    show dante normal at Position(xalign=0.15, yalign=0.5) with dissolve
 
     dante "Isso é muito estranho"
 
-    show vitoria normal at posicao_direita
+    show vitoria normal at Position(xalign=0.85, yalign=0.50)
 
     vitoria "Concordo"
     vitoria "Mas vamos tentar não nos preocupar demais"
     vitoria "Amanhã é um novo dia, e vamos descobrir mais sobre essa história."
 
-    show helena-vestido-azul-feliz at posicao_centro 
+    show helena-vestido-azul-feliz at Position(xalign=0.50,yalign=0.5) 
 
     helena "Sim, vamos descansar agora."
     helena "Amanhã pode ser um dia longo"
@@ -392,15 +385,15 @@ label capitulo2:
 
     scene quarto-helena
 
-    show helena-vestido-azul-feliz at posicao_direita with dissolve
+    show helena-vestido-azul-feliz at Position(xalign=0.85, yalign=0.50) with dissolve
 
     helena "Espero que goste do quarto. É simples, mas confortável"
 
-    show dante normal at posicao_esquerda 
+    show dante normal at Position(xalign=0.15, yalign=0.5) 
 
     dante "Está ótimo, Helena. Obrigado por tudo"
 
-    show vitoria normal at posicao_centro
+    show vitoria normal at Position(xalign=0.50,yalign=0.5)
 
     vitoria "Nós também estamos felizes que você veio. Boa noite, Dante. Até amanhã"
 

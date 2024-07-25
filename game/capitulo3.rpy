@@ -8,7 +8,7 @@ define posicao_centro_cap3 = Position(xalign=0.50,yalign=0.5)
 
 label capitulo3:
 
-    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3"
+    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume 0.2
 
     scene cozinha 
 
@@ -29,7 +29,7 @@ label capitulo3:
     $ renpy.music.set_volume(0.3, channel='music')
 
 
-    play sound "audio/Sound effects/Objetos/Panela_fritando_oléo_quente.mp3"
+    play sound "audio/Sound effects/Objetos/Panela_fritando_oléo_quente.mp3" volume 0.2
 
     narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
 
