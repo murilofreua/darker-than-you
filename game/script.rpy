@@ -99,7 +99,7 @@ init python:
             return self.ato_atual.caminho_atual.natureza
 
         def maca_guardada(self):
-            seff.maca = True
+            self.maca = True
 
         def get_peso_bom(self):
             return self.ato_atual.caminho_atual.pesos_proximo_caminho
