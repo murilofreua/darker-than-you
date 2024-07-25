@@ -457,10 +457,10 @@ label capitulo4:
                 show icaro normal at Position(xpos = 0.75, ypos = 0.75)
                 with move
 
-            dante "Eu tive um sonho... vi Helena aqui, envolta em luzes, tem que um significado."
+                dante "Eu tive um sonho... vi Helena aqui, envolta em luzes, tem que um significado."
 
-            augusto "Entendo, mas isso não justifica estar aqui sozinho, onde está Vitória."
-            augusto "Vamos investigar juntos amanhã, mas por hora, você precisa descansar."
+                augusto "Entendo, mas isso não justifica estar aqui sozinho, onde está Vitória."
+                augusto "Vamos investigar juntos amanhã, mas por hora, você precisa descansar."
 
         "Contar que perdeu o sono":
                 show dante normal at Position(xpos = 0.25, ypos = 0.75)
@@ -468,10 +468,10 @@ label capitulo4:
                 show icaro normal at Position(xpos = 0.75, ypos = 0.75)
                 with move
 
-            dante "Acabou que eu perdi o sono e estou andando pela cidade enquanto o sono volta"
+                dante "Acabou que eu perdi o sono e estou andando pela cidade enquanto o sono volta"
 
-            augusto "Entendo, nós ouvimos coisas estranhas e viemos ver como esta o padre"
-            augusto "Caso queira voltar aqui amanhã, está convidado. Mas por hora, você precisa descansar."
+                augusto "Entendo, nós ouvimos coisas estranhas e viemos ver como esta o padre"
+                augusto "Caso queira voltar aqui amanhã, está convidado. Mas por hora, você precisa descansar."
 
     dante "Sim, amanhã conversaremos melhor. Boa noite."
 
