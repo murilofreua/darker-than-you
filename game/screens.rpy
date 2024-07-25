@@ -384,8 +384,10 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 420
     yfill True
+    xpos 0.5
+    ypos 0.3
 
-    background "gui/overlay/main_menu.png"
+    background "gui/overlay/paulo-muzy.png"
 
 style main_menu_vbox:
     xalign 1.0

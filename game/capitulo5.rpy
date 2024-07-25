@@ -107,18 +107,18 @@ label capitulo5:
         "Perguntar sobre o relicário":
             dante "Seu Pedro, você sabe algo sobre o relicário que Helena estava interessada?"
 
-            seupedro "Ela estava obcecada com uma lenda sobre o relicário. Acreditava que ele tinha um grande poder."
+            pedro "Ela estava obcecada com uma lenda sobre o relicário. Acreditava que ele tinha um grande poder."
             
             narrador "O ambiente se torna carregado de suspense, com Dante recebendo uma nova pista para investigar."
 
         "Perguntar sobre sombras estranhas":
             dante "Você viu algo estranho ultimamente, como sombras ou figuras encapuzadas?"
 
-            seupedro "Sim, vi uma sombra nas proximidades recentemente. Algo parecia fora do comum."
+            pedro "Sim, vi uma sombra nas proximidades recentemente. Algo parecia fora do comum."
 
             narrador "O ambiente parece cada vez mais opressor."
 
-    hide seupedro normal with dissolve
+    hide pedro normal with dissolve
 
     narrador "Dante se despede e se dirige à biblioteca da igreja, refletindo sobre as novas pistas e o crescente senso de urgência."
 
