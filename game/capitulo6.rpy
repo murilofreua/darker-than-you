@@ -1,6 +1,6 @@
 label capitulo6:
 
-    # scene area-secreta
+    scene area-secreta
 
     narrador "A área secreta é um espaço oculto e enigmático, com paredes de pedra e símbolos antigos gravados."
     
@@ -88,7 +88,7 @@ label capitulo6:
 
     narrador "A busca os leva a investigar um local abandonado na cidade, onde eles esperam encontrar mais pistas."
 
-        # scene local-abandonado
+    # scene local-abandonado
 
     narrador "O local é um edifício antigo e deteriorado, com janelas quebradas e paredes cobertas de mofo."
     
@@ -155,7 +155,7 @@ label capitulo6:
 
     hide dante normal with dissolve
     hide vitoria normal with dissolve
-    
+
     narrador "Dante e Vitória se aproximam da passagem secreta, seus corações batendo acelerados com a expectativa."
     
     narrador "A passagem é estreita e escura, com paredes úmidas e o som de gotejamento ecoando ao longe."
