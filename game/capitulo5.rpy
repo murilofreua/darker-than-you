@@ -14,7 +14,7 @@ label capitulo5:
 
     narrador "Dante se dirige ao escritório do Padre Iohann, a luz do dia gradualmente se intensifica conforme ele avança."
 
-    # scene escritorio-padre
+    scene escritorio-padre
 
     narrador "O escritório é um espaço acolhedor, mas com uma atmosfera pesada."
 
@@ -28,6 +28,9 @@ label capitulo5:
 
     menu:
         "Perguntar diretamente sobre Helena (Confiança Alta)":
+
+            $ pesoFinal += 1;
+
             dante "Padre Iohann, você viu Helena esta manhã?"
 
             narrador "O Padre Iohann, visivelmente aliviado, se oferece para ajudar."
@@ -64,6 +67,9 @@ label capitulo5:
 
     menu:
         "Perguntar sobre a noite do desaparecimento":
+
+            $ pesoFinal += 1;
+
             dante "Vocês viram algo na noite em que Helena desapareceu?"
 
             icaro "Eu ouvi murmúrios e vi uma figura encapuzada. Foi muito estranho."
@@ -71,6 +77,7 @@ label capitulo5:
             augusto "Eu vi uma sombra estranha que se movia rapidamente. Parecia... fora do comum."
 
         "Questionar sobre o Padre Iohann":
+
             dante "Vocês notaram algo estranho no comportamento do Padre Iohann?"
 
             icaro "Ele tem estado mais reservado ultimamente. Algo parece incomodá-lo."
@@ -95,7 +102,7 @@ label capitulo5:
     hide augusto normal with dissolve
     hide dante normal with dissolve
 
-    # scene casa-seupedro
+    scene casa-pedro
 
     narrador "A casa é simples e acolhedora, com móveis antigos e uma atmosfera de nostalgia."
 
@@ -122,7 +129,7 @@ label capitulo5:
 
     narrador "Dante se despede e se dirige à biblioteca da igreja, refletindo sobre as novas pistas e o crescente senso de urgência."
 
-    # scene biblioteca-igreja
+    scene biblioteca-noite
 
     narrador "A biblioteca é um local de silêncio absoluto, com estantes repletas de livros antigos."
 
@@ -132,6 +139,9 @@ label capitulo5:
 
     menu:
         "Investigar livros antigos (Confiança Alta)":
+
+            $ pesoFinal += 1;
+
             narrador "Dante encontra um livro sobre o relicário e rituais antigos, descobrindo uma referência a uma área secreta na igreja."
 
             dante "Isso pode ser importante. Preciso investigar essa área secreta."

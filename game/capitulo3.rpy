@@ -1,6 +1,6 @@
 label capitulo3:
 
-    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume 0.1 fadein 1.5
+    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3"
 
     scene cozinha 
 
@@ -8,7 +8,8 @@ label capitulo3:
 
     indefinido "..."
 
-    play sound "audio/Sound effects/pessoas/Homem_acordando_alongamento_escandaloso_descansado_cena_descontração.mp3" volume 0.025
+    play sound "audio/Sound effects/pessoas/Homem_acordando_alongamento_escandaloso_descansado_cena_descontração.mp3"
+    $ renpy.music.set_volume(0.125, channel='music')
 
     show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
 
@@ -16,7 +17,11 @@ label capitulo3:
     
     stop sound
 
-    play sound "audio/Sound effects/Objetos/Panela_fritando_oléo_quente.mp3" volume 0.05
+    play sound "audio/Sound effects/Lugares/Capitulo 3 - inicio dos sinais de cansaço.mp3"
+    $ renpy.music.set_volume(0.3, channel='music')
+
+
+    play sound "audio/Sound effects/Objetos/Panela_fritando_oléo_quente.mp3"
 
     narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
 
@@ -32,6 +37,9 @@ label capitulo3:
 
     menu:
         "Dormi sim, obrigado.":
+
+            $ pesoFinal += 1;
+
             dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
 
         "Tive uma noite de sono péssima":
@@ -44,29 +52,30 @@ label capitulo3:
     helena "Pensei em levar você para conhecer a Igreja da Misericórdia e conversar com o Padre Iohann. Ele é uma pessoa fascinante"
 
     narrador "Dante assentiu, lembrando-se das palavras de Rocha sobre as luzes estranhas. Ele estava curioso para conhecer o Padre Iohann e descobrir mais sobre a igreja que tanto o intrigara."
+
+
     narrador "Após o café, o trio seguiu em direção à igreja. O caminho era tranquilo, com poucas pessoas nas ruas, e a brisa fresca da manhã tornava a caminhada agradável."
 
     stop sound
 
-    scene igreja-dentro with fade
+    scene igreja-dentro
 
     $ renpy.music.play("audio/Sound effects/Objetos/Celebração_católica_orgão_melodia_completa.mp3", loop=True)
     $ renpy.music.set_volume(0.04, channel='music')
 
     narrador "Quando chegaram à igreja, Dante ficou impressionado novamente com sua arquitetura."
-    narrador "Ao entrarem, foram recebidos pelo som suave do órgão e pelo aroma de incenso."
-    narrador "No altar, um homem alto de cabelos negros e olhos cansados estava terminando suas orações."
-    narrador "Ao notar a presença dos visitantes, ele se levantou e se aproximou."
 
-    show padre normal at Position(xpos = 0.5, ypos = 0.75) with dissolve
+    narrador "A fachada barroca estava decorada com detalhes intrincados, e os vitrais coloridos refletiam a luz do sol, criando um espetáculo de cores."
+
+    narrador "Ao entrarem, foram recebidos pelo som suave do órgão e pelo aroma de incenso. No altar, um homem alto de cabelos negros e olhos cansados estava terminando suas orações. Ao notar a presença dos visitantes, ele se levantou e se aproximou."
+
+    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     padre "Bom dia, Helena, Vitória. E você deve ser Dante, o amigo de Helena. Sou o Padre Iohann. Seja bem-vindo à nossa igreja."
 
-    show padre normal at Position(xpos = 0.85, ypos = 0.75) with move
-    show vitoria normal at Position(xpos = 0.1, ypos = 0.75)
-    show helena normal at Position(xpos = 0.25, ypos = 0.75)
-    show dante normal at Position(xpos = 0.40, ypos = 0.75)
-    with dissolve
+    show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show helena normal at Position(xpos = 0.25, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.40, ypos = 0.75) with dissolve
 
     dante "Muito prazer em conhecê-lo, Padre Iohann. É um lugar lindo."
 
@@ -79,13 +88,13 @@ label capitulo3:
 
     narrador "Enquanto conversavam, dois jovens seminaristas se aproximaram, curiosos. Helena os apresentou a Dante."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75)
-    show helena normal at Position(xpos = 0.3, ypos = 0.75)
-    with dissolve
+    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    
+    show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
 
-    show icaro normal at Position(xpos = 0.7, ypos = 0.75)
-    show augusto normal at Position(xpos = 0.9, ypos = 0.75)
-    with dissolve
+    show icaro normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+
+    show augusto normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     helena "Este é Ícaro e aquele é Augusto. Eles estão estudando aqui com o Padre Iohann."
 
@@ -105,6 +114,8 @@ label capitulo3:
     menu:
         "Perguntar sobre as luzes estranhas":
 
+            $ pesoFinal += 1;
+
             show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
             show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
             show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
@@ -115,9 +126,7 @@ label capitulo3:
 
             padre "Sim, soube dessas histórias. Alguns fiéis relataram ter visto essas luzes, mas não temos nenhuma explicação concreta. Estamos investigando, mas até agora, nada de anormal foi encontrado."
 
-            narrador "Dante notou um leve tremor na mão do padre enquanto ele falava, como se estivesse sendo pressionado a falar de um assunto desagradável"
-            # . Helena, tentando aliviar o clima, sugeriu que explorassem a igreja e seu entorno."
-            
+            narrador "Dante notou um leve tremor na mão do padre enquanto ele falava. Helena, tentando aliviar o clima, sugeriu que explorassem a igreja e seu entorno."
 
             hide padre normal with dissolve
             hide dante normal with dissolve
@@ -140,19 +149,14 @@ label capitulo3:
     padre "É uma verdadeira relíquia!"
     padre "Alguns dizem que ele guarda segredos sobre o passado do vilarejo."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.95)
-    show helena normal at Position(xpos = 0.3, ypos = 0.95)
-    show padre normal at Position(xpos = 0.9, ypos = 0.95)
-    with move
-
     menu:
         "Folhear livro":
-            hide helena normal
-            hide padre normal
-            with dissolve
 
-            show dante normal at Position(xpos = 0.5, ypos = 0.75) with move
+            $ pesoFinal += 1;
+
             play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3"
+            hide helena normal with dissolve
+            hide padre normal with dissolve
 
             narrador "Dante, curioso, Abriu o livro."
 
@@ -173,7 +177,9 @@ label capitulo3:
 
     scene igreja-corredor
 
-    play sound "audio/Sound effects/Objetos/Objeto_caindo_som_forte.mp3" volume .3 loop fadeout 1
+
+    ## Musica sinistra
+    $ renpy.music.set_volume(0.02, channel='music')
 
     narrador "Enquanto se dirigiam para sair, um barulho de algo caindo ao chão chamou a atenção de Dante."
 
@@ -186,6 +192,9 @@ label capitulo3:
 
     menu:
         "Perguntar sobre barulho":
+
+            $ pesoFinal += 1;
+
             show dante normal at Position(xpos = 0.165, ypos = 0.75) with dissolve
 
             dante "O que foi isso?"
@@ -223,6 +232,9 @@ label capitulo3:
     $ renpy.music.set_volume(0.005, channel='music')
 
     scene torre-do-sino
+
+    narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
+
     stop sound
 
     narrador "A escada para a torre era estreita e íngreme."
@@ -243,8 +255,6 @@ label capitulo3:
 
     scene igreja-dentro
 
-    stop sound
-    $ renpy.music.set_volume(0.075, channel='music')
     narrador "Quando desceram, Padre Iohann prostravasse em frente a porta."
 
 
@@ -260,6 +270,9 @@ label capitulo3:
 
     menu:
         "Perguntar sobre o festival da cidade":
+                        
+                $ pesoFinal += 1;
+
                 dante "O festival parece ser incrível. O que exatamente você faz para ajudar, Padre Iohann?"
 
                 padre "Na ornamentação e na organização da Missa de Domingo de Ramos. Também coordeno algumas atividades culturais que acontecem durante o festival."
@@ -282,9 +295,6 @@ label capitulo3:
     hide dante normal with dissolve
     hide helena normal with dissolve
     hide vitoria normal with dissolve
-
-    $ renpy.music.play("audio/Capitulos/Capitulo 3 - inicio dos sinais de cansaço.mp3", loop=True)
-    $ renpy.music.set_volume(0.2, channel='music')
 
     scene centro
 
@@ -311,6 +321,9 @@ label capitulo3:
             dante "Gostei de conhece-lo"
         
         "Achou evasivo":
+
+            $ pesoFinal += 1;
+
             dante "Sim, muito interessante."
             dante "Há algo nele que me intriga."
 
