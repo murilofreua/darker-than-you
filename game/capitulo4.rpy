@@ -201,16 +201,17 @@ label capitulo4:
         "Dormir":
             pass
 
+    $ renpy.music.play("audio/Sound effects/Lugares/Natureza_clima_tensao.mp3", loop=True)
+    $ renpy.music.set_volume(0.025, channel='music')
     scene quarto-helena
-    show dante normal at Position(xpos = .85, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.85, ypos=.75) with dissolve
 
     narrador "No amanhecer do segundo dia do festival, Vitória acorda Dante aos prantos"
-    narrador "Helena desapareceu misteriosamente. A última vez que alguém a viu foi caminhando após a festa proximo da igreja."
 
-    show vitoria normal at Position(xpos = 0, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with move
+    show vitoria normal at Position(xpos=0, ypos=.75) with dissolve
+    show vitoria normal at Position(xpos=.3, ypos=.75) with move
 
-    show dante normal at Position(xpos = 0.85, ypos = 0.75):
+    show dante normal at Position(xpos=.85, ypos=.75):
         xzoom -1
     with dissolve
 
@@ -218,105 +219,156 @@ label capitulo4:
 
     menu:
         "levantar rapidamente":
+            show vitoria normal at Position(xpos=0, ypos=.75):
+                xzoom -1
+            with move
+            hide vitoria normal with dissolve
             show dante normal at Position(xpos=0, ypos=.75) with move
+            hide dante normal with dissolve
 
             narrador "Dante grita o nome de Helena pela casa"
+            scene cozinha
             menu:
                 "Chamar pela Helena":
+                    show dante normal at Position(xpos=.5, ypos=.75) with dissolve
+                    
                     dante "Helena?"
 
                     narrador "sem respostas pela casa"
+                    show dante normal at Position(xpos=.5, ypos=.95) with move
                     menu:
                         "Chamar fervorosamente pela Helena":
+                            show dante normal at Position(xpos=.5, ypos=.75) with move
                             dante "Helenaaa!!!"
                             narrador "... ainda sem resposta"
 
-    narrador "Ele bate na porta do quarto dela."
-    
-    vitoria "Ela deve estar na igreja."
+    show dante normal at Position(xpos=.85, ypos=.75):
+        xzoom -1
+    with move
+    show vitoria normal at Position(xpos=.3, ypos=.75) with dissolve
 
-    menu:
-        "Espero que sim":
-            dante "Espero que sim"
+    vitoria "Ela pode ter ido a igreja."
 
-    hide vitoria normal with dissolve
+    dante "Espero que sim"
+
+    show dante normal at Position(xpos=1., ypos=.75):
+        xzoom 1
+    with move
     hide dante normal with dissolve
+    show vitoria normal at Position(xpos=1., ypos=.75) with move
+    hide vitoria normal with dissolve
 
     scene centro
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=0, ypos=.75) with dissolve
+    show dante normal at Position(xpos=.35, ypos=.75) with move
+    show vitoria normal at Position(xpos=0, ypos=.75) with dissolve
+    show vitoria normal at Position(xpos=.15, ypos=.75) with move
+
 
     narrador "Ele e Vitória começam a procurá-la por toda a cidade, perguntando aos moradores se a viram."
 
     narrador "Eles vão até a igreja, onde encontram Padre Iohann."
 
-    hide vitoria normal with dissolve
     hide dante normal with dissolve
+    hide vitoria normal with dissolve
 
     scene igreja-fora-dia
     
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.35, ypos=.75)
+    show vitoria normal at Position(xpos=.15, ypos=.75)
+    
+    show padre normal at Position(xpos=.85, ypos=.75) with dissolve
+
+    show dante normal at Position(xpos=.35, ypos=.95)
+    show vitoria normal at Position(xpos=.15, ypos=.95)
+    show padre normal at Position(xpos=.85, ypos=.95)
+    with move
 
     menu:
-        "Perguntar para o Padre sobre a Helena":
+        "Perguntar para o Padre":
+            show dante normal at Position(xpos=.35, ypos=.75)
+            show vitoria normal at Position(xpos=.15, ypos=.75)
+            show padre normal at Position(xpos=.85, ypos=.75)
+            with move
             dante "Padre Iohann, você viu Helena esta manhã?"
+    
 
-    narrador "O padre parece pensativo."
+    narrador "O padre pensa por um momento."
 
-    padre "Sim, a vi mais cedo. Ela disse que ia ajudar na montagem da procissão."
+    padre "Sim, a vi mais cedo."
+    padre "Ela disse que ia ajudar na montagem da procissão."
 
-    hide padre normal with dissolve
+    scene igreja-corredor
+    show vitoria normal at Position(xpos=.5, ypos=.75) with dissolve
+    show vitoria normal at Position(xpos=.15, tpos=.75) with move
+    show dante normal at Position(xpos=.5, ypos=.75) with dissolve
+    show dante normal at Position(xpos=.35, tpos=.75) with move
 
     narrador "Dante e Vitória procuram pela igreja, mas não encontram sinal de Helena."
-
     narrador "Conforme o dia avança, a preocupação aumenta."
 
     hide vitoria normal with dissolve
     hide dante normal with dissolve
 
+    scene praca-principal
+
     narrador "Eles voltam para a praça, onde encontram Rocha."
 
     scene praca-principal
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-    show rocha normal at Position(xpos = 0.8, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.35, ypos=.75)
+    show vitoria normal at Position(xpos=.15, ypos=.75)
+    with dissolve
+    show rocha normal at Position(xpos=.85, ypos=.75) with dissolve
 
     vitoria "Rocha, precisamos da sua ajuda. Helena desapareceu."
 
     narrador "Rocha fica sério imediatamente."
 
-    rocha "Vamos organizar uma busca. Ela estava perto da igreja, certo? Vamos começar por lá."
+    rocha "Vamos organizar uma busca."
+    rocha "Vamos começar uma busca."
 
     hide rocha normal with dissolve
     hide vitoria normal with dissolve
     hide dante normal with dissolve
 
-    scene centro
+    scene igreja-fora-dia
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.35, ypos=.75) with dissolve
+    show vitoria normal at Position(xpos=.15, ypos=.75) with dissolve
 
-    narrador "Enquanto a busca se intensifica, Dante e Vitória se sentem cada vez mais desesperados."
-
-    narrador "Eles vasculham cada canto da cidade, perguntando a todos que encontram."
+    narrador "A busca se intensifica, Dante e Vitória se sentem cada vez mais desesperados."
+    narrador "Eles vasculharam cada canto da cidade, perguntando a todos que encontram."
 
     vitoria "Helena estava tão animada com o festival."
-
     vitoria "Ela não desapareceria assim."
 
+    show padre normal at Position(xpos=.85, ypos=.75) with dissolve
+
+    show vitoria normal at Position(xpos=.15, ypos=.95)
+    show dante normal at Position(xpos=.35, ypos=.95)
+    show padre normal at Position(xpos=.85, ypos=.95)
+    with move
+
     menu:
-        "Eu sei. Algo está errado.":
-            dante "Eu sei. Algo está errado."
-        "A Helena nunca desapareceu assim antes...":
-            dante "A Helena nunca desapareceu assim antes..."
+        "Indagar sentido": #caminho caso não seja investigatívo
+            show vitoria normal at Position(xpos=.15, ypos=.75)
+            show dante normal at Position(xpos=.35, ypos=.75)
+            show padre normal at Position(xpos=.85, ypos=.75)
+            with move
+            
+            dante "Eu sei. Isso não faz sentido."
 
-    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+        "Desconfiar": #Caminho desbloqueado caso pergunte muito
+            show vitoria normal at Position(xpos=.15, ypos=.75)
+            show dante normal at Position(xpos=.35, ypos=.75)
+            show padre normal at Position(xpos=.85, ypos=.75)
+            with move
 
-    narrador "Padre Iohann tenta manter a calma, mas Dante percebe que ele também está preocupado."
+            dante "A Helena nunca desapareceu assim..."
+            
+            narrador "Padre Iohann tenta manter a calma, mas Dante percebe que ele também está preocupado."
 
     padre "Precisamos manter a fé e continuar procurando"
 
@@ -324,69 +376,102 @@ label capitulo4:
     hide vitoria normal with dissolve
     hide dante normal with dissolve
 
+    scene igreja-fora-noite
+
     narrador "A noite cai e Helena ainda não foi encontrada."
-
     narrador "A atmosfera do festival muda, tornando-se mais tensa e preocupada."
+    narrador "Dante, Vitória e os outros se reúnem, discutindo os próximos passos."
 
-    scene praca-principal
+    scene festival-noite
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-
-    narrador "Dante, Vitória e os outros se reúnem na praça, discutindo os próximos passos."
+    show pedro normal at Position(xpos=.1, ypos=.1):
+        xzoom -1
+    show dante normal at Position(xpos=.45, ypos=.75)
+    show vitoria normal at Position(xpos=.15, ypos=.75)
+    show sofia normal at Position(xpos=.3, ypos=.75)
+    with dissolve
 
     dante "Ela não pode ter ido longe. Alguém deve ter visto algo."
 
-    show rocha normal at Position(xpos = 0.8, ypos = 0.75) with dissolve
+    show rocha normal at Position(xpos=.85, ypos=.75) with dissolve
 
     rocha "Vamos continuar a busca pela manhã. Precisamos de mais luz."
 
-    hide rocha normal with dissolve
-    hide vitoria normal with dissolve
-    hide dante normal with dissolve
+    hide rocha normal
+    hide vitoria normal
+    hide dante normal
+    hide pedro
+    hide sofia
+    with dissolve
 
-    # scene quarto-dante-noite
+    scene quarto-helena-noite
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.85, ypos=.75) with dissolve
 
     narrador "Naquela noite, Dante tem um sonho estranho."
 
+    $ renpy.music.set_volume(0.075, channel='music')
+    scene igreja-fora-noite with fade
+
+    show helena normal at Position(xpos=.5, ypos=.75) with dissolve
+
     narrador "Ele vê Helena perto da igreja, cercada pelas mesmas luzes misteriosas que ele viu antes."
 
-    narrador "Acorda suando frio, decidido a descobrir a verdade."
+    scene quarto-helena-noite with fade
+
+    narrador "Dante acorda suando frio, decidido a descobrir a verdade."
+
+    show dante normal at Position(xpos=.85, ypos=.75) with dissolve:
+        xzoom -1
 
     menu:
         "Ir para Igreja":
             dante "Eu preciso ir até a igreja."
+            show dante normal at Position(xpos=0, ypos=.75) with move
 
     narrador "Diz Dante para si mesmo, saindo silenciosamente de casa."
 
-    hide dante normal with dissolve
+    scene igreja-dentro-noite
 
-    # scene igreja-dentro-noite
+    narrador "Na igreja, ele encontra Ícaro e Augusto, os jovens seminaristas"
 
-    narrador "Na igreja, ele encontra Ícaro e Augusto, os jovens seminaristas, que também estão preocupados com o desaparecimento de Helena."
-
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show icaro normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
-    show augusto normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.25, ypos = 0.75) with dissolve
+    show icaro normal at Position(xpos = 0.85, ypos = 0.75) with dissolve
 
     icaro "Dante, o que está fazendo aqui tão tarde?"
 
+    show icaro normal at Position(xpos = 0.75, ypos = 0.75) with move
+    show augusto normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+
+    augusto "Estamos todos tensos após o desaparecimento de Helena, devemos ter cuidado e não sair sozinhos a noite."
+
+    show dante normal at Position(xpos = 0.25, ypos = 0.95)
+    show augusto normal at Position(xpos = 0.9, ypos = 0.95)
+    show icaro normal at Position(xpos = 0.75, ypos = 0.95)
+    with move
+
     menu:
-        "Contar sobre o sonho com a Helena":
-            dante "Eu tive um sonho... vi Helena aqui."
+        "Contar sobre o sonho":
+                show dante normal at Position(xpos = 0.25, ypos = 0.75)
+                show augusto normal at Position(xpos = 0.9, ypos = 0.75)
+                show icaro normal at Position(xpos = 0.75, ypos = 0.75)
+                with move
 
-            augusto "Nós também ouvimos coisas estranhas."
+            dante "Eu tive um sonho... vi Helena aqui, envolta em luzes, tem que um significado."
 
-            augusto "Vamos investigar juntos, mas por hora, você precisa descansar."
+            augusto "Entendo, mas isso não justifica estar aqui sozinho, onde está Vitória."
+            augusto "Vamos investigar juntos amanhã, mas por hora, você precisa descansar."
 
-        "Contar que perdeu o sono e está andando pela cidade":
+        "Contar que perdeu o sono":
+                show dante normal at Position(xpos = 0.25, ypos = 0.75)
+                show augusto normal at Position(xpos = 0.9, ypos = 0.75)
+                show icaro normal at Position(xpos = 0.75, ypos = 0.75)
+                with move
+
             dante "Acabou que eu perdi o sono e estou andando pela cidade enquanto o sono volta"
 
-            augusto "Entendo, nós ouvimos coisas estranhas e viemos investigar"
-
-            augusto "Caso queira investigar junto amanhã, está convidado. Mas por hora, você precisa descansar."
+            augusto "Entendo, nós ouvimos coisas estranhas e viemos ver como esta o padre"
+            augusto "Caso queira voltar aqui amanhã, está convidado. Mas por hora, você precisa descansar."
 
     dante "Sim, amanhã conversaremos melhor. Boa noite."
 
@@ -394,7 +479,8 @@ label capitulo4:
     hide icaro normal with dissolve
     hide augusto normal with dissolve
 
+    scene quarto-helena-noite
+
     narrador "Dante se despede dos seminaristas e, em casa, tem uma péssima noite de sono, ainda preocupado com Helena."
 
-    $ renpy.music.stop(channel='music')
     return
