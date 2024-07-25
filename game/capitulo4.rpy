@@ -40,8 +40,6 @@ label capitulo4:
     hide padre normal with dissolve
     hide dante normal with dissolve
 
-    $ renpy.music.stop(channel='music')
-
     scene festival-dia
 
     narrador "Dante, Helena e Vitória se envolvem nas tarefas, conhecendo mais moradores do vilarejo durante o processo."

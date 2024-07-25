@@ -355,7 +355,7 @@ label capitulo2:
 
     hide dante normal with dissolve
     show helena-vestido-azul-feliz at posicao_esquerda with dissolve
-    show rocha at posicao_direita with dissolve
+    show rocha normal at posicao_direita with dissolve
 
     helena "Vamos ficar atentos, Rocha. Obrigada por nos avisar"
 
