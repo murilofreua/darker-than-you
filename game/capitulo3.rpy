@@ -1,11 +1,3 @@
-define posicao_direita_invertido_cap3 = Position(xpos = 0.70, ypos = 0.25)
-
-define posicao_direita_cap3 = Position(xalign=0.85, yalign=0.50)
-
-define posicao_esquerda_cap3 = Position(xalign=0.15, yalign=0.5)
-
-define posicao_centro_cap3 = Position(xalign=0.50,yalign=0.5)
-
 label capitulo3:
 
     play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume 0.1 fadein 1.5
@@ -59,7 +51,7 @@ label capitulo3:
     scene igreja-dentro with fade
 
     $ renpy.music.play("audio/Sound effects/Objetos/Celebração_católica_orgão_melodia_completa.mp3", loop=True)
-    $ renpy.music.set_volume(0.05, channel='music')
+    $ renpy.music.set_volume(0.04, channel='music')
 
     narrador "Quando chegaram à igreja, Dante ficou impressionado novamente com sua arquitetura."
     narrador "Ao entrarem, foram recebidos pelo som suave do órgão e pelo aroma de incenso."
@@ -181,19 +173,24 @@ label capitulo3:
 
     scene igreja-corredor
 
-    ## Musica sinistra
+    play sound "audio/Sound effects/Objetos/Objeto_caindo_som_forte.mp3" volume .3 loop fadeout 1
 
-    narrador "Enquanto se dirigiam para sair, um barulho suave, quase imperceptível, chamou a atenção de Dante. Parecia vir de uma sala adjacente. Ele olhou para o padre, que imediatamente desviou o olhar."
+    narrador "Enquanto se dirigiam para sair, um barulho de algo caindo ao chão chamou a atenção de Dante."
+
+
+    narrador "Parecia vir de uma sala adjacente."
+
+    stop sound
+
+    narrador "Ele olhou para o padre, que imediatamente desviou o olhar."
 
     menu:
         "Perguntar sobre barulho":
-            show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-
-            # som da minha pika
+            show dante normal at Position(xpos = 0.165, ypos = 0.75) with dissolve
 
             dante "O que foi isso?"
 
-            show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+            show padre normal at Position(xpos = 0.85, ypos = 0.75) with dissolve
 
             padre "Oh, nada de mais. Apenas o vento batendo nas janelas. Esta igreja é antiga, sabe?"
   
@@ -201,29 +198,35 @@ label capitulo3:
 
         "Ignorar barulho":
             pass
-
+    
     narrador "O grupo continuou a explorar a igreja até que Padre Iohann sugeriu uma visita à torre do sino."
+
+    show padre normal at Position(xpos = 0.85, ypos = 0.75) with dissolve
 
     padre "A vista lá de cima é magnífica."
     padre "Vocês deveriam ver."
 
-    show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.5, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.165, ypos = 0.75) with dissolve
+    show vitoria normal at Position(xpos = 0.35, ypos = 0.75) with dissolve
+    show helena normal at Position(xpos = 0.55, ypos = 0.75) with dissolve
 
     helena "Vamos lá, a vista é realmente linda"
 
-    play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3"
+    play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3" volume .5 loop
+    show helena normal at Position(xpos = 0.65, ypos = 0.75) with move
+    hide helena normal with dissolve
+    show vitoria normal at Position(xpos = 0.65, ypos = 0.75) with move
+    hide vitoria normal with dissolve
+    show dante normal at Position(xpos = 0.65, ypos = 0.75) with move
+    hide dante normal with dissolve
 
-    narrador "A escada para a torre era estreita e íngreme."
+    $ renpy.music.set_volume(0.005, channel='music')
 
     scene torre-do-sino
-
-    $ renpy.music.set_volume(0.02, channel='music')
-
-    narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
-
     stop sound
 
+    narrador "A escada para a torre era estreita e íngreme."
+    narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
     narrador "O vilarejo parecia um cenário de conto de fadas, cercado por colinas verdejantes e banhado pela luz suave da manhã."
     narrador "Enquanto admiravam a vista, Dante sentiu um arrepio ao lembrar-se das luzes estranhas."
     narrador "Algo naquele lugar parecia fora do comum, e ele estava determinado a descobrir o que era."
@@ -234,16 +237,16 @@ label capitulo3:
     vitoria "Você não pode ir sozinho Dante."
     vitoria "Vamos descer todos juntos."
 
-    play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3"
+    play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3" volume 0.5
 
     narrador "Assim desce o grupo unido indo em peso ao causador do barulho."
 
     scene igreja-dentro
 
+    stop sound
     $ renpy.music.set_volume(0.075, channel='music')
     narrador "Quando desceram, Padre Iohann prostravasse em frente a porta."
 
-    stop sound
 
     show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
     show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
@@ -298,6 +301,10 @@ label capitulo3:
 
     helena "O que achou do Padre Iohann? Ele é uma figura interessante, não é?"
 
+    show dante normal at Position(xpos = 0.8375, ypos = 0.75):
+        xzoom -1
+    with dissolve
+
     menu:
         "Gostou de conhece-lo":
             dante "Sim, muito interessante."
@@ -323,7 +330,8 @@ label capitulo3:
 
     scene quarto-helena-noite
 
-    show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos=.85, ypos=.75) with move
 
     narrador "O dia passou rapidamente, e à noite, enquanto estava deitado em sua cama, Dante sonha sobre tudo o que havia visto e ouvido se imaginando em seu quarto."
 

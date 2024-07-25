@@ -1,40 +1,60 @@
-
 label capitulo4:
 
-    scene igreja-fora-dia with fade
+    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume 0.06
 
-    $ renpy.music.set_volume(0.125, channel='music')
+    scene cozinha with fade
+
+    $ renpy.music.play("audio/Capitulos/Capitulo 4 - estranhezas não espantam a alegria.mp3", loop=True)
+    $ renpy.music.set_volume(0.0175, channel='music')
 
     narrador "Novamente o grupo é acordado pelo soar do sino da igreja"
-
     narrador "Os dias que antecedem o festival são intensos e cheios de atividades."
 
-    $ renpy.music.play("audio/Capitulos/Capitulo 3 - inicio dos sinais de cansaço.mp3", loop=True)
-    $ renpy.music.set_volume(0.2, channel='music')
+    show dante normal at Position(xpos=.165, ypos=.75) with dissolve
+    show vitoria normal at Position(xpos=.35, ypos=.75) with dissolve
+    show helena normal at Position(xpos=.55, ypos=.75) with dissolve
 
-    narrador "Dante, Helena e Vitória se voluntariam para ajudar nos preparativos, e o vilarejo fervilha de excitação."
+    stop sound fadeout 2.0
+
+    play sound "audio/Sound effects/pessoas/Pessoa_bebendo_café_xicará_garganta.mp3" fadein 1.0 loop
+
+    narrador "Dante, Helena e Vitória se voluntariaram para ajudar nos preparativos, e o vilarejo fervilha de excitação."
+
+    narrador "Após terminar suas xicaras, saem apressados em direção a praça"
+
+    stop sound
+
+    show helena normal at Position(xpos=.9, ypos=.75) with move
+    hide helena normal with dissolve
+    show vitoria normal at Position(xpos=.9, ypos=.75) with move
+    hide vitoria normal with dissolve
+    show dante normal at Position(xpos=.9, ypos=.75) with move
+    hide dante normal with dissolve
 
     narrador "A praça principal se transforma em um colorido cenário festivo, com bandeirolas, barracas de comida e atividades sendo organizadas."
 
-    narrador "Na manhã do primeiro dia de preparativos, Dante se encontra com Padre Iohann na igreja."
+    scene praca-principal with fade
 
-    show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
-    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    narrador "Na manhã do primeiro dia de preparativos, Dante se encontra com Padre Iohann na Praça principal."
+
+    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show padre normal at Position(xpos=.9, ypos=.75) with dissolve
     
     padre "Bom dia, Dante. Estamos muito agradecidos por sua ajuda com o festival."
 
 
     menu:
-        "Estou feliz em ajudar, Padre Iohann. O que precisa ser feito?":
-            dante "Estou feliz em ajudar, Padre Iohann. O que precisa ser feito?"
+        "Feliz em ajudar":
+            dante "Estou feliz em ajudar, Padre Iohann."
+            dante "O que precisa ser feito?"
 
-        "É um prazer estar aqui ajudando com a preparação da festa":
-            dante "É um prazer estar aqui ajudando com a preparação da festa"
+        "Feliz por ter a festa":
+            dante "É um prazer estar aqui"
+            dante "Mesmo que ajudando com a preparação da festa"
+            dante "Tomara que isso deixe todas as comidas mais saborosas"
 
     padre "Temos muitas coisas para organizar."
-
     padre "As barracas de comida, as decorações da praça, e precisamos preparar a procissão."
-
     padre "Qualquer coisa que você possa fazer será de grande valor."
 
     hide padre normal with dissolve
@@ -45,11 +65,13 @@ label capitulo4:
     scene festival-dia
 
     narrador "Dante, Helena e Vitória se envolvem nas tarefas, conhecendo mais moradores do vilarejo durante o processo."
-
     narrador "Isabel, Sofia e Seu Pedro estão todos presentes, contribuindo de diferentes maneiras para os preparativos."
+    narrador "Dante encontra Isabel ajudando nas barracas de comida."
 
-    show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
-    show isabel normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.5, ypos=.75) with dissolve
+    show dante normal at Position(xpos=.15, ypos=.75) with move
+    show isabel normal at Position(xpos=.5, ypos=.75) with dissolve
+    show isabel normal at Position(xpos=.9, ypos=.75) with move
 
     dante "Este festival é realmente importante para todos aqui, não é?"
 
@@ -57,19 +79,23 @@ label capitulo4:
 
     hide isabel normal with dissolve
 
-    show sofia normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    narrador "Logo em seguida sofia aparece"
+
+    show sofia normal at Position(xpos=.9, ypos=.75) with dissolve
 
     sofia "Dante, você sabia que o festival começou como uma celebração para agradecer a boa colheita?"
     sofia "Ao longo dos anos, ele evoluiu, mas nunca perdeu seu significado."
 
-    menu:
-        "Não sabia disso. É fascinante como a história do vilarejo está entrelaçada com o festival.":
+    menu: #não é necessário peso aqui
+        "Não sabia disso.":
 
-            dante "Não sabia disso. É fascinante como a história do vilarejo está entrelaçada com o festival."
+            dante "Não sabia disso."
+            dante "É fascinante como a história do vilarejo está entrelaçada com o festival."
 
-        "Eu já sabia disso. Mas muito obrigado por me relembrar":
+        "lido no livro de registros.":
             
-            dante "Eu já sabia disso. Mas muito obrigado por me relembrar"
+            dante "Eu fiquei sabendo disso no livro de registros da igreja."
+            dante "Mas muito obrigado por me relembrar!"
 
     hide sofia normal with dissolve
     hide dante normal with dissolve
@@ -77,23 +103,22 @@ label capitulo4:
     scene festival-noite
 
     narrador "Finalmente, a noite do festival chega."
-
     narrador "A praça está iluminada com lanternas coloridas, e a música tradicional enche o ar."
-
     narrador "As barracas de comida oferecem delícias típicas da região, e as pessoas dançam e celebram com alegria."
-
     narrador "Dante, Helena e Vitória circulam pelo festival, absorvendo a atmosfera vibrante."
-
     narrador "Eles experimentam comidas típicas, participam de jogos e danças, e se envolvem na celebração."
-
     narrador "Dante se sente cada vez mais conectado com a cidade e seus habitantes."
-
     narrador "Enquanto caminham pela praça, encontram-se com o Padre Iohann."
 
-    show dante normal at Position(xpos = 0.35, ypos = 0.75)
-    show helena normal at Position(xpos = 0.1, ypos = 0.75)
-    show padre normal at Position(xpos = 0.85, ypos = 0.75)
+    show helena normal at Position(xpos=.35, ypos=.75)
+    show dante normal at Position(xpos=.5, ypos=.75)
     with dissolve
+    show helena normal at Position(xpos=.15, ypos=.75)
+    show dante normal at Position(xpos=.35, ypos=.75)
+    with move
+    show padre normal at Position(xpos=.5, ypos=.75) with dissolve
+    show padre normal at Position(xpos=.85, ypos=.75) with move
+    
 
     padre "Boa noite, filhos. Espero que estejam aproveitando o festival."
 
@@ -106,22 +131,25 @@ label capitulo4:
     menu:
         "Confirmar presença":
             dante "Estaremos lá, Padre."
-        "Informar que não será possível comparecer":
+
+            padre "Que otimo meu cordeirinho"
+        "não será possível comparecer":
             dante "Lamento informar, mas não será possível que eu compareça, Padre"
 
+            padre "Fico triste em ouvir isso meu pequeno"
+
     hide padre normal with dissolve
-    hide helena normal with dissolve
-    hide dante normal with dissolve
+    hide helena normal
+    hide dante normal
+    with dissolve
 
     scene igreja-fora-noite
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
 
-    narrador "Durante a primeira noite do festival, Dante vê novamente as luzes estranhas perto da igreja."
-
+    narrador "Durante a primeira noite do festival, Dante vê novamente as luzes estranhas perto da igreja, similares a velas vermelhas."
     narrador "Ele tenta investigar, mas elas desaparecem antes que ele possa se aproximar."
-
-    narrador "A sensação de que algo está fora do comum continua a perturbá-lo, mas ele decide manter suas preocupações para si por enquanto."
+    narrador "A sensação de que algo está fora do comum continua a perturbá-lo, mas ele decide manter suas preocupações para si por enquanto e retorna ao festival."
 
     hide dante normal with dissolve
 
@@ -129,10 +157,11 @@ label capitulo4:
 
     narrador "Enquanto os três amigos conversam sobre a festa, Rocha, o policial, aproxima-se."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-    show helena normal at Position(xpos = 0.5, ypos = 0.75) with dissolve
-    show rocha normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.1, ypos = 0.75)
+    show vitoria normal at Position(xpos = 0.3, ypos = 0.75)
+    show helena normal at Position(xpos = 0.5, ypos = 0.75)
+    with dissolve
+    show rocha normal at Position(xpos = 0.85, ypos = 0.75) with dissolve
 
     rocha "Boa noite, pessoal. Aproveitando o festival?"
 
@@ -145,39 +174,65 @@ label capitulo4:
     dante "Claro, Rocha. Manteremos os olhos abertos."
 
     hide rocha normal with dissolve
+    hide helena normal
+    hide vitoria normal
+    hide dante normal
+    with dissolve
+
+    narrador "Após brincareme comerem de tudo, os três amigos decidem ir para casa descansar"
+
+    scene quarto-helena-noite
+    
+    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos=.85, ypos=.75) with move
+    show helena normal at Position(xpos=.15, ypos=.75) with dissolve
+    show helena normal at Position(xpos=.35, ypos=.75) with move
+
+    helena "Boa noite Dante, até amanhã, estarei no quarto ao lado."
+
+    dante "Boa noite helena, foi otimo passar o dia com voces"
+
+    show helena normal at Position(xpos=0, ypos=.75):
+        xzoom -1
+    with move
     hide helena normal with dissolve
-    hide vitoria normal with dissolve
-    hide dante normal with dissolve
-
-    scene quarto-dante
     
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-
-    narrador "No segundo dia do festival, Helena desaparece misteriosamente. A última vez que alguém a viu foi perto da igreja."
-    
-    narrador "A manhã começa com Dante acordando e percebendo que Helena não está em casa."
-
-    hide dante normal with dissolve
+    menu:
+        "Dormir":
+            pass
 
     scene quarto-helena
+    show dante normal at Position(xpos = .85, ypos = 0.75) with dissolve
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
+    narrador "No amanhecer do segundo dia do festival, Vitória acorda Dante aos prantos"
+    narrador "Helena desapareceu misteriosamente. A última vez que alguém a viu foi caminhando após a festa proximo da igreja."
+
+    show vitoria normal at Position(xpos = 0, ypos = 0.75) with dissolve
+    show vitoria normal at Position(xpos = 0.3, ypos = 0.75) with move
+
+    show dante normal at Position(xpos = 0.85, ypos = 0.75):
+        xzoom -1
+    with dissolve
+
+    vitoria "Dante! Dante!, não consigo achar a Helena em lugar nenhum"
 
     menu:
-        "Chamar pela Helena":
-            dante "Helena?"
+        "levantar rapidamente":
+            show dante normal at Position(xpos=0, ypos=.75) with move
 
-            narrador "... sem resposta"
-
+            narrador "Dante grita o nome de Helena pela casa"
             menu:
-                "Chamar fervorosamente pela Helena":
-                    dante "Helenaaa!!!"
+                "Chamar pela Helena":
+                    dante "Helena?"
 
-                    narrador "... ainda sem resposta"
+                    narrador "sem respostas pela casa"
+                    menu:
+                        "Chamar fervorosamente pela Helena":
+                            dante "Helenaaa!!!"
+                            narrador "... ainda sem resposta"
 
     narrador "Ele bate na porta do quarto dela."
-
+    
     vitoria "Ela deve estar na igreja."
 
     menu:
