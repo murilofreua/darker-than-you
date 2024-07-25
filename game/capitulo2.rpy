@@ -60,6 +60,8 @@ label capitulo2:
     
     hide vitoria normal with dissolve
 
+    hide helena-vestido-azul-feliz with dissolve
+
     narrador "O trio passou o dia caminhando pelo centro da cidade" 
     narrador "Conheceram alguns residentes e atravessaram um riacho..."
     narrador "Até chegarem na porta da Igreja da Misericórdia, uma bela igreja antiga."
@@ -91,7 +93,7 @@ label capitulo2:
     scene padaria-fora
 
     $ renpy.music.play("audio/Sound effects/pessoas/Homem_cantarolar_senior_trabalhando_corte.mp3", loop=True)
-    $ renpy.music.set_volume(0.5, channel='music')
+    $ renpy.music.set_volume(0.7, channel='music')
 
     narrador "Lá, foram recebidos por Seu Pedro, o padeiro."
     
@@ -99,7 +101,7 @@ label capitulo2:
 
     pedro "Olha quem veio! Helena, você trouxe um visitante especial, não é? "
 
-    show helena-vestido-azul-feliz at posicao_direita with dissolve
+    show helena-vestido-azul-feliz at posicao_centro with dissolve
 
     helena "Ah, Seu Pedro! Este é o meu amigo Dante. Ele está aqui para passar alguns dias conosco."
 
@@ -247,14 +249,25 @@ label capitulo2:
     show dante normal at posicao_esquerda with dissolve
 
     menu:
-        "Aceitar maçã":
+        "Aceitar maçã e comer":
             show dante normal at posicao_esquerda
             
             dante "Obrigado, Isabel. É um prazer conhecê-la!"
             
             isabel " O prazer é todo meu pequeno."
 
-        "Agradecer Maçã":
+        "Aceitar maça e guardar no bolso":
+            dante "Muito obrigado, Isabel, acabei de comer um lanche agora a pouco no Pedro."
+            dante "É um imenso prazer conhecê-la!"
+
+            isabel " Que pena que está cheio, pelo menos leve essa maça então para o passeio."
+
+            $ historia.maca_guardada()
+            narrador "Dante pega a maça e a quarda!"
+
+            isabel " Tenham um bom passeio crianças."
+
+        "Recusar Maçã":
             show dante normal at posicao_esquerda
             
             dante "Muito obrigado, Isabel, mas dispenso, estou cheio de nosso lanche agora a pouco. É um imenso prazer conhecê-la!"
@@ -278,11 +291,13 @@ label capitulo2:
 
     show rocha normal at posicao_direita with move
 
-    show vitoria normal at posicao_centro
+    show vitoria normal at posicao_esquerda with move
 
     vitoria "Boa noite, Rocha. Este é Dante, amigo de infância da Helena"  
 
     rocha "Prazer em conhecê-lo, Dante"
+
+    show vitoria normal at posicao_centro with move
 
     show dante normal at posicao_esquerda with dissolve
 
@@ -305,7 +320,7 @@ label capitulo2:
 
     $ renpy.music.play("audio/Sound effects/Lugares/Praca_clima_tensao.mp3", loop=True)
     $ renpy.music.set_volume(0.2, channel='music')
-    play sound "audio/Sound effects/Avisos sonoros meta linguagem/Trovão_crescente_espaçado.mp3"
+    # play sound "audio/Sound effects/Avisos sonoros meta linguagem/Trovão_crescente_espaçado.mp3"
    
     vitoria "O que houve??"
     
@@ -404,4 +419,3 @@ label capitulo2:
 
     $ renpy.music.stop(channel='music')
     return
-

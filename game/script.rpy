@@ -23,7 +23,7 @@ image isabel normal = im.Scale("neutros/isabel.png", 610, 540)
 image rocha normal = im.Scale("neutros/rocha.png", 680, 540)
 image sofia normal = im.Scale("neutros/sofia.png", 635, 540)
 image vitoria normal = im.Scale("neutros/vitoria.png", 575, 540)
-image padre normal = im.Scale("neutros/padre.png", 575, 540)
+image padre normal = im.Scale("neutros/padre.png", 745, 740)
 image pedro normal = im.Scale("neutros/pedro.png",680,540)
 
 # Personagens felizes
@@ -35,6 +35,8 @@ image pedro normal = im.Scale("neutros/pedro.png",680,540)
 # Variáveis
 
 init python:
+
+    config.rollback_enabled = True #false #setar como false quando for gerar o .exe
 
     class Caminho:
         def __init__(self,natureza):
@@ -66,6 +68,7 @@ init python:
 
     class Historia:
         def __init__(self):
+            self.maca = False
             ato1 = Ato([Caminho("ruim"),Caminho("normal"),Caminho("bom")],"Casa do Protagonista")
             ato2 = Ato([Caminho("ruim"),Caminho("normal"),Caminho("bom")],"Conhecendo o Vilarejo")
             ato3 = Ato([Caminho("ruim"),Caminho("normal"),Caminho("bom")],"Assasinato!")
@@ -86,14 +89,17 @@ init python:
         def incr_peso_bom(self):
             self.ato_atual.caminho_atual.pesos_proximo_caminho["bom"]+=1
 
-        def incr_peso_normal(self):
-            self.ato_atual.caminho_atual.pesos_proximo_caminho["normal"]+=1
+        # def incr_peso_normal(self):
+        #     self.ato_atual.caminho_atual.pesos_proximo_caminho["normal"]+=1
 
-        def incr_peso_ruim(self):
-            self.ato_atual.caminho_atual.pesos_proximo_caminho["ruim"]+=1
+        # def incr_peso_ruim(self):
+        #     self.ato_atual.caminho_atual.pesos_proximo_caminho["ruim"]+=1
 
         def get_natureza_caminho_atual(self):
             return self.ato_atual.caminho_atual.natureza
+
+        def maca_guardada(self):
+            seff.maca = True
     
 define historia = Historia()
 

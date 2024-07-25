@@ -1,3 +1,11 @@
+define posicao_direita_invertido_cap3 = Position(xpos = 0.70, ypos = 0.25)
+
+define posicao_direita_cap3 = Position(xalign=0.85, yalign=0.50)
+
+define posicao_esquerda_cap3 = Position(xalign=0.15, yalign=0.5)
+
+define posicao_centro_cap3 = Position(xalign=0.50,yalign=0.5)
+
 label capitulo3:
 
     play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3"
@@ -25,8 +33,13 @@ label capitulo3:
 
     narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
 
-    show helena normal at Position(xpos = 0.65, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show vitoria normal at posicao_direita_invertido_cap3:
+        xzoom -1
+    with dissolve
+
+    show helena normal at Position(xpos = 0.5, ypos = 0.25):
+        xzoom -1
+    with dissolve
     
     helena "Bom dia, Dante! Dormiu bem?"
 
@@ -43,11 +56,14 @@ label capitulo3:
 
     helena "Pensei em levar você para conhecer a Igreja da Misericórdia e conversar com o Padre Iohann. Ele é uma pessoa fascinante"
 
-    stop sound
-
     narrador "Dante assentiu, lembrando-se das palavras de Rocha sobre as luzes estranhas. Ele estava curioso para conhecer o Padre Iohann e descobrir mais sobre a igreja que tanto o intrigara."
 
+    $ renpy.music.play("audio/Capitulos/Capitulo 3 - inicio dos sinais de cansaço.mp3", loop=True)
+    $ renpy.music.set_volume(0.2, channel='music')
+
     narrador "Após o café, o trio seguiu em direção à igreja. O caminho era tranquilo, com poucas pessoas nas ruas, e a brisa fresca da manhã tornava a caminhada agradável."
+
+    stop sound
 
     scene igreja-dentro
 
@@ -76,11 +92,13 @@ label capitulo3:
 
     narrador "Enquanto conversavam, dois jovens seminaristas se aproximaram, curiosos. Helena os apresentou a Dante."
 
-    show helena normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
-    show dante normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    
+    show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
 
-    show icaro normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show augusto normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
+    show icaro normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+
+    show augusto normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     helena "Este é Ícaro e aquele é Augusto. Eles estão estudando aqui com o Padre Iohann."
 
@@ -127,13 +145,30 @@ label capitulo3:
     show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
     show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
-    padre "Este livro contém registros antigos da nossa igreja. É uma verdadeira relíquia. Alguns dizem que ele guarda segredos sobre o passado do vilarejo."
+    padre "Este livro contém registros antigos da nossa igreja."
+    padre "É uma verdadeira relíquia!"
+    padre "Alguns dizem que ele guarda segredos sobre o passado do vilarejo."
 
     menu:
         "Folhear livro":
-            narrador "Dante, curioso, folheou algumas páginas, notando nomes e eventos registrados ao longo dos anos."
+            play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3"
+            hide helena normal with dissolve
+            hide padre normal with dissolve
+
+            narrador "Dante, curioso, Abriu o livro."
+
+            narrador "Encantado com seu conteúdo, Dante continuou a ler entretido"
+
+            play sound "audio/Sound Effects/Objetos/livro_sendo_folheado.mp3"
+
+            narrador "Ao aprofundar sua leitura acabou notando nomes de moradores e visitantes"
+
+            narrador "Eventos registrados ao longo dos anos também eram bem descritos, mas nenhum que fosse relevante."
 
             narrador "Algo no livro parecia despertar uma memória distante, mas ele não conseguiu identificar o quê."
+
+            stop sound
+
         "Não folhear livro":
             pass
 
