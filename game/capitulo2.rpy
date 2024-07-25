@@ -210,7 +210,7 @@ label capitulo2:
 
     sofia "Helena, Vitória! Quem é o rapaz?"
 
-    show helena-vestido-azul-feliz at posicao_centro with dissolve
+    show helena-vestido-azul-feliz at posicao_esquerda with dissolve
 
     helena "Boa tarde, Sofia"
     helena "Este é Dante, um amigo meu de infância"
@@ -234,7 +234,7 @@ label capitulo2:
 
     show isabel normal at posicao_centro with dissolve
 
-    isabel "Boa noite, meninas. Quem é este novo amigo?"
+    isabel "Boa noite, meninas. Quem é este rapaz charmoso?"
 
     show isabel normal at posicao_direita with move
 
@@ -250,13 +250,13 @@ label capitulo2:
 
     menu:
         "Aceitar maçã e comer":
-            show dante normal at posicao_esquerda
             
             dante "Obrigado, Isabel. É um prazer conhecê-la!"
             
             isabel " O prazer é todo meu pequeno."
 
         "Aceitar maça e guardar no bolso":
+
             dante "Muito obrigado, Isabel, acabei de comer um lanche agora a pouco no Pedro."
             dante "É um imenso prazer conhecê-la!"
 
@@ -268,7 +268,6 @@ label capitulo2:
             isabel " Tenham um bom passeio crianças."
 
         "Recusar Maçã":
-            show dante normal at posicao_esquerda
             
             dante "Muito obrigado, Isabel, mas dispenso, estou cheio de nosso lanche agora a pouco. É um imenso prazer conhecê-la!"
             

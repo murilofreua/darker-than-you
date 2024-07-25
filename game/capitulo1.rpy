@@ -50,7 +50,7 @@ label capitulo1:
     dante "Estou muito bem, e com você? Acabei de entrar de férias, mas confesso que não ando fazendo muita coisa."
     dante "Por onde você anda?"
 
-    helena "Já faz alguns anos vim morar num vilarejo com meus pais."
+    helena "Já faz alguns anos que vim morar num vilarejo pacáto com meus pais."
     helena "Eles decidiram largar a vida da capital!"
 
     helena "Eu amo morar aqui, é lindo! Acabei de te mandar umas fotos, dá uma olhada!"
@@ -68,7 +68,7 @@ label capitulo1:
 
     hide helena normal with fade
 
-    narrador "Animado por relembrar alguns de seus bons momentos com Helena, em horas de conversas, Dante decide visitar o vilarejo."
+    narrador "Animado por relembrar alguns de seus bons momentos com Helena, após horas de conversas, Dante decide visitar o vilarejo."
     narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."
     
     hide dante normal

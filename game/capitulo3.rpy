@@ -177,9 +177,7 @@ label capitulo3:
 
     scene igreja-corredor
 
-
     ## Musica sinistra
-    $ renpy.music.set_volume(0.02, channel='music')
 
     narrador "Enquanto se dirigiam para sair, um barulho suave, quase imperceptível, chamou a atenção de Dante. Parecia vir de uma sala adjacente. Ele olhou para o padre, que imediatamente desviou o olhar."
 
@@ -216,6 +214,8 @@ label capitulo3:
 
     scene torre-do-sino
 
+    $ renpy.music.set_volume(0.02, channel='music')
+
     narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
 
     stop sound
@@ -236,6 +236,7 @@ label capitulo3:
 
     scene igreja-dentro
 
+    $ renpy.music.set_volume(0.075, channel='music')
     narrador "Quando desceram, Padre Iohann prostravasse em frente a porta."
 
     stop sound
@@ -274,6 +275,9 @@ label capitulo3:
     hide dante normal with dissolve
     hide helena normal with dissolve
     hide vitoria normal with dissolve
+
+    $ renpy.music.play("audio/Capitulos/Capitulo 3 - inicio dos sinais de cansaço.mp3", loop=True)
+    $ renpy.music.set_volume(0.2, channel='music')
 
     scene centro
 
