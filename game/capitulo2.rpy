@@ -17,6 +17,7 @@ label capitulo2:
 
     narrador "Helena estava radiante em um vestido azul, e lhe aguardava com um grande sorriso, acompanhada por uma amiga, que fora momentaneamente ofuscada pelo brilho de Helena."
 
+    show vitoria normal at Position(xpos=1., y=.75) with move
     hide vitoria normal with dissolve
 
     show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.75) with move
@@ -25,7 +26,7 @@ label capitulo2:
 
     show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.95) with move
 
-    show dante normal at Position(xpos=.15, ypos=.95) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.95) with dissolve
 
     menu: 
         "Abraçar":
@@ -35,9 +36,15 @@ label capitulo2:
 
             dante "Olá, Helena! Você mudou muito desde a última vez que nos vimos!"
 
+            narrador "Dante pensa em voz alta exaltando a beleza da amiga"
+
+            dante "Está estonteantemente linda!"
+
             show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.75)
-            show dante normal at Position(xpos=.15, ypos=.75)
+            show dante normal at Position(xpos = .165, ypos=.75)
             with move
+
+            narrador "Helena se distancia por ter ficado embasbacada com o elogio durante o abraço enquanto Vitória se apresenta"
     
     hide helena-vestido-azul-feliz with dissolve
 
@@ -56,7 +63,7 @@ label capitulo2:
             dante "Prazer Vitória, como é bom te conhecer!"
 
             show vitoria normal at Position(xpos=.7, ypos=.25)
-            show dante normal at Position(xpos=.15, ypos=.75)
+            show dante normal at Position(xpos = .165, ypos=.75)
             with move
     
     show helena-vestido-azul-feliz at Position(xpos=.50,ypos=.75)
@@ -87,7 +94,7 @@ label capitulo2:
     narrador "Apesar de Dante de não ser muito religioso..."
     narrador "O garoto sentiu uma sensação estranha enquanto olhava para a igreja, como se alguma energia misteriosa o atraísse."
 
-    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
 
     dante "Que bela igreja!"
 
@@ -127,7 +134,7 @@ label capitulo2:
     hide helena-vestido-azul-feliz with dissolve
 
     show pedro normal at Position(xpos=.8, ypos=.95) with move
-    show dante normal at Position(xpos=.15, ypos=.95) with dissolve 
+    show dante normal at Position(xpos = .165, ypos=.95) with dissolve 
 
     menu: 
         "Apertar a mão de Pedro":
@@ -154,7 +161,7 @@ label capitulo2:
 
         "Pedir explicação":
             show pedro normal at Position(xpos=.8, ypos=.75) with move
-            show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+            show dante normal at Position(xpos = .165, ypos=.75) with dissolve
 
             narrador "Sem entender muito, Dante indaga a Helena e Vitoria qual foi a graça da fala"
 
@@ -206,7 +213,7 @@ label capitulo2:
     vitoria "Dante, você vai adorar o festival!"
     vitoria "É a melhor época do ano aqui: tem música, danças tradicionais, comidas típicas e até bingo!"
 
-    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
 
     dante "Sou muito bom no bingo hein!"
     dante "Já estou ansioso, Parece incrível!"
@@ -235,7 +242,7 @@ label capitulo2:
     narrador "Caminhando pela praça, a atmosfera acolhedora do vilarejo os envolvia."
     narrador "Crianças corriam e brincavam, e o grupo de amigos conversava animadamente"
     narrador "Ao se aproximarem de um banco perto da fonte, avistaram uma mulher sentada, muito concentrada na leitura de um pequeno livro de capa cor de vinho, sem título." 
-    narrador "A sombra de Vitória tocou as páginas, e ela notou a presença do grupo."
+    narrador "A sombra de Helena tocou as páginas, e ela notou a presença do grupo."
 
     stop sound
 
@@ -256,7 +263,7 @@ label capitulo2:
     sofia "Espero que goste da nossa cidade"
 
     show sofia normal at Position(xpos=.85, ypos=.75) with move
-    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
 
     dante "Muito prazer em conhecê-la! Até agora, todos têm sido muito acolhedores."
 
@@ -282,7 +289,7 @@ label capitulo2:
 
     hide vitoria normal with dissolve
 
-    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
 
     menu:
         "Aceitar maçã e comer":
@@ -323,18 +330,21 @@ label capitulo2:
 
     hide sofia normal with dissolve
 
-    show vitoria normal at Position(xpos=.35, ypos=.75)
-    show helena normal at Position(xpos=.50, ypos=.75)
-    show dante normal at Position(xpos=.65, ypos=.75)
-    with dissolve
-    
     narrador "Os jovens dão continuidade ao passeio."
-    narrador "Enquanto continuavam a conversar, Rocha, o policial, aproximou-se do grupo, acenando com um sorriso."
 
-    hide vitoria normal
-    hide helena normal
-    hide dante normal
+    show vitoria normal at Position(xpos=.15, ypos=.75)
+    show helena-vestido-azul-feliz at Position(xpos=.25, ypos=.75)
+    show dante normal at Position(xpos=.45, ypos=.75)
     with dissolve
+    show vitoria normal at Position(xpos=1., ypos=.75) 
+    show helena-vestido-azul-feliz at Position(xpos=1., ypos=.75) 
+    show dante normal at Position(xpos=1., ypos=.75)
+    with move 
+    hide vitoria normal with dissolve
+    hide helena-vestido-azul-feliz with dissolve
+    hide dante normal with dissolve
+
+    narrador "Enquanto continuavam a conversar, Rocha, o policial, aproximou-se do grupo, acenando com um sorriso."
 
     show rocha normal at Position(xpos=.5, ypos=.75) with dissolve
     
@@ -347,7 +357,7 @@ label capitulo2:
 
 
     show vitoria normal at Position(xpos=.35,ypos=.75) with move
-    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
 
     menu:
         "Apertar mão de rocha firmemente":
@@ -433,7 +443,7 @@ label capitulo2:
 
     narrador "Depois da conversa com o policial, o grupo se despediu e continuou caminhando pela praça, com uma leve tensão no ar."
 
-    show dante normal at Position(xpos=.15, ypos=.75)
+    show dante normal at Position(xpos = .165, ypos=.75)
     show helena-vestido-azul-feliz at Position(xpos=.75, ypos=.75)
     show vitoria normal at Position(xpos=.85, ypos=.75):
         xzoom -1
@@ -498,13 +508,6 @@ label capitulo2:
 
     narrador "Com passeios lúdicos e duvidas no ar, chega ao fim o primeiro dia da viagem de dante"
 
-    hide vitoria normal
+    hide dante normal with dissolve
 
-    hide dante normal 
-    
-    hide helena-vestido-azul-feliz
-
-    with dissolve
-
-    $ renpy.music.stop(channel='music')
     return

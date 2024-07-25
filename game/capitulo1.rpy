@@ -6,27 +6,27 @@ label capitulo1:
     $ renpy.music.play("audio/Capitulos/Capitulo 1 - Parece um sonho merecido.mp3", loop=True)
     $ renpy.music.set_volume(.25, channel='music')
 
-    indefinido "Amanhecer do 1° dia"
+    indefinido "..."
 
-    show dante normal at truecenter with dissolve
+    show dante normal at Position(xpos = .5, ypos = .75) with dissolve
 
     dante "Ócio..."
 
-    play sound "audio/Sound effects/Objetos/Toque_celular_nokia_3310.mp3" volume .5 loop
-    
     dante "Finalmente!"
+
+    play sound "audio/Sound effects/Objetos/Toque_celular_nokia_3310.mp3" volume .5 loop
 
     telefoneDoDante "*tocando"
 
     dante "Inferno"
 
-    show dante normal at Position(xpos = .15, ypos = .8) with move
+    show dante normal at Position(xpos = .165, ypos = .95) with move
 
     menu:
         "Atender":
             stop sound fadeout 1.5
 
-    show dante normal at Position(xpos = .5, ypos = .5) with move
+    show dante normal at Position(xpos = .5, ypos = .75) with move
 
     dante "Alô?"
 
@@ -34,7 +34,7 @@ label capitulo1:
 
     dante "Sim, quem fala?"
 
-    show dante normal at Position(xpos = .15, ypos = .5) with move
+    show dante normal at Position(xpos = .15, ypos = .75) with move
 
     show helena normal at Position(xpos = .7, ypos = .25):
         xzoom -1
@@ -67,7 +67,7 @@ label capitulo1:
 
     hide helena normal with dissolve
 
-    show dante normal at Position(xpos = .5, ypos = .5) with move
+    show dante normal at Position(xpos = .5, ypos = .75) with move
 
     narrador "Animado por relembrar alguns de seus bons momentos com Helena, após horas de conversas, Dante decide visitar o vilarejo."
     narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."

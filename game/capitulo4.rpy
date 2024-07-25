@@ -7,10 +7,10 @@ label capitulo4:
 
     narrador "Novamente o grupo é acordado pelo soar do sino da igreja"
 
+    narrador "Os dias que antecedem o festival são intensos e cheios de atividades."
+
     $ renpy.music.play("audio/Capitulos/Capitulo 3 - inicio dos sinais de cansaço.mp3", loop=True)
     $ renpy.music.set_volume(0.2, channel='music')
-
-    narrador "Os dias que antecedem o festival são intensos e cheios de atividades."
 
     narrador "Dante, Helena e Vitória se voluntariam para ajudar nos preparativos, e o vilarejo fervilha de excitação."
 
@@ -90,9 +90,10 @@ label capitulo4:
 
     narrador "Enquanto caminham pela praça, encontram-se com o Padre Iohann."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
-    show padre normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos = 0.35, ypos = 0.75)
+    show helena normal at Position(xpos = 0.1, ypos = 0.75)
+    show padre normal at Position(xpos = 0.85, ypos = 0.75)
+    with dissolve
 
     padre "Boa noite, filhos. Espero que estejam aproveitando o festival."
 
