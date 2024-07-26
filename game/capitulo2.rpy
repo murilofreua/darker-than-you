@@ -358,18 +358,26 @@ label capitulo2:
 
     vitoria "Boa tarde, Rocha. Este é Dante, amigo de infância da Helena"  
 
+    hide vitoria normal with dissolve
 
-    show vitoria normal at Position(xpos=.35,ypos=.75) with move
-    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.95)
+    show rocha normal at Position(xpos = .85, ypos=.95)
+    with move
 
     menu:
         "Apertar mão de rocha firmemente":
 
+<<<<<<< Updated upstream
             $ historia.incr_peso_bom()
 
             hide vitoria normal with dissolve
             show dante normal at Position(xpos=.35,ypos=.75) with move
             show rocha normal at Position(xpos=.65,ypos=.75) with move
+=======
+            show dante normal at Position(xpos=.35,ypos=.75)
+            show rocha normal at Position(xpos=.65,ypos=.75)
+            with move
+>>>>>>> Stashed changes
 
             rocha "Prazer em conhecê-lo, Dante"
             rocha "Espero que aproveite sua estadia."
@@ -379,6 +387,10 @@ label capitulo2:
             rocha "Isso é bom de ouvir"
 
         "Acenar mão a distância":
+            show dante normal at Position(xpos=.165,ypos=.75)
+            show rocha normal at Position(xpos=.85,ypos=.75)
+            with move
+
             dante "Oi seu policial"
             
             rocha "Meio arisco, não é mesmo?!."
@@ -390,6 +402,7 @@ label capitulo2:
     show rocha normal at Position(xpos=.5,ypos=.75) with move
 
     $ renpy.music.set_volume(.15, channel='music')
+    play sound "audio/Sound effects/Lugares/Natureza_clima_tensao.mp3" volume .1 loop
 
     rocha "Mas, preciso alertar vocês sobre algo estranho que aconteceu hoje."
    
