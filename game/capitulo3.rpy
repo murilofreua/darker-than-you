@@ -38,7 +38,7 @@ label capitulo3:
     menu:
         "Dormi sim, obrigado.":
 
-            $ pesoFinal += 1;
+            
 
             dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
 
@@ -114,7 +114,7 @@ label capitulo3:
     menu:
         "Perguntar sobre as luzes estranhas":
 
-            $ pesoFinal += 1;
+            
 
             show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
             show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
@@ -152,7 +152,7 @@ label capitulo3:
     menu:
         "Folhear livro":
 
-            $ pesoFinal += 1;
+            
 
             play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3"
             hide helena normal with dissolve
@@ -193,7 +193,7 @@ label capitulo3:
     menu:
         "Perguntar sobre barulho":
 
-            $ pesoFinal += 1;
+            
 
             show dante normal at Position(xpos = 0.165, ypos = 0.75) with dissolve
 
@@ -271,7 +271,7 @@ label capitulo3:
     menu:
         "Perguntar sobre o festival da cidade":
                         
-                $ pesoFinal += 1;
+                
 
                 dante "O festival parece ser incrível. O que exatamente você faz para ajudar, Padre Iohann?"
 
@@ -322,7 +322,7 @@ label capitulo3:
         
         "Achou evasivo":
 
-            $ pesoFinal += 1;
+            
 
             dante "Sim, muito interessante."
             dante "Há algo nele que me intriga."
