@@ -390,7 +390,6 @@ label capitulo2:
     show rocha normal at Position(xpos=.5,ypos=.75) with move
 
     $ renpy.music.set_volume(.15, channel='music')
-    play sound "audio/Sound effects/Lugares/Praca_clima_tensao.mp3" volume .1 loop
 
     rocha "Mas, preciso alertar vocês sobre algo estranho que aconteceu hoje."
    
