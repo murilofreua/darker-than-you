@@ -101,6 +101,9 @@ init python:
         def maca_guardada(self):
             self.maca = True
 
+        def livro_lido(self):
+            self.livro = True
+
         def get_peso_bom(self):
             return self.ato_atual.caminho_atual.pesos_proximo_caminho
     
