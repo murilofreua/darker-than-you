@@ -58,6 +58,11 @@ init python:
     
 define historia = Historia()
 
+default persistent.finalOtimo = False
+default persistent.finalBom = False
+default persistent.finalMedio = False
+default persistent.finalRuim = False
+
 label start:
 
     call capitulo1

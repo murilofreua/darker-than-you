@@ -1,9 +1,11 @@
 
-label finalBom:
+label finalOtimo:
     
-    scene final-bom
+    scene final-otimo
 
-    $ persistent.finalBom = True
+    $ persistent.finalOtimo = True
+
+    # alterar texto de final otimo
 
     show text "O local é uma caverna oculta com símbolos antigos." at truecenter with dissolve
     pause 
@@ -22,10 +24,10 @@ label finalBom:
 
     show text "A cerimônia é marcada por discursos de agradecimento e expressões de gratidão." at truecenter with dissolve
     pause 15
-    
+
     scene black
 
-    show text "Por suas habilidades investigativas, você atingiu o segundo melhor final possível" at truecenter with dissolve
+    show text "Por suas habilidades investigativas, você atingiu o melhor final possível" at truecenter with dissolve
 
     pause
 

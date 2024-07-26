@@ -4,20 +4,36 @@ label finalRuim:
     
     scene final-ruim
 
-    narrador "Helena desaparece sem deixar rastros."
+    $ persistent.finalRuim = True
 
-    narrador "O local é macabro, com sinais do ritual já completado."
+    show text "Helena desaparece sem deixar rastros." at truecenter with dissolve
+    pause 15
 
-    narrador "A atmosfera é sombria e perturbadora."
+    show text "O local é macabro, com sinais do ritual já completado." at truecenter with dissolve
+    pause 15
 
-    narrador "A cidade está em choque e desespero."
+    show text "A atmosfera é sombria e perturbadora." at truecenter with dissolve
+    pause 15
 
-    narrador "As ruas estão silenciosas e a sensação de perda é palpável."
+    show text "A cidade está em choque e desespero." at truecenter with dissolve
+    pause 15
 
-    narrador "Um evento sombrio marca a conclusão da história."
+    show text "As ruas estão silenciosas e a sensação de perda é palpável." at truecenter with dissolve
+    pause 15
 
-    narrador "A cidade luta para se recuperar da tragédia."
+    show text "Um evento sombrio marca a conclusão da história." at truecenter with dissolve
+    pause 15
 
-    narrador "Padre Iohann enfrenta possíveis acusações"
+    show text "A cidade luta para se recuperar da tragédia." at truecenter with dissolve
+    pause 15
+
+    show text "Padre Iohann enfrenta possíveis acusações" at truecenter with dissolve
+    pause 15
+    
+    scene black with dissolve
+
+    show text "Por suas habilidades investigativas, você atingiu o pior final possível" at truecenter with dissolve
+
+    pause
 
     return
