@@ -30,8 +30,9 @@ label capitulo1:
         "Atender":
             stop sound fadeout 1.5
 
-    hide smartphone with dissolve
-    show dante normal at Position(xpos=.5, ypos=.75) with move
+    show smartphone at Position(xpos=.85, ypos=.85)
+    show dante normal at Position(xpos=.25, ypos=.75)
+    with move
 
     dante "Alô?"
 
@@ -40,7 +41,7 @@ label capitulo1:
     dante "Sim, quem fala?"
 
     show dante normal at Position(xpos=.15, ypos=.75) with move
-
+    hide smartphone
     show helena normal at Position(xpos=.7, ypos=.25):
         xzoom -1
     with dissolve
@@ -66,17 +67,14 @@ label capitulo1:
     helena "Já que está de férias, não gostaria de prestar uma visita?"
     helena "Juro por Deus que você vai amar!"
 
-    hide helena normal with dissolve
-
     dante  "Sim, claro!"
 
+    hide helena normal with dissolve
     hide celular with dissolve
+
     show dante normal at Position(xpos=.5, ypos=.75) with move
 
     narrador "Animado por relembrar alguns de seus bons momentos com Helena, após horas de conversas, Dante decide visitar o vilarejo."
-
-    show dante normal at Position(xpos=.165, ypos=.75) with move
-
     narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."
 
 
