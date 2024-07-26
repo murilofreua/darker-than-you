@@ -18,7 +18,7 @@ call entrarMenuDante
 
                 "Padaria":
                     call retomarMenuDante
-                    $ historia.incr_peso_bom()
+                    $ historia.incrementar_peso(1)
                     show helena normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
                     helena "Beleza, iremos visitar a deliciosa Padaria primeiro!"
 
