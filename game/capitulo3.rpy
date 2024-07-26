@@ -116,8 +116,6 @@ label capitulo3:
 
             $ historia.incrementar_peso(1)
 
-            $ ValorPesoBom = historia.get_peso_bom().get('peso', 0)
-
             show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
             show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
             show helena normal at Position(xpos = 0.3, ypos = 0.75) with dissolve
