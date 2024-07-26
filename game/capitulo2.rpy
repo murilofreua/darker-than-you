@@ -54,6 +54,10 @@ label capitulo2:
 
     vitoria "Olá, Dante! Sou a Vitória, muito prazer"
 
+    show vitoria normal at Position(xpos=.7, ypos=.5)
+    show dante normal at Position(xpos=.165, ypos=.95)
+    with move
+
     menu:
         "Cumprimentar cordialmente":
             show vitoria normal at Position(xpos=.6, ypos=.25)
@@ -256,17 +260,25 @@ label capitulo2:
     show sofia normal at Position(xpos=.85, ypos=.75) with dissolve
     narrador "Ao se aproximarem de um banco perto da fonte, avistaram uma mulher sentada, muito concentrada na leitura de um pequeno livro de capa cor de vinho, sem título" 
 
+    show vitoria normal at Position(xpos=.65, ypos=.75) with move
+
     narrador "Ao Vitoria se aproximar para cumprimentar a moça,sua sombra tocou as páginas, e ela notou a presença do grupo."
 
     sofia "Helena, Vitória! Quem é o rapaz?"
 
     show helena-vestido-azul-feliz at Position(xpos=.15, ypos=.75) with dissolve
 
+    hide vitoria normal
+    hide dante normal
+    with dissolve
+
+
     helena "Boa tarde, Sofia"
     helena "Este é Dante, o amigo meu de infância"
     helena "Ele está aqui para passar alguns dias conosco"
 
     hide helena-vestido-azul-feliz normal with dissolve
+
     show sofia normal at Position(xpos=.5, ypos=.75) with move
 
     sofia "Seja bem-vindo, Dante"
@@ -279,13 +291,13 @@ label capitulo2:
 
     sofia "Que bom ouvir isso. A Encosta da Saudade é um lugar especial. Se precisar de algo, não hesite em me procurar."
 
-    narrador "Enquanto conversavam, Isabel, a esposa do fazendeiro, se aproximou, carregando uma cesta de frutas."
-
-    hide dante normal 
+    hide dante normal
     hide sofia normal
     with dissolve
 
     show isabel normal at Position(xpos=.5, ypos=.75) with dissolve
+
+    narrador "Enquanto conversavam, Isabel, a esposa do fazendeiro, se aproximou, carregando uma cesta de frutas."
 
     isabel "Boa noite, meninas. Quem é este rapaz charmoso?"
 
@@ -300,15 +312,24 @@ label capitulo2:
     hide vitoria normal with dissolve
 
     show dante normal at Position(xpos = .165, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .165, ypos=.95)
+    show isabel normal at Position(xpos = .85, ypos=.95)
+    with move
 
     menu:
         "Aceitar maçã e comer":
-            
+            show dante normal at Position(xpos = .165, ypos=.75)
+            show isabel normal at Position(xpos = .85, ypos=.75)
+            with move
+
             dante "Obrigado, Isabel. É um prazer conhecê-la!"
             
             isabel " O prazer é todo meu pequeno."
 
         "Aceitar maça e guardar no bolso":
+            show dante normal at Position(xpos = .165, ypos=.75)
+            show isabel normal at Position(xpos = .85, ypos=.75)
+            with move
 
             dante "Muito obrigado, Isabel, acabei de comer um lanche agora a pouco no Pedro."
             dante "É um imenso prazer conhecê-la!"
@@ -321,6 +342,9 @@ label capitulo2:
             isabel " Tenham um bom passeio crianças."
 
         "Recusar Maçã":
+            show dante normal at Position(xpos = .165, ypos=.75)
+            show isabel normal at Position(xpos = .85, ypos=.75)
+            with move
             
             dante "Muito obrigado, Isabel, mas dispenso, estou cheio de nosso lanche agora a pouco. É um imenso prazer conhecê-la!"
             
@@ -458,11 +482,25 @@ label capitulo2:
     hide rocha normal with dissolve
     show helena-vestido-azul-feliz at Position(xpos=.35, ypos=.75) with move
 
-    show vitoria normal at Position(xpos=.50, ypos=.75)
+    show vitoria normal at Position(xpos=.5, ypos=.75)
     show dante normal at Position(xpos=.65, ypos=.75)
     with dissolve
 
     narrador "Depois da conversa com o policial, o grupo se despediu e continuou caminhando pela praça, com uma leve tensão no ar."
+
+    show dante normal at Position(xpos = .65, ypos=.95)
+    show vitoria normal at Position(xpos=.5, ypos=.95)
+    show helena-vestido-azul-feliz at Position(xpos=.35, ypos=.95)
+    with move
+
+    menu:
+        "Demonstrar sua ":
+            show dante normal at Position(xpos=.65, ypos=.75)
+            show vitoria normal at Position(xpos=.5, ypos=.75)
+            show helena-vestido-azul-feliz at Position(xpos=.35, ypos=.75)
+            with move
+
+            dante "Isso é muito estranho"
 
     show dante normal at Position(xpos = .165, ypos=.75)
     show helena-vestido-azul-feliz at Position(xpos=.75, ypos=.75)
@@ -470,7 +508,6 @@ label capitulo2:
         xzoom -1
     with move
 
-    dante "Isso é muito estranho"
 
     hide helena-vestido-azul-feliz with dissolve
 
@@ -480,7 +517,7 @@ label capitulo2:
 
     stop sound fadeout 1.5
 
-    show helena-vestido-azul-feliz at Position(xpos=.65, ypos=.75) 
+    show helena-vestido-azul-feliz at Position(xpos=.65, ypos=.75) with dissolve
 
     helena "Sim, vamos descansar agora."
     helena "Amanhã pode ser um dia longo"
@@ -490,7 +527,7 @@ label capitulo2:
     hide vitoria normal 
     with dissolve
 
-    scene quarto-helena
+    scene quarto-helena-noite
 
     narrador "O grupo chega à casa de Helena e as meninas apresentam ao Dante o quarto que o acolherá"
 

@@ -9,9 +9,9 @@ label capitulo3:
     indefinido "..."
 
     play sound "audio/Sound effects/pessoas/Homem_acordando_alongamento_escandaloso_descansado_cena_descontração.mp3"
-    $ renpy.music.set_volume(0.125, channel='music')
+    $ renpy.music.set_volume(.125, channel='music')
 
-    show dante normal at Position(xpos = 0.15, ypos = 0.75) with dissolve
+    show dante normal at Position(xpos=.15, ypos=.75) with dissolve
 
     narrador "Ele se levantou, espreguiçando-se e ouvindo os sons suaves do vilarejo."
     
@@ -25,24 +25,38 @@ label capitulo3:
 
     narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
 
-    show vitoria normal at Position(xpos = 0.72, ypos = 0.25):
+    show vitoria normal at Position(xpos=.72, ypos=.25):
         xzoom -1
     with dissolve
 
-    show helena normal at Position(xpos = 0.5, ypos = 0.25):
+    show helena normal at Position(xpos=.5, ypos=.25):
         xzoom -1
     with dissolve
     
     helena "Bom dia, Dante! Dormiu bem?"
 
+    show vitoria normal at Position(xpos=.72, ypos=.45)
+    show helena normal at Position(xpos=.5, ypos=.45)
+    show dante normal at Position(xpos=.15, ypos=.95)
+    with move
+
     menu:
         "Dormi sim, obrigado.":
-
             $ historia.incrementar_peso(1)
+
+            show vitoria normal at Position(xpos=.72, ypos=.25)
+            show helena normal at Position(xpos=.5, ypos=.25)
+            show dante normal at Position(xpos=.15, ypos=.75)
+            with move
 
             dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
 
         "Tive uma noite de sono péssima":
+            show vitoria normal at Position(xpos=.72, ypos=.25)
+            show helena normal at Position(xpos=.5, ypos=.25)
+            show dante normal at Position(xpos=.15, ypos=.75)
+            with move
+
             dante "Dormi péssimo. Ao menos o cheiro de café está maravilhoso."
 
     play sound "audio/Sound effects/pessoas/Pessoa_bebendo_café_xicará_garganta.mp3"
@@ -51,10 +65,9 @@ label capitulo3:
 
     helena "Pensei em levar você para conhecer a Igreja da Misericórdia e conversar com o Padre Iohann. Ele é uma pessoa fascinante"
 
-    narrador "Dante assentiu, lembrando-se das palavras de Rocha sobre as luzes estranhas. Ele estava curioso para conhecer o Padre Iohann e descobrir mais sobre a igreja que tanto o intrigara."
-
-
-    narrador "Após o café, o trio seguiu em direção à igreja. O caminho era tranquilo, com poucas pessoas nas ruas, e a brisa fresca da manhã tornava a caminhada agradável."
+    narrador "Dante assentiu, lembrando-se das palavras de Rocha sobre as luzes estranhas."
+    narrador "Ele estava curioso para conhecer o Padre Iohann e descobrir mais sobre a igreja que tanto o intrigara."
+    narrador "Após o café, o trio seguiu em direção à igreja."
 
     stop sound
 
@@ -64,18 +77,23 @@ label capitulo3:
     $ renpy.music.set_volume(0.04, channel='music')
 
     narrador "Quando chegaram à igreja, Dante ficou impressionado novamente com sua arquitetura."
-
     narrador "A fachada barroca estava decorada com detalhes intrincados, e os vitrais coloridos refletiam a luz do sol, criando um espetáculo de cores."
+    narrador "Ao entrarem, foram recebidos pelo som suave do órgão e pelo aroma de incenso."
 
-    narrador "Ao entrarem, foram recebidos pelo som suave do órgão e pelo aroma de incenso. No altar, um homem alto de cabelos negros e olhos cansados estava terminando suas orações. Ao notar a presença dos visitantes, ele se levantou e se aproximou."
+    show vitoria normal at Position(xpos = 0.1, ypos = 0.75)
+    show helena normal at Position(xpos = 0.25, ypos = 0.75)
+    show dante normal at Position(xpos = 0.40, ypos = 0.75)
+    with dissolve
+
+    narrador "No altar, um homem alto de cabelos negros e olhos cansados estava terminando suas orações."
 
     show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
-    padre "Bom dia, Helena, Vitória. E você deve ser Dante, o amigo de Helena. Sou o Padre Iohann. Seja bem-vindo à nossa igreja."
+    narrador "Ao notar a presença dos visitantes, ele se levantou e se aproximou."
 
-    show vitoria normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show helena normal at Position(xpos = 0.25, ypos = 0.75) with dissolve
-    show dante normal at Position(xpos = 0.40, ypos = 0.75) with dissolve
+    show padre normal at Position(xpos = 0.8, ypos = 0.75) with move
+
+    padre "Bom dia, Helena, Vitória. E você deve ser Dante, o amigo de Helena. Sou o Padre Iohann. Seja bem-vindo à nossa igreja."
 
     dante "Muito prazer em conhecê-lo, Padre Iohann. É um lugar lindo."
 
