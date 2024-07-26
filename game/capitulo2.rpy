@@ -74,18 +74,14 @@ label capitulo2:
     show dante normal at Position(xpos=.3, ypos=.75)
     with move
 
-    narrador "disse Helena antes de pegar ambos pelos braços e sair correndo em direção ao centro da cidade."
+    narrador "disse Helena antes de pegar ambos pelos braços e sair correndo sem rumo para conhecer a cidade."
 
     hide helena-vestido-azul-feliz with dissolve
-
     hide dante normal
     hide vitoria normal
     with dissolve
 
-
-    narrador "O trio passou o dia caminhando pelo centro da cidade" 
-    narrador "Conheceram alguns residentes e atravessaram um riacho..."
-    narrador "Até chegarem na porta da Igreja da Misericórdia, uma bela igreja antiga."
+    narrador "O grupo passou na porta da Igreja da Misericórdia, uma bela igreja antiga."
 
     play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume .2 fadein 2.0
 
@@ -102,19 +98,25 @@ label capitulo2:
 
     helena "É incrível, né?"
     helena "A Igreja é símbolo deste lugar. Seus fundadores vieram da Europa e trouxeram a tradição católica aqui"
+    helena "Mas esse não é nosso destino, vamos."
 
-
-    hide dante normal
     hide helena-vestido-azul-feliz
+    hide dante normal
     with dissolve
+
+    narrador "O trio passou em frente a praça da cidade"
+
     stop sound fadeout 1.5
+
+    scene praca-principal
+
+    narrador "Após uma tarde de conversa, os três se dirigiram para a padaria favorita de Vitória, próxima à praça principal da cidade."
 
     scene padaria-fora
 
     $ renpy.music.play("audio/Sound effects/pessoas/Homem_cantarolar_senior_trabalhando_corte.mp3", loop=True)
     $ renpy.music.set_volume(.5, channel='music')
 
-    narrador "Após uma tarde de conversa, os três se dirigiram para a padaria favorita de Vitória, próxima à praça principal da cidade."
     narrador "Lá, foram recebidos por Seu Pedro, o padeiro."
     
     show pedro normal at Position(xpos=.5, ypos=.75) with dissolve
@@ -163,16 +165,17 @@ label capitulo2:
             narrador "Dante olhou para Helena e Vitória, ainda rindo, e sorriu confuso"
 
         "Pedir explicação":
-            show pedro normal at Position(xpos=.8, ypos=.75) with move
-            show dante normal at Position(xpos = .165, ypos=.75) with dissolve
+
+            hide pedro normal with dissolve
+
+            show dante normal at Position(xpos = .5, ypos=.75) with dissolve
 
             narrador "Sem entender muito, Dante indaga a Helena e Vitoria qual foi a graça da fala"
 
             dante "Eu realmente estou com fome após a viagem, por que as risadas?"
 
-            hide pedro normal with dissolve
-
-            show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.75) with move
+            show dante normal at Position(xpos = .165, ypos=.75) with move
+            show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.75) with dissolve
 
             helena "Não seja tão careta Dante, o seu Pedro trabalha no cemitério da cidade por isso a graça em morrendo de fome"
 
@@ -209,14 +212,15 @@ label capitulo2:
     hide helena-vestido-azul-feliz with dissolve
     $ renpy.music.set_volume(.2, channel='music')
     
-    show vitoria normal at Position(xpos=.7, ypos=.25):
+    show vitoria normal at Position(xpos=.35, ypos=.25):
         xzoom -1
     with dissolve 
 
     vitoria "Dante, você vai adorar o festival!"
     vitoria "É a melhor época do ano aqui: tem música, danças tradicionais, comidas típicas e até bingo!"
 
-    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
+    show vitoria normal at Position(xpos=.7, ypos=.25) with move
+    show dante normal at Position(xpos=.165, ypos=.75) with dissolve
 
     dante "Sou muito bom no bingo hein!"
     dante "Já estou ansioso, Parece incrível!"
@@ -235,21 +239,24 @@ label capitulo2:
     with dissolve
 
     $ renpy.music.play("audio/Sound effects/Lugares/Safe_house_seguro_tranquilo.mp3", loop=True)
-    $ renpy.music.set_volume(.3, channel='music')
+    $ renpy.music.set_volume(.15, channel='music')
  
     scene praca-principal with fade
 
-    play sound "audio/Sound effects/Lugares/Natureza_ventania_leve.mp3"
+
+    play sound "audio/Sound effects/Lugares/Vilarejo_passaros_cachorro_sem_tecnologia.mp3" loop
+    show helena-vestido-azul-feliz at Position(xpos=.15, ypos=.75) with dissolve
+    show dante normal at Position(xpos=.35, ypos=.75) with dissolve
+    show vitoria normal at Position(xpos=.55, ypos=.75) with dissolve
 
     narrador "A brisa da tarde assoprava fria e o céu se estendia como uma folha de ouro sob suas cabeças, e iluminava resplandecia toda a cidade"
     narrador "Caminhando pela praça, a atmosfera acolhedora do vilarejo os envolvia."
-    narrador "Crianças corriam e brincavam, e o grupo de amigos conversava animadamente"
-    narrador "Ao se aproximarem de um banco perto da fonte, avistaram uma mulher sentada, muito concentrada na leitura de um pequeno livro de capa cor de vinho, sem título." 
-    narrador "A sombra de Helena tocou as páginas, e ela notou a presença do grupo."
-
-    stop sound
+    narrador "Passaros cantavam, a natureza era vivída e o grupo de amigos conversava animadamente"
 
     show sofia normal at Position(xpos=.85, ypos=.75) with dissolve
+    narrador "Ao se aproximarem de um banco perto da fonte, avistaram uma mulher sentada, muito concentrada na leitura de um pequeno livro de capa cor de vinho, sem título" 
+
+    narrador "Ao Vitoria se aproximar para cumprimentar a moça,sua sombra tocou as páginas, e ela notou a presença do grupo."
 
     sofia "Helena, Vitória! Quem é o rapaz?"
 
