@@ -8,7 +8,7 @@ label capitulo1:
 
     indefinido "..."
 
-    show dante normal at Position(xpos = .5, ypos = .75) with dissolve
+    show dante normal at Position(xpos=.5, ypos=.75) with dissolve
 
     dante "Ócio..."
 
@@ -18,15 +18,20 @@ label capitulo1:
 
     telefoneDoDante "*tocando"
 
-    dante "Inferno"
+    show dante normal at Position(xpos=.35, ypos=.75) with move 
+    show smartphone at Position(xpos=.55, ypos=.8) with dissolve
 
-    show dante normal at Position(xpos = .165, ypos = .95) with move
+    dante "Inferno!"
+
+    show dante normal at Position(xpos=.35, ypos=.95)
+    show smartphone at Position(xpos=.55, ypos=.95) with move
 
     menu:
         "Atender":
             stop sound fadeout 1.5
 
-    show dante normal at Position(xpos = .5, ypos = .75) with move
+    hide smartphone with dissolve
+    show dante normal at Position(xpos=.5, ypos=.75) with move
 
     dante "Alô?"
 
@@ -34,9 +39,9 @@ label capitulo1:
 
     dante "Sim, quem fala?"
 
-    show dante normal at Position(xpos = .15, ypos = .75) with move
+    show dante normal at Position(xpos=.15, ypos=.75) with move
 
-    show helena normal at Position(xpos = .7, ypos = .25):
+    show helena normal at Position(xpos=.7, ypos=.25):
         xzoom -1
     with dissolve
 
@@ -52,9 +57,7 @@ label capitulo1:
     helena "Eles decidiram largar a vida da capital!"
     helena "Eu amo morar aqui, é lindo! Acabei de te mandar umas fotos, dá uma olhada!"
 
-    narrador "Dante Olha a notificação e visualiza as fotos rapidamente"
-
-    # adicionar fotos do local, pode ser um celular na galeria ou umas 4 fotos daquelas de camera de revelação instantânea sobrepostas.
+    show celular at Position(xpos=.42, ypos=.89)
 
     dante " Uau! Esse lugar é fera demais!"
     dante "Até me lembra um pouco aquela viagem que fizemos para Goiás na época de escola, lembra?"
@@ -63,15 +66,21 @@ label capitulo1:
     helena "Já que está de férias, não gostaria de prestar uma visita?"
     helena "Juro por Deus que você vai amar!"
 
-    dante  "Sim, claro!"
-
     hide helena normal with dissolve
 
-    show dante normal at Position(xpos = .5, ypos = .75) with move
+    dante  "Sim, claro!"
+
+    hide celular with dissolve
+    show dante normal at Position(xpos=.5, ypos=.75) with move
 
     narrador "Animado por relembrar alguns de seus bons momentos com Helena, após horas de conversas, Dante decide visitar o vilarejo."
+
+    show dante normal at Position(xpos=.165, ypos=.75) with move
+
     narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."
-    
+
+
+
     hide dante normal with fade
 
     return
