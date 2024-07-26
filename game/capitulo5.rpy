@@ -29,7 +29,7 @@ label capitulo5:
     menu:
         "Perguntar diretamente sobre Helena (Confiança Alta)":
 
-            
+            $ historia.incr_peso_bom()
 
             dante "Padre Iohann, você viu Helena esta manhã?"
 
@@ -54,7 +54,7 @@ label capitulo5:
 
     narrador "Dante deixa o escritório, passando pelos corredores da igreja que parecem ainda mais sombrios, refletindo sua crescente desconfiança."
 
-    scene sala-seminaristas
+    scene sala-dos-seminaristas
 
     show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
@@ -68,7 +68,7 @@ label capitulo5:
     menu:
         "Perguntar sobre a noite do desaparecimento":
 
-            
+            $ historia.incr_peso_bom()
 
             dante "Vocês viram algo na noite em que Helena desapareceu?"
 
@@ -140,7 +140,7 @@ label capitulo5:
     menu:
         "Investigar livros antigos (Confiança Alta)":
 
-            
+            $ historia.incr_peso_bom()
 
             narrador "Dante encontra um livro sobre o relicário e rituais antigos, descobrindo uma referência a uma área secreta na igreja."
 

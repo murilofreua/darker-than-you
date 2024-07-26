@@ -25,7 +25,7 @@ label capitulo3:
 
     narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
 
-    show vitoria normal at posicao_direita_invertido_cap3:
+    show vitoria normal at Position(xpos = 0.72, ypos = 0.25):
         xzoom -1
     with dissolve
 
@@ -38,9 +38,11 @@ label capitulo3:
     menu:
         "Dormi sim, obrigado.":
 
-            
+            $ historia.incr_peso_bom()
 
-            dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
+            $ ValorPesoBom = historia.get_peso_bom().get('peso', 0)
+
+            dante "Dormi sim, obrigado. O cheiro de café está maravilhoso. Seu peso bom é {ValorPesoBom}."
 
         "Tive uma noite de sono péssima":
             dante "Dormi péssimo. Ao menos o cheiro de café está maravilhoso."
@@ -114,7 +116,9 @@ label capitulo3:
     menu:
         "Perguntar sobre as luzes estranhas":
 
-            
+            $ historia.incr_peso_bom()
+
+            $ ValorPesoBom = historia.get_peso_bom().get('peso', 0)
 
             show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
             show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
@@ -152,7 +156,7 @@ label capitulo3:
     menu:
         "Folhear livro":
 
-            
+            $ historia.incr_peso_bom()
 
             play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3"
             hide helena normal with dissolve
@@ -193,7 +197,7 @@ label capitulo3:
     menu:
         "Perguntar sobre barulho":
 
-            
+            $ historia.incr_peso_bom()
 
             show dante normal at Position(xpos = 0.165, ypos = 0.75) with dissolve
 
@@ -271,7 +275,7 @@ label capitulo3:
     menu:
         "Perguntar sobre o festival da cidade":
                         
-                
+                $ historia.incr_peso_bom()
 
                 dante "O festival parece ser incrível. O que exatamente você faz para ajudar, Padre Iohann?"
 
@@ -322,7 +326,7 @@ label capitulo3:
         
         "Achou evasivo":
 
-            
+            $ historia.incr_peso_bom()
 
             dante "Sim, muito interessante."
             dante "Há algo nele que me intriga."

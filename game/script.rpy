@@ -109,9 +109,6 @@ init python:
     
 define historia = Historia()
 
-$ pesoFinal = 0;
-
-
 label start:
 
     call capitulo1

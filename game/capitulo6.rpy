@@ -61,7 +61,7 @@ label capitulo6:
     menu:
         "Consultar registros históricos (Confiança Alta)":
 
-            
+            $ historia.incr_peso_bom()
 
             narrador "Eles encontram um registro detalhado sobre o relicário e o ritual."
             
@@ -133,7 +133,7 @@ label capitulo6:
 
         "Descobrir vestígios do ritual (Confiança Baixa)":
 
-            
+            $ historia.incr_peso_bom()
 
             narrador "Eles encontram apenas fragmentos do ritual e pistas sobre o possível paradeiro de Helena."
             
