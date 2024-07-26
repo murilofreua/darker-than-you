@@ -2,11 +2,11 @@
 
 label capitulo7:
     
-    $ ValorPesoBom = historia.get_peso_bom().get('peso', 0) 
+    $ peso_final = historia.get_peso_bom()
     
-    if ValorPesoBom >= 9:
+    if peso_final >= 9:
         call finalBom
-    elif ValorPesoBom >= 5:
+    elif peso_final >= 5:
         call finalMedio
     else:
         call finalRuim

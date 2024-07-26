@@ -158,7 +158,7 @@ label capitulo2:
     menu:
         "Sorrir confuso":
             
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             narrador "Dante olhou para Helena e Vitória, ainda rindo, e sorriu confuso"
 
@@ -367,7 +367,7 @@ label capitulo2:
     menu:
         "Apertar mão de rocha firmemente":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             hide vitoria normal with dissolve
             show dante normal at Position(xpos=.35,ypos=.75) with move

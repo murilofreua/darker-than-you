@@ -29,7 +29,7 @@ label capitulo5:
     menu:
         "Perguntar diretamente sobre Helena (Confiança Alta)":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             dante "Padre Iohann, você viu Helena esta manhã?"
 
@@ -68,7 +68,7 @@ label capitulo5:
     menu:
         "Perguntar sobre a noite do desaparecimento":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             dante "Vocês viram algo na noite em que Helena desapareceu?"
 
@@ -140,7 +140,7 @@ label capitulo5:
     menu:
         "Investigar livros antigos (Confiança Alta)":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             narrador "Dante encontra um livro sobre o relicário e rituais antigos, descobrindo uma referência a uma área secreta na igreja."
 

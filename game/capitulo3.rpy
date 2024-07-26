@@ -38,7 +38,7 @@ label capitulo3:
     menu:
         "Dormi sim, obrigado.":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
 
@@ -114,7 +114,7 @@ label capitulo3:
     menu:
         "Perguntar sobre as luzes estranhas":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             $ ValorPesoBom = historia.get_peso_bom().get('peso', 0)
 
@@ -154,7 +154,7 @@ label capitulo3:
     menu:
         "Folhear livro":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3"
             hide helena normal with dissolve
@@ -195,7 +195,7 @@ label capitulo3:
     menu:
         "Perguntar sobre barulho":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             show dante normal at Position(xpos = 0.165, ypos = 0.75) with dissolve
 
@@ -273,7 +273,7 @@ label capitulo3:
     menu:
         "Perguntar sobre o festival da cidade":
                         
-                $ historia.incr_peso_bom()
+                $ historia.incrementar_peso(1)
 
                 dante "O festival parece ser incrível. O que exatamente você faz para ajudar, Padre Iohann?"
 
@@ -324,7 +324,7 @@ label capitulo3:
         
         "Achou evasivo":
 
-            $ historia.incr_peso_bom()
+            $ historia.incrementar_peso(1)
 
             dante "Sim, muito interessante."
             dante "Há algo nele que me intriga."
