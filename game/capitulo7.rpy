@@ -29,7 +29,7 @@ label capitulo7:
 
 
 
-    scene tela-finais
+    scene textura-madeira2
 
     $ finalOtimoAtingido = persistent.finalOtimo
     $ finalBomAtingido = persistent.finalBom
@@ -37,14 +37,26 @@ label capitulo7:
     $ finalRuimAtingido = persistent.finalRuim
 
     if finalOtimoAtingido:
-        show final-otimo at Position(xpos = .2, ypos = 3) with dissolve
-    if finalBomAtingido:
-        show final-bom at Position(xpos = .4, ypos = .3) with dissolve
-    if finalMedioAtingido:
-        show final-medio at Position(xpos = .6, ypos = .3) with dissolve
-    if finalRuimAtingido:
-        show final-ruim at Position(xpos = .8, ypos = .3) with dissolve
+        show selo-final-otimo at Position(xpos=0.2, ypos=0.6) with dissolve
+    else:
+        show retangulo-vazio at Position(xpos=0.2, ypos=0.6) with dissolve
 
-    indefinido ""
+    if finalBomAtingido:
+        show selo-final-bom at Position(xpos=0.4, ypos=0.6) with dissolve
+    else:
+        show retangulo-vazio1 at Position(xpos=0.4, ypos=0.6) with dissolve
+
+    if finalMedioAtingido:
+        show selo-final-medio at Position(xpos=0.6, ypos=0.6) with dissolve
+    else:
+        show retangulo-vazio2 at Position(xpos=0.6, ypos=0.6) with dissolve
+
+    if finalRuimAtingido:
+        show selo-final-ruim at Position(xpos=0.8, ypos=0.6) with dissolve
+    else:
+        show retangulo-vazio3 at Position(xpos=0.8, ypos=0.6) with dissolve
+
+
+    pause
 
     return
