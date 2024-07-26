@@ -367,18 +367,14 @@ label capitulo2:
     menu:
         "Apertar mão de rocha firmemente":
 
-<<<<<<< Updated upstream
             $ historia.incr_peso_bom()
 
             hide vitoria normal with dissolve
             show dante normal at Position(xpos=.35,ypos=.75) with move
             show rocha normal at Position(xpos=.65,ypos=.75) with move
-=======
             show dante normal at Position(xpos=.35,ypos=.75)
             show rocha normal at Position(xpos=.65,ypos=.75)
             with move
->>>>>>> Stashed changes
-
             rocha "Prazer em conhecê-lo, Dante"
             rocha "Espero que aproveite sua estadia."
             

@@ -40,9 +40,7 @@ label capitulo3:
 
             $ historia.incr_peso_bom()
 
-            $ ValorPesoBom = historia.get_peso_bom().get('peso', 0)
-
-            dante "Dormi sim, obrigado. O cheiro de café está maravilhoso. Seu peso bom é {ValorPesoBom}."
+            dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
 
         "Tive uma noite de sono péssima":
             dante "Dormi péssimo. Ao menos o cheiro de café está maravilhoso."
