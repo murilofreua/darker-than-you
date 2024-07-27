@@ -92,9 +92,11 @@ label capitulo2:
     narrador "Apesar de Dante de não ser muito religioso..."
     narrador "O garoto sentiu uma sensação estranha enquanto olhava para a igreja, como se alguma energia misteriosa o atraísse."
 
-    show dante normal at Position(xpos = .165, ypos=.75) with dissolve
+    show dante normal at Position(xpos = .5, ypos=.75) with dissolve
 
     dante "Que bela igreja!"
+
+    show dante normal at Position(xpos = .165, ypos=.75) with move
 
     show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.75) with dissolve
 
@@ -161,12 +163,10 @@ label capitulo2:
 
     menu:
         "Sorrir confuso":
-            
-            $ historia.incrementar_peso(1)
-
             narrador "Dante olhou para Helena e Vitória, ainda rindo, e sorriu confuso"
 
         "Pedir explicação":
+            $ historia.incrementar_peso(1)
 
             hide pedro normal with dissolve
 
@@ -319,10 +319,17 @@ label capitulo2:
             show dante normal at Position(xpos = .165, ypos=.75)
             show isabel normal at Position(xpos = .85, ypos=.75)
             with move
+            show maça at Position(xpos=.75, ypos=.75) with dissolve
+            show maça at Position(xpos=.25, ypos=.75) with move
+            hide maça
+            show maça-mordida at Position(xpos=.25, ypos=.75)
+            with dissolve
 
             dante "Obrigado, Isabel. É um prazer conhecê-la!"
             
             isabel " O prazer é todo meu pequeno."
+
+            hide maça-mordida with dissolve
 
         "Aceitar maça e guardar no bolso":
             show dante normal at Position(xpos = .165, ypos=.75)
@@ -333,6 +340,10 @@ label capitulo2:
             dante "É um imenso prazer conhecê-la!"
 
             isabel " Que pena que está cheio, pelo menos leve essa maça então para o passeio."
+
+            show maça at Position(xpos=.75, ypos=.75) with dissolve
+            show maça at Position(xpos=.275, ypos=.75) with move
+            hide maça with dissolve
 
             $ historia.maca_guardada()
             narrador "Dante pega a maça e a guarda!"
@@ -362,19 +373,20 @@ label capitulo2:
 
     hide sofia normal with dissolve
 
-    narrador "Os jovens dão continuidade ao passeio."
-
     show vitoria normal at Position(xpos=.15, ypos=.75)
     show helena-vestido-azul-feliz at Position(xpos=.25, ypos=.75)
     show dante normal at Position(xpos=.45, ypos=.75)
     with dissolve
-    show vitoria normal at Position(xpos=1., ypos=.75) 
-    show helena-vestido-azul-feliz at Position(xpos=1., ypos=.75) 
-    show dante normal at Position(xpos=1., ypos=.75)
+    show vitoria normal at Position(xpos=.75, ypos=.75) 
+    show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.75) 
+    show dante normal at Position(xpos=.95, ypos=.75)
     with move 
-    hide vitoria normal with dissolve
-    hide helena-vestido-azul-feliz with dissolve
-    hide dante normal with dissolve
+    hide vitoria normal
+    hide helena-vestido-azul-feliz
+    hide dante normal
+    with dissolve
+
+    narrador "Os jovens dão continuidade ao passeio."
 
     narrador "Enquanto continuavam a conversar, Rocha, o policial, aproximou-se do grupo, acenando com um sorriso."
 
@@ -457,13 +469,14 @@ label capitulo2:
     show rocha normal at Position(xpos=.5, ypos=.75) with move
 
     rocha "Testemunhas dizem que pareciam pequenas esferas de luz flutuando ao redor da igreja, desaparecendo antes de poderem se aproximar"
-    rocha "Eu sei que pode parecer estranho, mas estamos tratando isso como apenas rumores."
-    rocha "Se virem algo, por favor, nos avisem imediatamente."
+    rocha "Eu sei que pode parecer estranho, mas estamos tratando isso apenas como rumores até o momento."
+    rocha "Se virem algo, por favor, me avisem imediatamente."
 
     hide rocha normal with dissolve
     show dante normal at Position(xpos=.5, ypos=.75) with dissolve
 
-    narrador "Dante sentiu um arrepio percorrer sua espinha. Aquela Igreja já lhe causara uma sensação estranha durante o dia."
+    narrador "Dante sentiu um arrepio percorrer sua espinha."
+    narrador "Um misto de agitação e medo pelo suspense entregue por rocha."
 
     hide dante normal with dissolve
 
@@ -492,7 +505,7 @@ label capitulo2:
     with move
 
     menu:
-        "Demonstrar sua ":
+        "Demonstrar insatisfação":
             show dante normal at Position(xpos=.65, ypos=.75)
             show vitoria normal at Position(xpos=.5, ypos=.75)
             show helena-vestido-azul-feliz at Position(xpos=.35, ypos=.75)
@@ -506,19 +519,16 @@ label capitulo2:
         xzoom -1
     with move
 
-
-    hide helena-vestido-azul-feliz with dissolve
-
     vitoria "Concordo"
     vitoria "Mas vamos tentar não nos preocupar demais"
     vitoria "Amanhã é um novo dia, e vamos descobrir mais sobre essa história."
 
     stop sound fadeout 1.5
 
-    show helena-vestido-azul-feliz at Position(xpos=.65, ypos=.75) with dissolve
+    show helena-vestido-azul-feliz at Position(xpos=.6, ypos=.75) with move
 
-    helena "Sim, vamos descansar agora."
-    helena "Amanhã pode ser um dia longo"
+    helena "Sim, vamos descansar por agora."
+    helena "Amanhã vai ser um dia longo"
 
     hide helena-vestido-azul-feliz
     hide dante normal
@@ -527,7 +537,7 @@ label capitulo2:
 
     scene quarto-helena-noite
 
-    narrador "O grupo chega à casa de Helena e as meninas apresentam ao Dante o quarto que o acolherá"
+    narrador "O grupo chega à casa de Helena, a qual apresenta a Dante o quarto que o acolherá"
 
     show helena-vestido-azul-feliz at Position(xpos=.5, ypos=.75) with dissolve
 
@@ -563,6 +573,10 @@ label capitulo2:
     hide helena-vestido-azul-feliz with dissolve
 
     narrador "Com passeios lúdicos e duvidas no ar, chega ao fim o primeiro dia da viagem de dante"
+
+    menu:
+        "Dormir":
+            dante "ZzZzZzZz"
 
     hide dante normal with dissolve
 

@@ -41,13 +41,16 @@ label capitulo1:
     dante "Sim, quem fala?"
 
     show dante normal at Position(xpos=.15, ypos=.75) with move
+
+    vozFeminina " Oi, Dante! Sou a Helena, lembra de mim?"
+
     hide smartphone
     show helena normal at Position(xpos=.7, ypos=.25):
         xzoom -1
     with dissolve
 
-
-    vozFeminina " Oi, Dante! Sou a Helena, lembra de mim? Achei seu número por acaso na internet. Tá sumido uai! Como estão as coisas?"
+    helena "Achei seu número por acaso na internet."
+    helena "Tá sumido uai! Como estão as coisas?"
 
     dante "He... Helena?"   
     dante "Helena?! Quanto tempo! Claro que me lembro de você. Faz tempo mesmo."
@@ -56,9 +59,10 @@ label capitulo1:
 
     helena "Já faz alguns anos que vim morar num vilarejo pacáto com meus pais."
     helena "Eles decidiram largar a vida da capital!"
-    helena "Eu amo morar aqui, é lindo! Acabei de te mandar umas fotos, dá uma olhada!"
+    helena "Eu amo morar aqui, é lindo!"
+    helena "Acabei de te mandar umas fotos, dá uma olhada!"
 
-    show celular at Position(xpos=.42, ypos=.89)
+    show celular at Position(xpos=.42, ypos=.89) with dissolve
 
     dante " Uau! Esse lugar é fera demais!"
     dante "Até me lembra um pouco aquela viagem que fizemos para Goiás na época de escola, lembra?"
@@ -67,10 +71,11 @@ label capitulo1:
     helena "Já que está de férias, não gostaria de prestar uma visita?"
     helena "Juro por Deus que você vai amar!"
 
-    dante  "Sim, claro!"
+    hide celular with dissolve
+
+    dante  "Olha, essa é uma otima ideia!"
 
     hide helena normal with dissolve
-    hide celular with dissolve
 
     show dante normal at Position(xpos=.5, ypos=.75) with move
 
