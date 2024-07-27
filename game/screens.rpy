@@ -355,8 +355,20 @@ screen main_menu():
 
     ## Isso garante que qualquer outra tela de menu seja substituída.
     tag menu
+    
+    $ finalOtimoAtingido = persistent.finalOtimo
+    $ finalBomAtingido = persistent.finalBom
+    $ finalMedioAtingido = persistent.finalMedio
+    $ finalRuimAtingido = persistent.finalRuim
 
-    $ renpy.music.play("audio/Sound effects/Objetos/Toque_celular_nokia_3310.mp3", loop=True)
+    $ finaisAtingidos = int(finalOtimoAtingido) + int(finalBomAtingido) + int(finalMedioAtingido) + int(finalRuimAtingido)
+
+    if finaisAtingidos == 4:
+        $ renpy.music.play("audio/Capitulos/Menu_sound.mp3", loop=True)
+        $ renpy.music.set_volume(0.07, channel='music')
+    else:
+        $ renpy.music.play("audio/Capitulos/intro_menor.wav", loop=True)
+        $ renpy.music.set_volume(0.07, channel='music')
 
     add gui.main_menu_background
 
