@@ -1567,7 +1567,23 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
+
+$ finalOtimoAtingido = persistent.finalOtimo
+$ finalBomAtingido = persistent.finalBom
+$ finalMedioAtingido = persistent.finalMedio
+$ finalRuimAtingido = persistent.finalRuim
+
+$ finaisAtingidos = int(finalOtimoAtingido) + int(finalBomAtingido) + int(finalMedioAtingido) + int(finalRuimAtingido)
+
+if finaisAtingidos == 4:
+    style main_menu_frame:
+        variant "small"
+        background "images/cenarios/igreja-fora-noite-pessimo.jpg"
+else:
+    style main_menu_frame:
+        variant "small"
+        background "gui/phone/overlay/main_menu.png"
+    
 
 style game_menu_outer_frame:
     variant "small"
