@@ -36,8 +36,6 @@ label capitulo2:
 
             dante "Olá, Helena! Você mudou muito desde a última vez que nos vimos!"
 
-            narrador "Dante pensa em voz alta exaltando a beleza da amiga"
-
             dante "Está estonteantemente linda!"
 
             show helena-vestido-azul-feliz at Position(xpos=.85, ypos=.75)
@@ -85,11 +83,11 @@ label capitulo2:
     hide vitoria normal
     with dissolve
 
-    narrador "O grupo passou na porta da Igreja da Misericórdia, uma bela igreja antiga."
+    scene igreja-fora-dia
 
     play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume .2 fadein 2.0
 
-    scene igreja-fora-dia
+    narrador "O grupo passou na porta da Igreja da Misericórdia, uma bela igreja antiga."
 
     narrador "Apesar de Dante de não ser muito religioso..."
     narrador "O garoto sentiu uma sensação estranha enquanto olhava para a igreja, como se alguma energia misteriosa o atraísse."
