@@ -370,37 +370,49 @@ label capitulo3:
     hide padre normal
     with dissolve
 
-    $ renpy.music.set_volume(0.01, channel='music')
-    play sound "audio/Sound effects/Lugares/Safe_house_seguro_tranquilo.mp3" volume.3
+    $ renpy.music.play("audio/Sound effects/Lugares/Safe_house_seguro_tranquilo.mp3", loop=True)
+    $ renpy.music.set_volume(0.05, channel='music')
     scene centro
+
+    show helena normal at Position(xpos=.35, ypos=.75)
+    show vitoria normal at Position(xpos=.55, ypos=.75)
+    show dante normal at Position(xpos=.75, ypos=.75)
+    with dissolve
 
     narrador "Helena, Vitória e Dante decidiram aproveitar o resto do dia explorando o vilarejo."
     narrador "Mas Dante não conseguia tirar a sensação de estranheza da cabeça."
     narrador "Algo naquela igreja o incomodava."
     narrador "Enquanto caminhavam de volta para a praça principal, Helena virou-se para Dante e disse:" #aqui
 
-    show helena normal at Position(xpos=.35, ypos=.75) with dissolve
-    show dante normal at Position(xpos=.85, ypos=.75) with dissolve
 
     helena "O que achou do Padre Iohann? Ele é uma figura interessante, não é?"
 
-    show dante normal at Position(xpos=.8375, ypos=.75):
+    show dante normal at Position(xpos=.8375, ypos=.95):
         xzoom -1
-    with dissolve
+    show helena normal at Position(xpos=.15, ypos=.95)
+    show vitoria normal at Position(xpos=.35, ypos=.95)
+    with move
 
     menu:
         "Gostou de conhece-lo":
+            show dante normal at Position(xpos=.8375, ypos=.75)
+            show helena normal at Position(xpos=.15, ypos=.75)
+            show vitoria normal at Position(xpos=.35, ypos=.75)
+            with move
+
             dante "Sim, muito interessante."
             dante "Gostei de conhece-lo"
         
         "Achou evasivo":
+            show dante normal at Position(xpos=.8375, ypos=.75)
+            show helena normal at Position(xpos=.15, ypos=.75)
+            show vitoria normal at Position(xpos=.35, ypos=.75)
+            with move
 
             $ historia.incrementar_peso(1)
 
             dante "Sim, muito interessante."
             dante "Há algo nele que me intriga."
-
-    show vitoria normal at Position(xpos=.15, ypos=.75) with dissolve
 
     vitoria "Ele é um homem bom!"
     vitoria "Mas também parece carregar um grande fardo"
@@ -410,9 +422,10 @@ label capitulo3:
 
     narrador "Todos seguem rumo ao seu local de descanso e tiram o sono merecido depois do dia cansativo"
 
-    hide dante normal with dissolve
-    hide helena normal with dissolve
-    hide vitoria normal with dissolve
+    hide dante normal
+    hide helena normal
+    hide vitoria normal
+    with dissolve
 
     scene quarto-helena-noite
 
@@ -422,12 +435,11 @@ label capitulo3:
     narrador "O dia passou rapidamente, e à noite, enquanto estava deitado em sua cama, Dante sonha sobre tudo o que havia visto e ouvido se imaginando em seu quarto."
 
     $ renpy.music.play("audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3", loop=True)
-    $ renpy.music.set_volume(0.02, channel='music')
-
+    $ renpy.music.set_volume(0.01, channel='music')
 
     narrador "Antes de adormecer, ouviu novamente o som dos sinos da igreja, desta vez mais distante, quase como um sussurro."
-
-    narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos, esperando que o dia seguinte trouxesse mais respostas, e talvez, mais perguntas."
+    narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos"
+    narrador "esperando que o dia seguinte trouxesse mais respostas."
 
     menu:
         "Dormir":
