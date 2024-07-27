@@ -8,10 +8,10 @@ label finalBom:
     show text "Helena é encontrada desorientada, mas demonstrando estar bem de saúde." at truecenter with dissolve
     pause 
 
-    show text "O local onde Helena foi encontrada é uma caverna oculta, repleta de símbolos antigos e misteriosos" at truecenter with dissolve
+    show text "O local onde Helena foi encontrada é uma caverna oculta, repleta de símbolos antigos e misteriosos." at truecenter with dissolve
     pause 
 
-    show text "Encontram vestígios de que o ritual não foi realizado" at truecenter with dissolve
+    show text "Encontram vestígios de que o ritual não foi realizado." at truecenter with dissolve
     pause 
 
     show text "A atmosfera é de alívio e felicidade, com uma sensação de grande realização." at truecenter with dissolve
