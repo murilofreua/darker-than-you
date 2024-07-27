@@ -31,7 +31,7 @@ define gui.accent_color = '#0099cc'
 
 ## A cor usada para um botão de texto quando ele não está selecionado nem passa
 ## o mouse.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#FFF'
 
 ## A cor pequena é usada para texto pequeno, que precisa ser mais claro/escuro
 ## para obter o mesmo efeito.
@@ -62,22 +62,22 @@ define gui.interface_text_color = '#ffffff'
 ## Fontes e tamanhos de fonte ##################################################
 
 ## A fonte usada para o texto do jogo.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "RobotoMono-Medium.ttf"
 
 ## A fonte usada para os nomes dos caracteres.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "Hey August.ttf"
 
 ## A fonte usada para o texto fora do jogo.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "Hey August.ttf"
 
 ## O tamanho do texto normal do diálogo.
 define gui.text_size = 33
 
 ## O tamanho dos nomes dos caracteres.
-define gui.name_text_size = 45
+define gui.name_text_size = 60
 
 ## O tamanho do texto na interface de usuário do jogo.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 60
 
 ## O tamanho dos rótulos na interface de usuário do jogo.
 define gui.label_text_size = 36
