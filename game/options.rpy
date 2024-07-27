@@ -12,7 +12,7 @@
 ##
 ## O _() ao redor da string a marca como elegível para tradução.
 
-define config.name = _("Darker Than You")
+define config.name = _("")
 
 
 ## Determina se o título fornecido acima será mostrado na tela do menu
@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## A versão do jogo.
 
-define config.version = "1.0"
+define config.version = ""
 
 
 ## Texto que é colocado na tela "Sobre" do jogo. Coloque o texto entre aspas

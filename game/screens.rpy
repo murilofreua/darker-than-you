@@ -250,13 +250,6 @@ screen quick_menu():
             yalign 1.0
 
             textbutton _("Voltar") action Rollback()
-            textbutton _("Histórico") action ShowMenu('history')
-            textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Automotivo") action Preference("auto-forward", "toggle")
-            textbutton _("Salvar") action ShowMenu('save')
-            textbutton _("Q.Salvar") action QuickSave()
-            textbutton _("Q. Carga") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## Esse código garante que a tela quick_menu seja exibida no jogo, sempre que o
@@ -287,48 +280,58 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
-        style_prefix "navigation"
+    if main_menu:
+        hbox:
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+            xpos 0.1
+            ypos 0.86
 
-        spacing gui.navigation_spacing
+            spacing 90
 
-        if main_menu:
+            if main_menu:
 
-            textbutton _("Início") action Start()
+                textbutton _("Início") action Start()
 
-        else:
+            else:
 
-            textbutton _("Histórico") action ShowMenu("history")
+                textbutton _("Histórico") action ShowMenu("history")
+
+                textbutton _("Salvar") action ShowMenu("save")
+
+            textbutton _("Jogos salvos") action ShowMenu("load")
+
+            textbutton _("Configurações") action ShowMenu("preferences")
+
+            if _in_replay:
+
+                textbutton _("Fim da reprodução") action EndReplay(confirm=True)
+
+            elif not main_menu:
+
+                textbutton _("Menu principal") action MainMenu()
+
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+                ## A ajuda não é necessária ou relevante para dispositivos móveis.
+                textbutton _("Ajuda") action ShowMenu("help")
+
+            if renpy.variant("pc"):
+
+                ## O botão Sair é proibido no iOS e desnecessário no Android e na
+                ## Web.
+                textbutton _("Sair") action Quit(confirm=not main_menu)
+    else:
+        vbox:
+            xpos 0.02
+            ypos 0.7
+            anchor (0.0, 1.0)
+            spacing 20
 
             textbutton _("Salvar") action ShowMenu("save")
-
-        textbutton _("Carga") action ShowMenu("load")
-
-        textbutton _("Preferências") action ShowMenu("preferences")
-
-        if _in_replay:
-
-            textbutton _("Fim da reprodução") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
+            textbutton _("Jogos salvos") action ShowMenu("load")
+            textbutton _("Configurações") action ShowMenu("preferences")
             textbutton _("Menu principal") action MainMenu()
-
-        textbutton _("Sobre") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## A ajuda não é necessária ou relevante para dispositivos móveis.
-            textbutton _("Ajuda") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## O botão Sair é proibido no iOS e desnecessário no Android e na
-            ## Web.
-            textbutton _("Sair") action Quit(confirm=not main_menu)
+            textbutton _("Sair") action Quit(confirm=True)
 
 
 style navigation_button is gui_button
@@ -352,6 +355,8 @@ screen main_menu():
 
     ## Isso garante que qualquer outra tela de menu seja substituída.
     tag menu
+
+    $ renpy.music.play("audio/Sound effects/Objetos/Toque_celular_nokia_3310.mp3", loop=True)
 
     add gui.main_menu_background
 
@@ -382,12 +387,10 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
+    xsize 600
     yfill True
-    xpos 0.5
-    ypos 0.3
 
-    background "gui/overlay/paulo-muzy.png"
+    background "gui/overlay/menu-principal.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -597,7 +600,7 @@ screen load():
 
     tag menu
 
-    use file_slots(_("Carga"))
+    use file_slots(_("Jogos Salvos"))
 
 
 screen file_slots(title):
@@ -1254,7 +1257,7 @@ style skip_text:
 style skip_triangle:
     ## Temos que usar uma fonte que tenha o glifo BLACK RIGHT-POINTING SMALL
     ## TRIANGLE.
-    font "DejaVuSans.ttf"
+    font "RobotoMono-Bold.ttf"
 
 
 ## Tela de notificação #########################################################
