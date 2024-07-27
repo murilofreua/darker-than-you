@@ -84,5 +84,7 @@ label start:
     call capitulo6
 
     call capitulo7
+
+    call creditos
     
 return
