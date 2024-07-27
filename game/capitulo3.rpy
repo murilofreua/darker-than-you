@@ -193,6 +193,7 @@ label capitulo3:
     menu:
         "Folhear livro":
             $ historia.incrementar_peso(1)
+            $ historia.livro_lido()
 
             show dante normal at Position(xpos=.35, ypos=.75) with move
             play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3" loop volume.75

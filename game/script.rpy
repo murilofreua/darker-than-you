@@ -47,8 +47,14 @@ init python:
         def maca_guardada(self):
             self.maca = True
 
+        def get_maca_guardada(self):
+            return self.maca
+
         def livro_lido(self):
             self.livro = True
+
+        def get_livro_lido(self):
+            return self.livro
 
         def incrementar_peso(self, valor):
             self.peso_bom += valor
