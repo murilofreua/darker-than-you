@@ -8,7 +8,7 @@ label capitulo1:
 
     indefinido "..."
 
-    show dante normal at Position(xpos=.5, ypos=.75) with dissolve
+    show dante at Position(xpos=.5, ypos=.75) with dissolve
 
     dante "Ócio..."
 
@@ -18,12 +18,14 @@ label capitulo1:
 
     telefoneDoDante "*tocando"
 
-    show dante normal at Position(xpos=.35, ypos=.75) with move 
-    show smartphone at Position(xpos=.55, ypos=.8) with dissolve
+    show dante at Position(xpos=.35, ypos=.75) with move 
+    show dante preocupado at Position(xpos=.35, ypos=.75)
+    show smartphone at Position(xpos=.55, ypos=.8)
+    with dissolve
 
     dante "Inferno!"
-
-    show dante normal at Position(xpos=.35, ypos=.95)
+    
+    show dante preocupado at Position(xpos=.35, ypos=.95)
     show smartphone at Position(xpos=.55, ypos=.95) with move
 
     menu:
@@ -31,7 +33,7 @@ label capitulo1:
             stop sound fadeout 1.5
 
     show smartphone at Position(xpos=.85, ypos=.85)
-    show dante normal at Position(xpos=.25, ypos=.75)
+    show dante preocupado at Position(xpos=.25, ypos=.75)
     with move
 
     dante "Alô?"
@@ -40,17 +42,19 @@ label capitulo1:
 
     dante "Sim, quem fala?"
 
-    show dante normal at Position(xpos=.15, ypos=.75) with move
-
-    vozFeminina " Oi, Dante! Sou a Helena, lembra de mim?"
+    show dante preocupado at Position(xpos=.15, ypos=.75) with move
 
     hide smartphone
-    show helena normal at Position(xpos=.7, ypos=.25):
+    show helena feliz at Position(xpos=.7, ypos=.25):
         xzoom -1
     with dissolve
 
+    vozFeminina " Oi, Dante! Sou a Helena, lembra de mim?"
+
     helena "Achei seu número por acaso na internet."
     helena "Tá sumido uai! Como estão as coisas?"
+
+    show dante feliz at Position(xpos=.15, ypos=.75) with dissolve
 
     dante "He... Helena?"   
     dante "Helena?! Quanto tempo! Claro que me lembro de você. Faz tempo mesmo."
@@ -77,11 +81,11 @@ label capitulo1:
 
     hide helena normal with dissolve
 
-    show dante normal at Position(xpos=.5, ypos=.75) with move
+    show dante at Position(xpos=.5, ypos=.75) with move
 
     narrador "Animado por relembrar alguns de seus bons momentos com Helena, após horas de conversas, Dante decide visitar o vilarejo."
     narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."
-w
+
     hide dante normal with fade
 
     return

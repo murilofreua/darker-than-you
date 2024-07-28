@@ -25,8 +25,6 @@ label capitulo7:
         "Final Ruim":
             call finalRuim
 
-
-
     scene textura-madeira2
 
     $ finalOtimoAtingido = persistent.finalOtimo

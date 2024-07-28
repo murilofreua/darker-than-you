@@ -152,7 +152,7 @@ define config.save_directory = "DarkerThanYou-1719347754"
 ##
 ## O ícone exibido na barra de tarefas ou no dock.
 
-define config.window_icon = "images/SelosFinais/logo-dty.png"
+define config.window_icon = "images/objetos/SelosFinais/logo-dty.png"
 
 ## Configuração de compilação ##################################################
 ##

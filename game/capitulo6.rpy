@@ -6,8 +6,8 @@ label capitulo6:
     
     narrador "O ambiente é sombrio e úmido, com a única iluminação vindo de lanternas que Dante e Vitória carregam."
     
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show vitoria at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     dante "Esses símbolos... são muito antigos. Precisamos ter cuidado."
     
@@ -38,8 +38,8 @@ label capitulo6:
             
             vitoria "Veja estas marcas no chão. Alguém estava tentando completar algo aqui, mas foi interrompido."
 
-    hide dante normal with dissolve
-    hide vitoria normal with dissolve
+    hide dante with dissolve
+    hide vitoria with dissolve
 
     narrador "Dante e Vitória deixam a área secreta e vão em direção ao local onde o relicário pode estar escondido."
 
@@ -51,8 +51,8 @@ label capitulo6:
     
     narrador "Livros sobre práticas ocultas estão espalhados sobre a mesa, cobertos por uma fina camada de poeira."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show vitoria at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     dante "Precisamos encontrar algo que nos dê uma pista definitiva."
 
@@ -83,8 +83,8 @@ label capitulo6:
             
             vitoria "Um dos moradores mencionou um local antigo na cidade. Pode ser nosso próximo destino."
 
-    hide dante normal with dissolve
-    hide vitoria normal with dissolve
+    hide dante with dissolve
+    hide vitoria with dissolve
 
     narrador "A busca os leva a investigar um local abandonado na cidade, onde eles esperam encontrar mais pistas."
 
@@ -94,8 +94,8 @@ label capitulo6:
     
     narrador "A atmosfera é opressiva, com a sensação de que algo sombrio aconteceu ali."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
-    show vitoria normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show vitoria at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     dante "Este lugar me dá arrepios. Precisamos ser rápidos."
 
@@ -153,8 +153,8 @@ label capitulo6:
 
             narrador "Eles seguem pela passagem, sentindo que estão cada vez mais perto de descobrir o paradeiro de Helena."
 
-    hide dante normal with dissolve
-    hide vitoria normal with dissolve
+    hide dante with dissolve
+    hide vitoria with dissolve
 
     narrador "Dante e Vitória se aproximam da passagem secreta, seus corações batendo acelerados com a expectativa."
     

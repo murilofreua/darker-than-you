@@ -3,59 +3,60 @@ label capitulo3:
     indefinido ""
 
     scene quarto-helena with fade
+    
+    show dante at Position(xpos=.85, ypos=.75)
+
     play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume 0.25
 
     narrador "O sol ainda estava nascendo quando Dante foi despertado por um som distante de sinos."
 
-    indefinido ""
-
     play sound "audio/Sound effects/pessoas/Homem_acordando_alongamento_escandaloso_descansado_cena_descontração.mp3" volume.3
 
-    show dante normal at Position(xpos=.85, ypos=.75) with dissolve
-
+    show dante at Position(xpos=.85, ypos=.75):
+        xzoom -1    
+    with dissolve
     narrador "Ele se levantou, espreguiçando-se e ouvindo os sons suaves do vilarejo."
-    
-    stop sound
+    show dante at Position(xpos=.25, ypos=.75) with move
 
+    stop sound
     play sound "audio/Capitulos/Capitulo 3 - inicio dos sinais de cansaço.mp3"
     $ renpy.music.set_volume(0.3, channel='music')
 
     scene cozinha 
 
+    show vitoria at Position(xpos=.72, ypos=.25):
+        xzoom -1
+    show helena at Position(xpos=.5, ypos=.25):
+        xzoom -1
+    with dissolve
+    show dante at Position(xpos=.165, ypos=.75) with dissolve
+
     play sound "audio/Sound effects/Objetos/Panela_fritando_oléo_quente.mp3" volume.2
 
     narrador "Helena e Vitória já estavam na cozinha, preparando o café da manhã."
-
-    show vitoria normal at Position(xpos=.72, ypos=.25):
-        xzoom -1
-    show helena normal at Position(xpos=.5, ypos=.25):
-        xzoom -1
-    with dissolve
-
-    show dante normal at Position(xpos=.165, ypos=.75)
     
     helena "Bom dia, Dante! Dormiu bem?"
 
-    show vitoria normal at Position(xpos=.72, ypos=.45)
-    show helena normal at Position(xpos=.5, ypos=.45)
-    show dante normal at Position(xpos=.165, ypos=.95)
+    show vitoria at Position(xpos=.72, ypos=.45)
+    show helena at Position(xpos=.5, ypos=.45)
+    show dante at Position(xpos=.165, ypos=.95)
     with move
 
     menu:
         "Dormi sim, obrigado.":
             $ historia.incrementar_peso(1)
 
-            show vitoria normal at Position(xpos=.72, ypos=.25)
-            show helena normal at Position(xpos=.5, ypos=.25)
-            show dante normal at Position(xpos=.165, ypos=.75)
+            show vitoria at Position(xpos=.72, ypos=.25)
+            show helena at Position(xpos=.5, ypos=.25)
+            show dante at Position(xpos=.165, ypos=.75)
             with move
 
             dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
 
         "Tive uma noite de sono péssima":
-            show vitoria normal at Position(xpos=.72, ypos=.25)
-            show helena normal at Position(xpos=.5, ypos=.25)
-            show dante normal at Position(xpos=.165, ypos=.75)
+            show vitoria at Position(xpos=.72, ypos=.25)
+            show helena at Position(xpos=.5, ypos=.25)
+            show dante at Position(xpos=.165, ypos=.75)
             with move
 
             dante "Dormi péssimo. Ao menos o cheiro de café está maravilhoso."
@@ -81,41 +82,45 @@ label capitulo3:
     narrador "A fachada barroca estava decorada com detalhes intrincados, e os vitrais coloridos refletiam a luz do sol, criando um espetáculo de cores."
     narrador "Ao entrarem, foram recebidos pelo som suave do órgão e pelo aroma de incenso."
 
-    show vitoria normal at Position(xpos=.15, ypos=.75)
-    show helena normal at Position(xpos=.3, ypos=.75)
-    show dante normal at Position(xpos=.5, ypos=.75)
+    show vitoria at Position(xpos=.15, ypos=.75)
+    show helena at Position(xpos=.3, ypos=.75)
+    show dante at Position(xpos=.5, ypos=.75)
     with dissolve
 
     narrador "No altar, um homem alto de cabelos negros e olhos cansados estava terminando suas orações."
 
-    show padre normal at Position(xpos=.85, ypos=.75) with dissolve
+    show padre orando at Position(xpos=.85, ypos=.75) with dissolve
 
     narrador "Ao notar a presença dos visitantes, ele se levantou e se aproximou."
 
-    show padre normal at Position(xpos=.85, ypos=.75) with move
+    show padre at Position(xpos=.85, ypos=.75) with move
 
-    padre "Bom dia, Helena, Vitória. E você deve ser Dante, o amigo de Helena. Sou o Padre Iohann. Seja bem-vindo à nossa igreja."
+    padre "Bom dia, Helena"
+    padre "Bom dia, Vitória"
+    padre "E você deve ser Dante, o amigo de Helena."
+    padre "Sou o Padre Iohann. Seja bem-vindo à nossa igreja."
+
+    hide helena normal
+    hide vitoria normal
+    with dissolve
+    show dante at Position(xpos=.165, ypos=.75) with move
 
     dante "Muito prazer em conhecê-lo, Padre Iohann. É um lugar lindo."
 
     padre "Obrigado, meu filho. Esta igreja tem uma história rica, que muitos desconhecem."
     padre "Espero que possam sentir a paz que ela proporciona."
 
-    hide padre normal with dissolve
+    hide padre with dissolve
+    hide dante normal with dissolve
 
-    hide dante normal
-    hide helena normal
-    hide vitoria normal
+    show icaro at Position(xpos=.65, ypos=.75)
+    show augusto lendo at Position(xpos=.85, ypos=.75)
     with dissolve
 
     narrador "Enquanto conversavam, dois jovens seminaristas se aproximaram, curiosos. Helena os apresentou a Dante."
 
-    show dante normal at Position(xpos=.165, ypos=.75)
-    show helena normal at Position(xpos=.35, ypos=.75)
-    with dissolve
-
-    show icaro normal at Position(xpos=.7, ypos=.75)
-    show augusto normal at Position(xpos=.85, ypos=.75)
+    show dante at Position(xpos=.165, ypos=.75)
+    show helena at Position(xpos=.35, ypos=.75)
     with dissolve
 
     helena "Este é Ícaro e aquele é Augusto. Eles estão estudando aqui com o Padre Iohann."
@@ -131,8 +136,8 @@ label capitulo3:
     hide helena normal
     with dissolve
 
-    show dante normal at Position(xpos=.165, ypos=.95) with move
-    show padre normal at Position(xpos=.85, ypos=.95) with dissolve
+    show dante at Position(xpos=.165, ypos=.95) with move
+    show padre at Position(xpos=.85, ypos=.95) with dissolve
 
 
     menu:
@@ -140,8 +145,8 @@ label capitulo3:
 
             $ historia.incrementar_peso(1)
 
-            show padre normal at Position(xpos=.85, ypos=.75)
-            show dante normal at Position(xpos=.165, ypos=.75)
+            show padre at Position(xpos=.85, ypos=.75)
+            show dante at Position(xpos=.165, ypos=.75)
             with move
 
             dante "Padre Iohann, ouvimos algumas histórias sobre luzes estranhas perto da igreja. O senhor sabe de algo?"
@@ -155,16 +160,16 @@ label capitulo3:
             hide padre normal
             hide helena normal
             with dissolve
-            show dante normal at Position(xpos=.5, ypos=.75) with move
+            show dante at Position(xpos=.5, ypos=.75) with move
 
             narrador "Dante notou um leve tremor na mão do padre enquanto ele falava."
 
         "Não perguntar sobre as luzes estranhas":
             pass
 
-    show dante normal at Position(xpos=.165, ypos=.75) with move
-    show padre normal at Position(xpos=.85, ypos=.75)
-    show helena normal at Position(xpos=.35, ypos=.75)
+    show dante at Position(xpos=.165, ypos=.75) with move
+    show padre at Position(xpos=.85, ypos=.75)
+    show helena at Position(xpos=.35, ypos=.75)
     with dissolve
     narrador "O grupo caminhou pelos corredores, admirando as obras de arte e as relíquias históricas."
 
@@ -174,10 +179,7 @@ label capitulo3:
 
     narrador "Ao chegarem à sacristia, notaram um antigo livro de registros, que parecia estar ali há séculos."
 
-    show dante normal at Position(xpos=.165, ypos=.75)
-    show helena normal at Position(xpos=.35, ypos=.75)
-    with dissolve
-    show padre normal at Position(xpos=.85, ypos=.75)
+    show padre at Position(xpos=.5, ypos=.75)
     with dissolve
 
     padre "Este livro contém registros antigos da nossa igreja."
@@ -185,17 +187,15 @@ label capitulo3:
     padre "Alguns dizem que ele guarda segredos sobre o passado do vilarejo."
 
     hide padre normal
-    hide helena normal
-    with dissolve
-    show dante normal at Position(xpos=.5, ypos=.95) with move
 
+    show dante at Position(xpos=.5, ypos=.95) with move
 
     menu:
         "Folhear livro":
             $ historia.incrementar_peso(1)
             $ historia.livro_lido()
 
-            show dante normal at Position(xpos=.35, ypos=.75) with move
+            show dante at Position(xpos=.35, ypos=.75) with move
             play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3" loop volume.75
             show livro aberto at Position(xpos=.65, ypos=.75) with dissolve
 
@@ -218,11 +218,11 @@ label capitulo3:
     play sound "audio/Sound effects/Objetos/Objeto_caindo_som_forte.mp3" volume.2
     scene igreja-corredor
 
-    show vitoria normal at Position(xpos=.15, ypos=.75)
-    show helena normal at Position(xpos=.3, ypos=.75)
-    show dante normal at Position(xpos=.5, ypos=.75)
+    show vitoria at Position(xpos=.15, ypos=.75)
+    show helena at Position(xpos=.3, ypos=.75)
+    show dante at Position(xpos=.5, ypos=.75)
     with dissolve
-    show padre normal at Position(xpos=.85, ypos=.75) with dissolve
+    show padre at Position(xpos=.85, ypos=.75) with dissolve
 
     narrador "Enquanto se dirigiam para sair, um barulho de algo caindo ao chão chamou a atenção de Dante."
 
@@ -235,23 +235,23 @@ label capitulo3:
     hide vitoria normal
     hide helena normal
     with dissolve
-    show dante normal at Position(xpos=.165, ypos=.75) with move
+    show dante at Position(xpos=.165, ypos=.75) with move
 
-    show dante normal at Position(xpos=.165, ypos=.95)
-    show padre normal at Position(xpos=.85, ypos=.95)
+    show dante at Position(xpos=.165, ypos=.95)
+    show padre at Position(xpos=.85, ypos=.95)
     with move
 
     menu:
         "Perguntar sobre barulho":
             $ historia.incrementar_peso(1)
 
-            show dante normal at Position(xpos=.165, ypos=.75)
-            show padre normal at Position(xpos=.85, ypos=.75)
+            show dante at Position(xpos=.165, ypos=.75)
+            show padre at Position(xpos=.85, ypos=.75)
             with move
 
             dante "O que foi isso?"
 
-            show padre normal at Position(xpos=.85, ypos=.75) with dissolve
+            show padre at Position(xpos=.85, ypos=.75) with dissolve
 
             padre "Oh, nada de mais. Apenas o vento batendo nas janelas. Esta igreja é antiga, sabe?"
   
@@ -260,8 +260,8 @@ label capitulo3:
         "Ignorar barulho":
             pass
     
-    show dante normal at Position(xpos=.165, ypos=.75)
-    show padre normal at Position(xpos=.85, ypos=.75)
+    show dante at Position(xpos=.165, ypos=.75)
+    show padre at Position(xpos=.85, ypos=.75)
     with move
 
     narrador "O grupo continuou a explorar a igreja até que Padre Iohann sugeriu que visitassem um local especial."
@@ -269,21 +269,28 @@ label capitulo3:
     padre "A vista lá de cima é magnífica."
     padre "Vocês deveriam apreciar."
 
-    show dante normal at Position(xpos=.165, ypos=.75) with move
-    show vitoria normal at Position(xpos=.35, ypos=.75)
-    show helena normal at Position(xpos=.55, ypos=.75)
+    show dante at Position(xpos=.165, ypos=.75) with move
+    show vitoria at Position(xpos=.35, ypos=.75)
+    show helena at Position(xpos=.55, ypos=.75)
     with dissolve
-    show padre normal at Position(xpos=.85, ypos=.75) with move
+    show padre at Position(xpos=.85, ypos=.75) with move
+    show helena at Position(xpos=.55, ypos=.75):
+        xzoom -1
+    with move
 
     helena "Vamos lá, a vista é realmente linda"
 
+    show helena at Position(xpos=.55, ypos=.75):
+        xzoom 1
+    with move
+
     play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3" volume .5 loop
-    show helena normal at Position(xpos=.65, ypos=.75) with move
-    hide helena normal with dissolve
-    show vitoria normal at Position(xpos=.65, ypos=.75) with move
-    hide vitoria normal with dissolve
-    show dante normal at Position(xpos=.65, ypos=.75) with move
-    hide dante normal with dissolve
+    show helena at Position(xpos=.65, ypos=.75) with move
+    hide helena with dissolve
+    show vitoria at Position(xpos=.65, ypos=.75) with move
+    hide vitoria with dissolve
+    show dante at Position(xpos=.65, ypos=.75) with move
+    hide dante with dissolve
 
     $ renpy.music.set_volume(0.01, channel='music')
 
@@ -311,33 +318,34 @@ label capitulo3:
     $ renpy.music.set_volume(0.04, channel='music')
 
     scene igreja-dentro
-    show dante normal at Position(xpos=.165, ypos=.75)
-    show vitoria normal at Position(xpos=.35, ypos=.75)
-    show helena normal at Position(xpos=.55, ypos=.75)
+    show dante at Position(xpos=.165, ypos=.75)
+    show vitoria at Position(xpos=.35, ypos=.75)
+    show helena at Position(xpos=.55, ypos=.75)
     with dissolve
 
     narrador "Quando desceram, Padre Iohann prostravasse em frente a porta."
 
-    show padre normal at Position(xpos=.85, ypos=.75) with dissolve
+    show padre at Position(xpos=.85, ypos=.75) with dissolve
 
     padre "Filhos, preciso fazer meus afazeres."
     padre "Teremos que encerrar essa visita, está ficando tarde e logo teremos a missa das sete."
     padre "Tenho que ajudar também nos preparativos do festival da cidade."
     padre "É um evento muito importante para nós."
 
-    show dante normal at Position(xpos=.165, ypos=.95)
-    show vitoria normal at Position(xpos=.35, ypos=.95)
-    show helena normal at Position(xpos=.55, ypos=.95)
-    show padre normal at Position(xpos=.85, ypos=.95)
+    show dante at Position(xpos=.165, ypos=.95)
+    show vitoria at Position(xpos=.35, ypos=.95)
+    show helena at Position(xpos=.55, ypos=.95)
+    show padre at Position(xpos=.85, ypos=.95)
     with move
 
     menu:
         "Perguntar sobre o festival da cidade":  
             $ historia.incrementar_peso(1)
-            show dante normal at Position(xpos=.165, ypos=.75)
-            show vitoria normal at Position(xpos=.35, ypos=.75)
-            show helena normal at Position(xpos=.55, ypos=.75)
-            show padre normal at Position(xpos=.85, ypos=.75)
+            
+            show dante at Position(xpos=.165, ypos=.75)
+            show vitoria at Position(xpos=.35, ypos=.75)
+            show helena at Position(xpos=.55, ypos=.75)
+            show padre at Position(xpos=.85, ypos=.75)
             with move
 
             dante "O festival parece ser incrível. O que exatamente você faz para ajudar, Padre Iohann?"
@@ -356,10 +364,10 @@ label capitulo3:
             padre "Agradeço muito, meu filho. Qualquer ajuda é bem-vinda. Espero que aproveite o festival e toda a experiência."
 
         "Não perguntar sobre o festival da cidade":
-            show dante normal at Position(xpos=.165, ypos=.75)
-            show vitoria normal at Position(xpos=.35, ypos=.75)
-            show helena normal at Position(xpos=.55, ypos=.75)
-            show padre normal at Position(xpos=.85, ypos=.75)
+            show dante at Position(xpos=.165, ypos=.75)
+            show vitoria at Position(xpos=.35, ypos=.75)
+            show helena at Position(xpos=.55, ypos=.75)
+            show padre at Position(xpos=.85, ypos=.75)
             with move
         
             padre "Aguardo pela sua presença, Dante."
@@ -375,9 +383,9 @@ label capitulo3:
     $ renpy.music.set_volume(0.05, channel='music')
     scene centro
 
-    show helena normal at Position(xpos=.35, ypos=.75)
-    show vitoria normal at Position(xpos=.55, ypos=.75)
-    show dante normal at Position(xpos=.75, ypos=.75)
+    show helena at Position(xpos=.35, ypos=.75)
+    show vitoria at Position(xpos=.55, ypos=.75)
+    show dante at Position(xpos=.75, ypos=.75)
     with dissolve
 
     narrador "Helena, Vitória e Dante decidiram aproveitar o resto do dia explorando o vilarejo."
@@ -388,29 +396,30 @@ label capitulo3:
 
     helena "O que achou do Padre Iohann? Ele é uma figura interessante, não é?"
 
-    show dante normal at Position(xpos=.8375, ypos=.95):
+    show dante at Position(xpos=.8375, ypos=.95):
         xzoom -1
-    show helena normal at Position(xpos=.15, ypos=.95)
-    show vitoria normal at Position(xpos=.35, ypos=.95)
+    show helena at Position(xpos=.15, ypos=.95)
+    show vitoria at Position(xpos=.35, ypos=.95)
     with move
 
     menu:
-        "Gostou de conhece-lo":
-            show dante normal at Position(xpos=.8375, ypos=.75)
-            show helena normal at Position(xpos=.15, ypos=.75)
-            show vitoria normal at Position(xpos=.35, ypos=.75)
+        "Parece uma pessoa boa":
+            show dante at Position(xpos=.8375, ypos=.75)
+            show helena at Position(xpos=.15, ypos=.75)
+            show vitoria at Position(xpos=.35, ypos=.75)
             with move
 
             dante "Sim, muito interessante."
             dante "Gostei de conhece-lo"
         
-        "Achou evasivo":
-            show dante normal at Position(xpos=.8375, ypos=.75)
-            show helena normal at Position(xpos=.15, ypos=.75)
-            show vitoria normal at Position(xpos=.35, ypos=.75)
+        "Achei ele bastante evasivo":
+            $ historia.incrementar_peso(1)
+
+            show dante at Position(xpos=.8375, ypos=.75)
+            show helena at Position(xpos=.15, ypos=.75)
+            show vitoria at Position(xpos=.35, ypos=.75)
             with move
 
-            $ historia.incrementar_peso(1)
 
             dante "Sim, muito interessante."
             dante "Há algo nele que me intriga."
@@ -430,8 +439,8 @@ label capitulo3:
 
     scene quarto-helena-noite
 
-    show dante normal at Position(xpos=.165, ypos=.75) with dissolve
-    show dante normal at Position(xpos=.85, ypos=.75) with move
+    show dante at Position(xpos=.165, ypos=.75) with dissolve
+    show dante at Position(xpos=.85, ypos=.75) with move
 
     narrador "O dia passou rapidamente, e à noite, enquanto estava deitado em sua cama, Dante sonha sobre tudo o que havia visto e ouvido se imaginando em seu quarto."
 

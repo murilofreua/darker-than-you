@@ -20,9 +20,9 @@ label capitulo5:
 
     narrador "Livros antigos estão empilhados em prateleiras de madeira escura, e um crucifixo pendurado na parede parece observar tudo."
     
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show dante at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
-    show padre normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show padre at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     narrador "O Padre Iohann está sentado atrás de uma mesa, sua expressão é de preocupação, misturada com uma leve tensão."
 
@@ -48,20 +48,20 @@ label capitulo5:
 
             narrador "Dante percebe uma sensação de desconforto, levando-o a procurar pistas por conta própria."
 
-    hide dante normal with dissolve
+    hide dante with dissolve
 
-    hide padre normal with dissolve
+    hide padre with dissolve
 
     narrador "Dante deixa o escritório, passando pelos corredores da igreja que parecem ainda mais sombrios, refletindo sua crescente desconfiança."
 
     scene sala-dos-seminaristas
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show dante at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
     narrador "A sala é modesta, com bancos de madeira e mesas dispostas em linha."
 
-    show icaro normal at Position(xpos = 0.7, ypos = 0.75) with dissolve
-    show augusto normal at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show icaro at Position(xpos = 0.7, ypos = 0.75) with dissolve
+    show augusto at Position(xpos = 0.9, ypos = 0.75) with dissolve
 
     narrador "Ícaro e Augusto estão ocupados com seus estudos, a luz suave das lâmpadas cria um ambiente introspectivo."
 
@@ -98,15 +98,15 @@ label capitulo5:
 
     narrador "Dante se despede dos seminaristas e se dirige para a casa de Seu Pedro, passando por ruas que parecem mais escuras e silenciosas."
 
-    hide icaro normal with dissolve
-    hide augusto normal with dissolve
-    hide dante normal with dissolve
+    hide icaro with dissolve
+    hide augusto with dissolve
+    hide dante with dissolve
 
     scene casa-pedro
 
     narrador "A casa é simples e acolhedora, com móveis antigos e uma atmosfera de nostalgia."
 
-    show pedro normal at Position(xpos = 0.8, ypos = 0.75) with dissolve
+    show pedro at Position(xpos = 0.8, ypos = 0.75) with dissolve
 
     narrador "Seu Pedro está sentado à mesa, com um olhar preocupado, rodeado por velhas fotografias e lembranças."
 
@@ -125,7 +125,7 @@ label capitulo5:
 
             narrador "O ambiente parece cada vez mais opressor."
 
-    hide pedro normal with dissolve
+    hide pedro with dissolve
 
     narrador "Dante se despede e se dirige à biblioteca da igreja, refletindo sobre as novas pistas e o crescente senso de urgência."
 
@@ -135,7 +135,7 @@ label capitulo5:
 
     narrador "A luz da tarde filtra-se através das janelas, criando um jogo de luz e sombra que aumenta o mistério."
 
-    show dante normal at Position(xpos = 0.1, ypos = 0.75) with dissolve
+    show dante at Position(xpos = 0.1, ypos = 0.75) with dissolve
 
     menu:
         "Investigar livros antigos (Confiança Alta)":
@@ -153,6 +153,6 @@ label capitulo5:
 
     narrador "Dante se prepara para explorar a área secreta mencionada no livro, o ambiente se tornando mais sombrio e carregado de tensão."
 
-    hide dante normal with dissolve
+    hide dante with dissolve
 
     return
