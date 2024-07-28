@@ -81,9 +81,7 @@ label capitulo1:
 
     narrador "Animado por relembrar alguns de seus bons momentos com Helena, após horas de conversas, Dante decide visitar o vilarejo."
     narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."
-
-
-
+w
     hide dante normal with fade
 
     return
