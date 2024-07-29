@@ -8,7 +8,7 @@ label capitulo4:
     $ renpy.music.play("audio/Capitulos/Capitulo 4 - estranhezas não espantam a alegria.mp3", loop=True)
     $ renpy.music.set_volume(0.02, channel='music')
 
-    narrador "Novamente o grupo é acordado pelo soar do sino da igreja"
+    narrador "Novamente Dante é acordado pelo soar do sino da igreja."
     
     show dante at Position(xpos=.85, ypos=.75) with dissolve
 
@@ -35,8 +35,7 @@ label capitulo4:
     play sound "audio/Sound effects/pessoas/Pessoa_bebendo_café_xicará_garganta.mp3" fadein 1.0 loop
 
     narrador "Dante, Helena e Vitória se voluntariaram para ajudar nos preparativos, e o vilarejo fervilha de excitação."
-
-    narrador "Após terminar suas xicaras, saem apressados em direção a praça"
+    narrador "Após terminar suas xicaras, saem apressados em direção a praça."
 
     stop sound
 
@@ -55,7 +54,6 @@ label capitulo4:
     play sound "audio/Sound effects/Lugares/Vilarejo_passaros_cachorro_sem_tecnologia.mp3" loop
 
     narrador "A praça principal se transforma em um colorido cenário festivo, com bandeirolas, barracas de comida e atividades sendo organizadas."
-
     narrador "Na manhã do primeiro dia de preparativos, Dante se encontra com Padre Iohann na Praça principal."
 
     show dante at Position(xpos=.15, ypos=.75) with dissolve
@@ -81,11 +79,15 @@ label capitulo4:
             show padre at Position(xpos=.9, ypos=.75)
             with move
 
-            dante "É um prazer estar aqui"
-            dante "Mesmo que ajudando com a preparação da festa"
-            dante "Tomara que isso deixe todas as comidas mais saborosas"
+            dante "É um prazer estar aqui."
+            dante "Mesmo que ajudando com a preparação da festa."
+            dante "Tomara que isso deixe todas as comidas mais saborosas."
 
-            narrador "O padre não gosta da motivação de Dante, mas seus sermões são guardados para o culto apenas"
+            show padre preocupado at Position(xpos=.9, ypos=.75) with dissolve
+
+            narrador "O padre não gosta da motivação de Dante, mas seus sermões são guardados para o culto apenas."
+
+            show padre at Position(xpos=.9, ypos=.75) with dissolve
 
     padre "Temos muitas coisas para organizar."
     padre "As barracas de comida, as decorações da praça, e precisamos preparar a procissão."
@@ -114,7 +116,7 @@ label capitulo4:
 
     hide isabel with dissolve
 
-    narrador "Logo em seguida sofia aparece"
+    narrador "Logo em seguida sofia aparece."
 
     show sofia at Position(xpos=.5, ypos=.75) with dissolve
     show sofia at Position(xpos=.9, ypos=.75) with move
@@ -144,9 +146,9 @@ label capitulo4:
                 with move
                 
                 dante "Eu li algo sobre no livro de registros da igreja."
-                dante "Mas muito obrigado me dizer!"
+                dante "Mas muito obrigado me dizer com mais detalhes!"
     else:
-        menu: #não é necessário peso aqui
+        menu:
             "Não sabia disso.":
 
                 show dante at Position(xpos=.165, ypos=.75)
@@ -160,7 +162,15 @@ label capitulo4:
     hide dante normal
     with dissolve
 
-    scene festival-noite
+    scene festival-noite with fade
+    show dante feliz at Position(xpos=.55, ypos=.75)
+    show helena feliz at Position(xpos=.4, ypos=.77)
+    show vitoria feliz at Position(xpos=.35, ypos=.75)
+    with dissolve
+    show dante feliz at Position(xpos=.45, ypos=.75)
+    show helena feliz at Position(xpos=.3, ypos=.77)
+    show vitoria feliz at Position(xpos=.15, ypos=.75)
+    with move
 
     narrador "Finalmente, a noite do festival chega."
     narrador "A praça está iluminada com lanternas coloridas, e a música tradicional enche o ar."
@@ -170,14 +180,6 @@ label capitulo4:
     narrador "Dante se sente cada vez mais conectado com a cidade e seus habitantes."
     narrador "Enquanto caminham pela praça, encontram-se com o Padre Iohann."
 
-    show dante feliz at Position(xpos=.55, ypos=.75)
-    show helena feliz at Position(xpos=.4, ypos=.77)
-    show vitoria feliz at Position(xpos=.35, ypos=.75)
-    with dissolve
-    show dante feliz at Position(xpos=.4, ypos=.75)
-    show helena feliz at Position(xpos=.25, ypos=.77)
-    show vitoria feliz at Position(xpos=.15, ypos=.75)
-    with move
     show padre at Position(xpos=.7, ypos=.75) with dissolve
     show padre at Position(xpos=.8, ypos=.75) with move
     
@@ -190,16 +192,16 @@ label capitulo4:
 
     narrador "Dante olha para Helena e Vitória, ambos concordando em ajudar novamente."
 
-    show dante feliz at Position(xpos=.4, ypos=.95)
-    show helena feliz at Position(xpos=.25, ypos=.95)
+    show dante feliz at Position(xpos=.45, ypos=.95)
+    show helena feliz at Position(xpos=.3, ypos=.97)
     show vitoria feliz at Position(xpos=.15, ypos=.95)
-    show padre at Position(xpos=.85, ypos=.95)
+    show padre at Position(xpos=.85, ypos=.9)
     with move
 
     menu:
         "Confirmar presença":
-            show dante feliz at Position(xpos=.4, ypos=.75)
-            show helena feliz at Position(xpos=.25, ypos=.75)
+            show dante feliz at Position(xpos=.45, ypos=.75)
+            show helena feliz at Position(xpos=.3, ypos=.77)
             show vitoria feliz at Position(xpos=.15, ypos=.75)
             show padre at Position(xpos=.85, ypos=.75)
             with move
@@ -227,13 +229,13 @@ label capitulo4:
             $ historia.incrementar_peso(1)
             $ renpy.music.set_volume(0.01, channel='music')
 
-            show dante feliz at Position(xpos=.4, ypos=.75)
-            show helena feliz at Position(xpos=.25, ypos=.77)
+            show dante feliz at Position(xpos=.45, ypos=.75)
+            show helena feliz at Position(xpos=.3, ypos=.77)
             show vitoria feliz at Position(xpos=.15, ypos=.75)
             show padre at Position(xpos=.85, ypos=.75)
             with move
 
-            dante "Lamento informar, mas não será possível que eu compareça, Padre"
+            dante "Lamento informar, mas não será possível que eu compareça, Padre."
 
             hide padre 
             hide vitoria feliz
@@ -245,7 +247,7 @@ label capitulo4:
 
             helena "Nossa, por que Dante?"
 
-            dante "As comidas estão deliciosas mas estou passando mal, volto em pouco tempo"
+            dante "As comidas estão deliciosas mas estou passando mal, volto em pouco tempo."
 
             show dante feliz at Position(xpos=.4, ypos=.75)
             show helena feliz at Position(xpos=.25, ypos=.77):
@@ -255,7 +257,7 @@ label capitulo4:
             show padre at Position(xpos=.85, ypos=.75)
             with dissolve
 
-            padre "Fico triste em ouvir isso meu pequeno"
+            padre "Fico triste em ouvir isso meu pequeno."
 
             play sound "audio/Sound effects/Lugares/Natureza_clima_pesado_suspense.mp3" volume .15
             scene igreja-fora-noite with fade
@@ -284,7 +286,7 @@ label capitulo4:
 
             hide dante with dissolve
 
-            narrador "Todos se reencontram após a procissão novamente na praça."
+            narrador "Todos se reencontram, após a procissão, novamente na praça."
             $ renpy.music.play("audio/Capitulos/Capitulo 4.mp3", loop=True)
             $ renpy.music.set_volume(0.02, channel='music')            
 
@@ -309,23 +311,35 @@ label capitulo4:
 
     vitoria "Sim, Rocha. Está tudo incrível."
 
-    rocha "Recebi mais relatos de luzes estranhas perto da igreja. Se virem algo, por favor, nos avisem."
+    rocha "Recebi mais relatos de luzes estranhas perto da igreja."
+    rocha "Se virem algo, por favor, nos avisem."
 
     $ luz = historia.get_luzes()
     if luz :
+        hide helena feliz
+        hide vitoria feliz
+        hide rocha
+        with dissolve
         show dante preocupado at Position(xpos=.35, ypos=.21) with dissolve
-        narrador "Dante sente um arrepio, mas decide não contar o que viu aos presentes"
-        show dante at Position(xpos=.35, ypos=.21) with dissolve
+
+        narrador "Dante sente um arrepio, mas decide não contar o que viu aos presentes."
+
+        show helena feliz at Position(xpos=.3, ypos=.77)
+        show vitoria feliz at Position(xpos=.15, ypos=.75)
+        show rocha at Position(xpos = 0.85, ypos = 0.75)
+        show dante at Position(xpos=.35, ypos=.21)
+        with dissolve
 
     dante "Claro, Rocha. Manteremos os olhos abertos."
 
     hide rocha with dissolve
+
+    narrador "Após brincarem e comerem de tudo, os três amigos decidem ir para casa descansar."
+    
     hide helena normal
     hide vitoria normal
     hide dante normal
     with dissolve
-
-    narrador "Após brincarem e comerem de tudo, os três amigos decidem ir para casa descansar"
 
     scene quarto-helena-noite
     
@@ -340,7 +354,7 @@ label capitulo4:
         xzoom -1
     with move
 
-    dante "Boa noite helena, foi otimo passar o dia com voces"
+    dante "Boa noite helena, foi otimo passar o dia com voces."
 
     show helena at Position(xpos=0, ypos=.75):
         xzoom -1
@@ -359,7 +373,7 @@ label capitulo4:
     show vitoria triste at Position(xpos=0, ypos=.75) with dissolve
     show vitoria triste at Position(xpos=.3, ypos=.75) with move
 
-    vitoria "Dante! Dante!, não consigo achar a Helena em lugar nenhum"
+    vitoria "Dante! Dante!, não consigo achar a Helena em lugar nenhum."
 
     show dante preocupado at Position(xpos=.85, ypos=.75):
         xzoom -1
@@ -377,7 +391,7 @@ label capitulo4:
             show dante preocupado at Position(xpos=0, ypos=.95) with move
             hide dante with dissolve
 
-            narrador "Dante grita o nome de Helena pela casa"
+            narrador "Dante grita o nome de Helena pela casa."
             scene cozinha
             show dante preocupado at Position(xpos=.5, ypos=.95) with dissolve
             menu:
@@ -386,13 +400,13 @@ label capitulo4:
                     
                     dante "Helena?"
 
-                    narrador "sem respostas pela casa"
+                    narrador "sem respostas pela casa."
                     show dante preocupado at Position(xpos=.5, ypos=.95) with move
                     menu:
                         "Chamar fervorosamente pela Helena":
                             show dante preocupado at Position(xpos=.5, ypos=.75) with move
                             dante "Helenaaa!!!"
-                            narrador "... ainda sem resposta"
+                            narrador "... ainda sem resposta."
 
     show dante preocupado at Position(xpos=.85, ypos=.75):
         xzoom -1
@@ -401,7 +415,7 @@ label capitulo4:
 
     vitoria "Ela pode ter ido a igreja."
 
-    dante "Espero que sim"
+    dante "Espero que sim!"
 
     show dante preocupado at Position(xpos=1., ypos=.75):
         xzoom 1
@@ -525,7 +539,7 @@ label capitulo4:
     with move
 
     menu:
-        "estado de choque": #caminho caso não seja investigatívo
+        "Confirmar":
             show vitoria triste at Position(xpos=.15, ypos=.75)
             show dante preocupado at Position(xpos=.85, ypos=.75)
             with move
@@ -543,14 +557,14 @@ label capitulo4:
 
             narrador "Padre Iohann dispara para acalmar os cordeirinhos"
 
-        "Desconfiar": #Caminho desbloqueado caso pergunte muito
+        "Discordar":
             $ historia.incrementar_peso(1)
 
             show vitoria triste at Position(xpos=.15, ypos=.75)
             show dante preocupado at Position(xpos=.85, ypos=.75)
             with move
 
-            dante "A Helena nunca desapareceu assim..."
+            dante "A Helena já fez isso antes?"
 
             show dante preocupado at Position(xpos=.35, ypos=.75):
                 xzoom 1
@@ -630,6 +644,7 @@ label capitulo4:
     menu:
         "Ir para Igreja":
             dante "Eu preciso ir até a igreja."
+
             show dante preocupado at Position(xpos=.15, ypos=.75) with move
             hide dante preocupado with dissolve
 
@@ -641,7 +656,7 @@ label capitulo4:
     show icaro sentado at Position(xpos=.85, ypos=.75)
     with dissolve
 
-    narrador "Na igreja, ele encontra Ícaro, o jovem seminarista, lendo proximo ao quarto do padre"
+    narrador "Na igreja, ele encontra Ícaro, o jovem seminarista, lendo proximo ao quarto do padre."
 
     icaro "Dante, o que está fazendo aqui tão tarde?"
 
@@ -656,27 +671,28 @@ label capitulo4:
             show icaro at Position(xpos=.75, ypos=.75)
             with move
 
-            dante "Eu tive um sonho... vi Helena aqui, envolta em luzes, tem que um significado."
+            dante "Eu tive um sonho... vi Helena aqui, envolta em luzes, tem que ter um significado."
 
-            icaro "Entendo, mas isso não justifica estar aqui sozinho"
+            icaro "Entendo, mas isso não justifica estar aqui sozinho."
             icaro "Você deixou Vitória sozinha?"
             icaro "Vamos investigar juntos amanhã, mas por hora, você precisa voltar para casa de Helena."
 
-        "Indagar sobre a leitura":
+        "Perguntar sobre a leitura":
             
             $ historia.incrementar_peso(1)
             show dante preocupado at Position(xpos=.25, ypos=.75)
             show icaro at Position(xpos=.75, ypos=.75)
             with move
 
-            dante "Acabou que eu perdi o sono e estou andando pela cidade enquanto o sono volta"
-            dante "Por que você está lendo aqui tão tarde nesse bréu"
+            dante "Acabou que eu perdi o sono e estou andando pela cidade enquanto o sono volta."
+            dante "Por que você está lendo aqui tão tarde nesse bréu."
 
-            icaro "Entendo, nós ouvimos coisas estranhas e viemos ver como esta o padre"
-            icaro "Augusto está lá dentro conferindo se o padre precisa de algo"
+            icaro "Entendo, nós ouvimos coisas estranhas e viemos ver como esta o padre."
+            icaro "Augusto está lá dentro conferindo se o padre precisa de algo."
             icaro "Caso queira voltar aqui amanhã, está convidado. Mas por hora, você precisa descansar."
 
-    dante "Sim, amanhã conversaremos melhor. Boa noite."
+    dante "Sim, amanhã conversaremos melhor."
+    dante "Boa noite."
 
     hide dante with dissolve
     scene quarto-helena-noite with fade

@@ -40,7 +40,7 @@ label capitulo3:
     with move
 
     menu:
-        "Dormi sim, obrigado.":
+        "Dormi bem.":
             $ historia.incrementar_peso(1)
 
             show vitoria at Position(xpos=.72, ypos=.25)
@@ -50,33 +50,37 @@ label capitulo3:
 
             dante "Dormi sim, obrigado. O cheiro de café está maravilhoso."
 
-        "Tive uma noite de sono péssima":
+        "Noite péssima de sono":
             show vitoria at Position(xpos=.72, ypos=.25)
             show helena at Position(xpos=.5, ypos=.25)
             show dante at Position(xpos=.165, ypos=.75)
             with move
 
-            dante "Dormi péssimo. Ao menos o cheiro de café está maravilhoso."
+            dante "Tive uma noite péssima. Ao menos o cheiro de café está maravilhoso."
 
     play sound "audio/Sound effects/pessoas/Pessoa_bebendo_café_xicará_garganta.mp3"
 
     narrador "Enquanto tomavam café, Helena e Vitória discutiam o plano do dia."
 
-    helena "Pensei em levar você para conhecer a Igreja da Misericórdia e conversar com o Padre Iohann. Ele é uma pessoa fascinante"
+    helena "Pensei em levar você para conhecer a Igreja da Misericórdia e conversar com o Padre Iohann."
+    helena "Ele é uma pessoa fascinante e me ajuda muito nas minhas pesquisas sobre o passado do vilarejo"
 
-    narrador "Dante assentiu, lembrando-se das palavras de Rocha sobre as luzes estranhas."
+    narrador "Dante assentiu, momentaneamente lembrando-se das palavras de Rocha sobre as luzes estranhas."
     narrador "Ele estava curioso para conhecer o Padre Iohann e descobrir mais sobre a igreja que tanto o intrigara."
-    narrador "Após o café, o trio seguiu em direção à igreja."
 
     stop sound
 
+    narrador "Após o café, o trio seguiu em direção à igreja."
 
     scene igreja-dentro
-    show padre orando at Position(xpos=.85, ypos=.75)
+    # show padre orando at Position(xpos=.85, ypos=.75)
+    show padre orando pequeno at Position(xpos=.57, ypos=.64)
+
     $ renpy.music.play("audio/Sound effects/Objetos/Celebração_católica_orgão_melodia_completa.mp3", loop=True)
     $ renpy.music.set_volume(0.04, channel='music')
 
     narrador "Quando chegaram à igreja, Dante ficou impressionado novamente com sua arquitetura."
+    narrador "No altar, um homem alto de cabelos negros e olhos cansados estava terminando suas orações."
     narrador "Ao entrarem, foram recebidos pelo som suave do órgão e pelo aroma de incenso."
 
     show vitoria at Position(xpos=.15, ypos=.75)
@@ -84,15 +88,13 @@ label capitulo3:
     show dante at Position(xpos=.5, ypos=.75)
     with dissolve
 
-    narrador "No altar, um homem alto de cabelos negros e olhos cansados estava terminando suas orações."
-
     narrador "Ao fim de sua reza, o padre notou o grupo."
 
     show padre at Position(xpos=.85, ypos=.75) with move
 
-    padre "Bom dia, Helena"
-    padre "Bom dia, Vitória"
-    padre "E você deve ser Dante, o amigo de Helena."
+    padre "Bom dia, Helena!"
+    padre "Bom dia, Vitória!"
+    padre "E você deve ser Dante, o amigo que Helena comentou que viria prestar uma visita."
     padre "Sou o Padre Iohann. Seja bem-vindo à nossa igreja."
 
     hide helena normal
@@ -102,7 +104,7 @@ label capitulo3:
 
     dante "Muito prazer em conhecê-lo, Padre Iohann. É um lugar lindo."
 
-    padre "Obrigado, meu filho. Esta igreja tem uma história rica, que muitos desconhecem."
+    padre "Obrigado, meu filho. Esta igreja tem raizes antigas, que muitos desconhecem."
     padre "Espero que possam sentir a paz que ela proporciona."
 
     hide padre with dissolve
@@ -120,11 +122,11 @@ label capitulo3:
 
     helena "Este é Ícaro e aquele é Augusto. Eles estão estudando aqui com o Padre Iohann."
 
-    icaro "Muito prazer. É sempre bom conhecer pessoas novas."
+    icaro "Muito prazer. É sempre bom conhecer pessoas novas, principalmente da nossa idade."
 
     augusto "Prazer em conhecê-lo."
 
-    narrador "Dante sentiu uma sensação de camaradagem entre os seminaristas e o padre"
+    narrador "Dante sentiu uma sensação de camaradagem entre os seminaristas e o padre."
 
     hide icaro normal
     hide augusto normal
@@ -133,14 +135,13 @@ label capitulo3:
 
     show dante at Position(xpos=.5, ypos=.75) with move
 
-    narrador "Ao notar mais os detanhes barrocos, com seus vitrais coloridos refletindo e colorindo a luz do sol nas paredes, Dante viu um espetáculo de cores."
+    narrador "Ao notar mais na decoração da igreja, com seus vitrais coloridos refletindo e colorindo a luz do sol nas paredes, Dante viu um espetáculo de cores."
 
     show dante at Position(xpos=.5, ypos=.75):
         xzoom -1
     with move
 
     narrador "Como uma epifánia, Dante lembrou das luzes estranhas mencionadas por Rocha."
-
 
     show dante at Position(xpos=.165, ypos=.95):
         xzoom 1
@@ -159,9 +160,16 @@ label capitulo3:
 
             dante "Padre Iohann, ouvimos algumas histórias sobre luzes estranhas perto da igreja. O senhor sabe de algo?"
 
+            show padre preocupado at Position(xpos=.85, ypos=.75) with dissolve
+            
             narrador "O padre franziu a testa levemente antes de responder, seus olhos se tornando ainda mais profundos e misteriosos."
-
+            
+            show padre orando at Position(xpos=.85, ypos=.75) with dissolve
+            
             padre "Sim, soube dessas histórias."
+            
+            show padre at Position(xpos=.85, ypos=.75) with dissolve
+
             padre "Alguns fiéis relataram ter visto essas luzes proxima a igreja qunado estão vindo à missa, mas não temos nenhuma explicação concreta."
             padre "Estamos investigando. Até agora nada de anormal foi encontrado."
 
@@ -169,6 +177,7 @@ label capitulo3:
             hide helena normal
             with dissolve
             show dante at Position(xpos=.5, ypos=.75) with move
+            show dante preocupado at Position(xpos=.5, ypos=.75) with dissolve 
 
             narrador "Dante notou um leve tremor na mão do padre enquanto ele falava."
 
@@ -183,11 +192,12 @@ label capitulo3:
 
     $ renpy.music.set_volume(0.02, channel='music')
 
-    scene sacristia
+    scene sacristia with dissolve
 
     narrador "Ao chegarem à sacristia, notaram um antigo livro de registros, que parecia estar ali há séculos."
 
-    show padre at Position(xpos=.5, ypos=.75)
+    show padre at Position(xpos=.7, ypos=.75)
+    show livro aberto at Position(xpos=.45, ypos=.75)
     with dissolve
 
     padre "Este livro contém registros antigos da nossa igreja."
@@ -195,25 +205,37 @@ label capitulo3:
     padre "Alguns dizem que ele guarda segredos sobre o passado do vilarejo."
 
     hide padre normal
+    show livro aberto at Position(xpos=.65, ypos=.75) with move
+    show dante at Position(xpos=.35, ypos=.75) with dissolve
+    show dante at Position(xpos=.35, ypos=.75) with move
 
-    show dante at Position(xpos=.5, ypos=.95) with move
+    show dante at Position(xpos=.35, ypos=.95)
+    show livro aberto at Position(xpos=.65, ypos=.95)
+    with move
+
 
     menu:
         "Folhear livro":
             $ historia.incrementar_peso(1)
             $ historia.livro_lido()
 
-            show dante at Position(xpos=.35, ypos=.75) with move
+            show livro aberto at Position(xpos=.65, ypos=.75)
+            show dante at Position(xpos=.35, ypos=.75)
+            with move
             play sound "audio/Sound Effects/Objetos/livro_sendo_aberto.mp3" loop volume.75
-            show livro aberto at Position(xpos=.65, ypos=.75) with dissolve
+            show livro aberto at Position(xpos=.64, ypos=.76) with move
 
             narrador "Dante, curioso, Abriu o livro."
 
-            narrador "Encantado com seu conteúdo, Dante continuou a ler entretido"
+            narrador "Encantado com seu conteúdo, Dante continuou a ler entretido."
 
-            narrador "Ao aprofundar sua leitura acabou notando nomes de moradores e visitantes"
+            show livro aberto at Position(xpos=.66, ypos=.74) with move
+
+            narrador "Ao aprofundar sua leitura acabou notando nomes de moradores e visitantes."
 
             narrador "Eventos registrados ao longo dos anos também eram bem descritos, mas nenhum que fosse relevante no imediato."
+
+            show livro aberto at Position(xpos=.65, ypos=.75) with move
 
             narrador "Algo no livro parecia despertar uma memória distante, mas ele não conseguiu identificar o quê."
 
@@ -224,7 +246,7 @@ label capitulo3:
 
     $ renpy.music.set_volume(0.03, channel='music')
     play sound "audio/Sound effects/Objetos/Objeto_caindo_som_forte.mp3" volume.2
-    scene igreja-corredor
+    scene igreja-corredor with fade
 
     show vitoria at Position(xpos=.15, ypos=.75)
     show helena at Position(xpos=.3, ypos=.75)
@@ -238,8 +260,12 @@ label capitulo3:
 
     stop sound
 
+    show padre preocupado at Position(xpos=.85, ypos=.75) with dissolve
+
     narrador "Dante olhou para o padre, que imediatamente desviou o olhar."
 
+    # show padre at Position(xpos=.85, ypos=.75) with dissolve
+    
     hide vitoria normal
     hide helena normal
     with dissolve
@@ -262,7 +288,7 @@ label capitulo3:
             show padre at Position(xpos=.85, ypos=.75) with dissolve
 
             padre "Oh, nada de mais."
-            padre "Apenas o vento batendo nas janelas. Esta igreja é antiga e eventualmente range"
+            padre "Apenas o vento batendo nas janelas. Esta igreja é antiga e eventualmente range."
   
             narrador "Dante não estava totalmente convencido, mas decidiu não insistir."
 
@@ -287,7 +313,7 @@ label capitulo3:
         xzoom -1
     with move
 
-    helena "Vamos lá, a vista é realmente linda"
+    helena "Vamos lá, a vista é realmente linda."
 
     show helena at Position(xpos=.55, ypos=.75):
         xzoom 1
@@ -303,7 +329,7 @@ label capitulo3:
 
     $ renpy.music.set_volume(0.01, channel='music')
 
-    scene torre-do-sino
+    scene torre-do-sino with dissolve
     stop sound
 
     narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
@@ -326,10 +352,10 @@ label capitulo3:
     stop sound
     $ renpy.music.set_volume(0.04, channel='music')
 
-    scene igreja-dentro
+    scene igreja-dentro with fade
     show dante at Position(xpos=.165, ypos=.75)
     show vitoria at Position(xpos=.35, ypos=.75)
-    show helena at Position(xpos=.55, ypos=.75)
+    show helena at Position(xpos=.5, ypos=.75)
     with dissolve
 
     narrador "Quando desceram, Padre Iohann prostravasse em frente a porta."
@@ -361,7 +387,7 @@ label capitulo3:
 
             padre "Na ornamentação e na organização da Missa de Domingo de Ramos. Também coordeno algumas atividades culturais que acontecem durante o festival."
 
-            helena "Isso deve ser bastante trabalho."
+            helena "Isso dá bastante trabalho, principalmente por envolver os ritos antigos."
             helena "Mas o festival é sempre um sucesso, graças a todos os esforços da comunidade."
 
             dante "Estou ansioso para ver tudo isso de perto. Parece ser um evento muito especial."
@@ -385,12 +411,10 @@ label capitulo3:
     hide helena normal
     hide vitoria normal
     with dissolve
-    hide padre normal
-    with dissolve
 
     $ renpy.music.play("audio/Sound effects/Lugares/Safe_house_seguro_tranquilo.mp3", loop=True)
     $ renpy.music.set_volume(0.05, channel='music')
-    scene centro
+    scene centro with dissolve
 
     show helena at Position(xpos=.35, ypos=.75)
     show vitoria at Position(xpos=.55, ypos=.75)
@@ -400,8 +424,6 @@ label capitulo3:
     narrador "Helena, Vitória e Dante decidiram aproveitar o resto do dia explorando o vilarejo."
     narrador "Mas Dante não conseguia tirar a sensação de estranheza da cabeça."
     narrador "Algo naquela igreja o incomodava."
-    narrador "Enquanto caminhavam de volta para a praça principal, Helena virou-se para Dante e disse:" #aqui
-
 
     helena "O que achou do Padre Iohann? Ele é uma figura interessante, não é?"
 
@@ -419,9 +441,9 @@ label capitulo3:
             with move
 
             dante "Sim, muito interessante."
-            dante "Gostei de conhece-lo"
+            dante "Gostei de conhece-lo."
         
-        "Bastante evasivo":
+        "Uma pessoa reservada":
             $ historia.incrementar_peso(1)
 
             show dante at Position(xpos=.8375, ypos=.75)
@@ -434,19 +456,19 @@ label capitulo3:
             dante "Há algo nele que me intriga."
 
     vitoria "Ele é um homem bom!"
-    vitoria "Mas também parece carregar um grande fardo"
+    vitoria "Mas também parece carregar um grande fardo."
     vitoria "Acho que há mais nele do que aparenta."
 
-    helena "Está ficando tarde, vamos descansar para amanhã"
+    helena "Está ficando tarde, vamos descansar para amanhã."
 
-    narrador "Todos seguem rumo ao seu local de descanso e tiram o sono merecido depois do dia cansativo"
+    narrador "Todos seguem rumo ao seu local de descanso e tiram o sono merecido depois do dia cansativo."
 
     hide dante normal
     hide helena normal
     hide vitoria normal
     with dissolve
 
-    scene quarto-helena-noite
+    scene quarto-helena-noite with fade
 
     show dante at Position(xpos=.165, ypos=.75) with dissolve
     show dante at Position(xpos=.85, ypos=.75) with move
@@ -457,13 +479,15 @@ label capitulo3:
     $ renpy.music.set_volume(0.01, channel='music')
 
     narrador "Antes de adormecer, ouviu novamente o som dos sinos da igreja, desta vez mais distante, quase como um sussurro."
-    narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos"
+    narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos."
     narrador "esperando que o dia seguinte trouxesse mais respostas."
 
     show dante at Position(xpos=.85, ypos=.95) with move
 
     menu:
         "Dormir":
+            show dante at Position(xpos=.85, ypos=.75) with move
+
             dante "ZzZzZzZz"
 
     return

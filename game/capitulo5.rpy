@@ -6,20 +6,20 @@ label capitulo5:
     $ renpy.music.set_volume(1.0, channel='music')
     play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume .2 fadein 2.0 loop
 
-    narrador "Novamente Dante é acordado pelo soar do sino da igreja"
+    narrador "Novamente Dante é acordado pelo soar do sino da igreja."
     narrador "O ambiente é silencioso, exceto pelo som distante dos sinos."
     
     show dante at Position(xpos=.85, ypos=.75):
         xzoom -1
     with dissolve
 
-    narrador "Dante começa a investigação no dia seguinte ao desaparecimento de Helena."
+    narrador "Dante começa a investigação cedo no dia seguinte, retornando a igreja para tentar entender o sonho que teve."
 
     show dante at Position(xpos=.25, ypos=.75) with move
     hide dante with dissolve
     stop sound fadeout 2.0
 
-    scene festival-dia with fade
+    scene igreja-fora-dia with fade
     show dante at Position(xpos=.165, ypos=.75)
 
     narrador "O ambiente é carregado de tensão e mistério, refletindo a gravidade da situação."

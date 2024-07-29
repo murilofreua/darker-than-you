@@ -5,13 +5,13 @@ label capitulo7:
     menu:
         "Escolher final"
         "Final ótimo":
-            call finalOtimo from _call_finalOtimo
+            call finalOtimo
         "Final Bom":
-            call finalBom from _call_finalBom
+            call finalBom
         "Final Medio":
-            call finalMedio from _call_finalMedio
+            call finalMedio
         "Final Ruim":
-            call finalRuim from _call_finalRuim
+            call finalRuim
 
     scene textura-madeira2
 

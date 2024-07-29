@@ -5,10 +5,10 @@ label capitulo2:
 
     scene centro
 
-    narrador "Dante sentia a sensação de voltar para o passado"
-    narrador "A paisagem verdejante e as casas simples no estilo barroco europeu lembravam sua infância, passada numa pequena cidade no interior de Goiás"
-    narrador "Ao descer do ônibus e olhar em volta, ficou impressionado pela beleza da cidade."
-    narrador "O sol começava a se pôr, pintando o céu de tons dourados e fazendo com que as casas da vila parecessem ainda mais charmosas"
+    narrador "Dante sentia a sensação de voltar para o passado."
+    narrador "A paisagem verdejante e as casas simples no estilo barroco europeu lembravam sua infância numa pequena cidade do interior de Goiás."
+    narrador "Ao descer do ônibus e olhar em volta, ficou impressionado pela beleza da cidade mineira."
+    narrador "O sol acabará de raiar, pintando o céu de tons claros e fazendo com que as casas da vila parecessem ainda mais charmosas."
 
     show helena feliz at Position(xpos=.3, ypos=.77) with dissolve
     show vitoria feliz at Position(xpos=.45, ypos=.25):
@@ -25,7 +25,7 @@ label capitulo2:
         xzoom -1
     with dissolve
 
-    helena "Dante"
+    helena "Dante!"
     helena "Tão bom te ver!"
 
     show helena feliz at Position(xpos=.86, ypos=.97) with move
@@ -45,7 +45,7 @@ label capitulo2:
             show dante feliz at Position(xpos = .165, ypos=.75)
             with move
 
-            narrador "Helena se distancia por ter ficado embasbacada com o elogio durante o abraço enquanto Vitória se apresenta"
+            narrador "Helena se distancia por ter ficado embasbacada com o elogio durante o abraço enquanto Vitória se apresenta."
     
     hide helena feliz with dissolve
 
@@ -53,7 +53,7 @@ label capitulo2:
         xzoom -1
     with dissolve
 
-    vitoria "Olá, Dante! Sou a Vitória, muito prazer"
+    vitoria "Olá, Dante! Sou a Vitória, muito prazer."
 
     show vitoria feliz at Position(xpos=.7, ypos=.45)
     show dante feliz at Position(xpos=.165, ypos=.95)
@@ -73,13 +73,13 @@ label capitulo2:
     
     show helena feliz at Position(xpos=.55,ypos=.77) with dissolve
 
-    helena "Vamos começar nosso passeio amigos"
+    helena "Vamos começar nosso passeio amigos!"
 
     show vitoria feliz at Position(xpos=.6, ypos=.25)
     show dante feliz at Position(xpos=.35, ypos=.75)
     with move
 
-    narrador "disse Helena antes de pegar ambos pelos braços e sair correndo sem rumo para conhecer a cidade."
+    narrador "Disse Helena antes de pegar ambos pelos braços e sair correndo sem rumo para conhecer a cidade."
 
     hide helena feliz with dissolve
     hide dante normal
@@ -105,22 +105,36 @@ label capitulo2:
     with dissolve
 
     helena "É incrível, né?"
-    helena "A Igreja é símbolo deste lugar. Seus fundadores vieram da Europa e trouxeram a tradição católica aqui"
+    helena "A Igreja é o símbolo deste lugar."
+    helena "Meus estudos indicam que seus fundadores vieram da Europa e do México e trouxeram a tradição católica aqui."
     helena "Mas esse não é nosso destino, vamos."
 
     hide helena feliz
     hide dante normal
     with dissolve
 
-    narrador "O trio passou em frente a praça da cidade"
-
     stop sound fadeout 1.5
-
     scene praca-principal
 
-    narrador "Após uma tarde de conversa, os três se dirigiram para a padaria favorita de Vitória, próxima à praça principal da cidade."
+    show vitoria feliz at Position(xpos=.15, ypos=.75)
+    show helena feliz at Position(xpos=.25, ypos=.77)
+    show dante feliz at Position(xpos=.45, ypos=.75)
+
+    narrador "O trio passou em frente a praça da cidade."
+
+    show vitoria feliz at Position(xpos=.75, ypos=.75) 
+    show helena feliz at Position(xpos=.86, ypos=.77) 
+    show dante feliz at Position(xpos=.95, ypos=.75)
+    with move 
+    hide vitoria normal
+    hide helena feliz
+    hide dante normal
+    with dissolve
+
+    narrador "Os jovens dão continuidade ao passeio."
 
     scene padaria-fora
+    narrador "Após uma manhã de conversa, os três se dirigiram para a padaria favorita de Vitória, próxima à praça principal da cidade."
 
     $ renpy.music.play("audio/Sound effects/pessoas/Homem_cantarolar_senior_trabalhando_corte.mp3", loop=True)
     $ renpy.music.set_volume(.5, channel='music')
@@ -129,7 +143,7 @@ label capitulo2:
     
     show pedro feliz at Position(xpos=.5, ypos=.75) with dissolve
 
-    pedro "Olha quem veio! Helena, você trouxe um visitante especial, não é? "
+    pedro "Olha quem veio! Helena, você trouxe um visitante especial, não é?"
 
     show pedro feliz at Position(xpos=.8, ypos=.75) with move
 
@@ -137,7 +151,7 @@ label capitulo2:
 
     helena "Ah, Seu Pedro! Este é o meu amigo Dante. Ele está aqui para passar alguns dias conosco."
 
-    pedro "Ah sim! Bem-vindo ao vilarejo! Eu sou Pedro"
+    pedro "Ah sim! Bem-vindo ao vilarejo! Eu sou Pedro."
 
     hide helena feliz with dissolve
 
@@ -161,25 +175,37 @@ label capitulo2:
 
     play sound "audio/Sound effects/pessoas/Grupo_misto_rindo.mp3"
 
-    narrador "Mal ele terminara a frase, Helena e Vitória riram em disparate, acompanhadas pelo padeiro"
+    show pedro feliz at Position(xpos=.85, ypos=.75) with move
+    show vitoria feliz at Position(xpos=.15, ypos=.75)
+    show helena feliz at Position(xpos=.35, ypos=.77)
+    with dissolve
 
-    show pedro feliz at Position(xpos=.5, ypos=.95) with move
+    narrador "Mal ele terminara a frase, o padeiro rí em disparate, acompanhado por Helena e Vitória."
+
+    show pedro feliz at Position(xpos=.85, ypos=.95)
+    show vitoria feliz at Position(xpos=.15, ypos=.95)
+    show helena feliz at Position(xpos=.35, ypos=.97)
+    with move
 
     menu:
         "Sorrir confuso":
-
+            hide vitoria feliz
+            hide helena feliz
+            with dissolve
             show pedro feliz at Position(xpos=.8, ypos=.75) with move
             show dante feliz at Position(xpos = .165, ypos=.75) with dissolve
 
-            narrador "Dante olhou para Helena e Vitória, ainda rindo, e sorriu confuso"
+            narrador "Dante olhou para Helena e Vitória, ainda rindo, e sorriu confuso."
 
-        "Pedir explicação":
+            show pedro feliz at Position(xpos=.5, ypos=.75) with move
+
+        "Estou com fome":
             $ historia.incrementar_peso(1)
-
-            hide pedro with dissolve
+            hide vitoria feliz
+            hide helena feliz
+            hide pedro feliz
+            with dissolve
             show dante preocupado at Position(xpos = .5, ypos=.75) with dissolve
-
-            narrador "Sem entender muito, Dante indaga a Helena e Vitoria qual foi a graça da fala"
 
             dante "Eu realmente estou com fome após a viagem, por que as risadas?"
 
@@ -188,7 +214,7 @@ label capitulo2:
                 xzoom -1
             with dissolve
 
-            helena "Não seja tão careta Dante, o seu Pedro trabalha no cemitério da cidade por isso a graça em morrendo de fome"
+            helena "Não seja tão careta Dante, o seu Pedro trabalha no cemitério da cidade por isso a graça em morrendo de fome."
 
             stop sound
 
@@ -198,28 +224,24 @@ label capitulo2:
 
             helena "Por isso mesmo, seu Pedro não é uma figura!"
 
+            show pedro feliz at Position(xpos=.5, ypos=.75) with dissolve
+
             hide helena feliz
 
-    hide pedro 
     hide dante normal
     with dissolve
-
-    narrador "Seu Pedro, com seu semblante acolhedor, guiou o trio até uma mesa perto da cozinha, de onde podia-se sentir o cheiro das delicias ali preparadas."
 
     scene padaria-dentro
     stop sound
     show pedro feliz at Position(xpos=.5, ypos=.75) with dissolve
 
-    pedro "Hoje temos pão de queijo fresquinho, broa de milho, e bolos variados"
-    
-    narrador "Anunciou Seu Pedro, com um sorriso orgulhoso."
-    
+    pedro "Hoje temos pão de queijo fresquinho, broa de milho, e bolos variados."
     pedro "E claro, o café passado na hora, que não pode faltar."
 
     show pedro feliz at Position(xpos=.85, ypos=.75) with move
     show helena feliz at Position(xpos=.15, ypos=.77) with dissolve
 
-    helena "Parece uma ótima escolha! Vou querer um pouco de tudo, para experimentar."
+    helena "Parece uma ótima escolha! Vou querer o de sempre, para o Dante experimentar."
 
     hide pedro normal
     hide helena feliz with dissolve
@@ -238,15 +260,54 @@ label capitulo2:
     dante "Sou muito bom no bingo hein!"
     dante "Já estou ansioso, Parece incrível!"
 
-    show pedro feliz at Position(xpos=.25, ypos=.1):
+    show helena feliz at Position(xpos=.45, ypos=.27):
+        xzoom -1
+    with dissolve
+
+    helena "A melhor parte, com certeza, são os doces locais e a música, que possui raizes antigas e ritualísticas destinadas aos espiritos da colheita"
+    
+    show vitoria preocupado at Position(xpos=.7, ypos=.25) with dissolve
+
+    vitoria "Meu Deus Helena, não começa com suas curiosidades infindáveis!"
+
+    show helena triste at Position(xpos=.45, ypos=.25):
+        xzoom 1
+    with dissolve
+
+    helena "Amiga! não é para tanto, eu nem falo tanto assim sobre a história da vila."
+
+    show helena triste at Position(xpos=.45, ypos=.25):
+        xzoom -1
+    with dissolve
+
+    hide dante feliz with dissolve
+
+    show pedro feliz at Position(xpos=.001, ypos=.2):
         xzoom -1
     with dissolve
     
     $ renpy.music.set_volume(.6, channel='music')
+    narrador "Logo, Seu Pedro retornou com uma bandeja cheia de delícias"
 
-    narrador "Logo, Seu Pedro retornou com uma bandeja cheia de delícias, e os três começaram a comer, rindo e conversando sobre a vida no vilarejo e relembrando histórias de infância."
-    narrador " A tarde caía e Dante sentiu-se mais relaxado e feliz do que em muito tempo."
-    narrador "Depois de agradecer calorosamente a Seu Pedro e pagarem a conta, o trio se dirigiu à praça principal. "
+    pedro "Helena, minha pequena, eu ouvi mais sobre a história da cidade em sua presença que em minha vida toda."
+
+    play sound "audio/Sound effects/pessoas/Grupo_misto_rindo.mp3"
+    show vitoria feliz at Position(xpos=.7, ypos=.25) with dissolve
+    show helena feliz at Position(xpos=.45, ypos=.27) with dissolve
+
+
+    narrador "Após a graça com o gosto da amiga os três começaram a comer, rindo e conversando sobre a vida no vilarejo e relembrando histórias de infância."
+
+    hide vitoria feliz
+    hide helena feliz
+    hide pedro feliz
+    with dissolve
+    show dante feliz at Position(xpos=.5, ypos=.75) with dissolve
+
+    stop sound
+
+    narrador "O dia chegava a sua metade e Dante sentiu-se mais relaxado e feliz do que em muito tempo."
+    narrador "Depois de agradecer calorosamente a Seu Pedro e pagarem a conta, o trio se dirigiu à praça principal."
 
     hide dante normal
     hide vitoria normal
@@ -262,13 +323,13 @@ label capitulo2:
     show dante feliz at Position(xpos=.35, ypos=.75) with dissolve
     show vitoria feliz at Position(xpos=.55, ypos=.75) with dissolve
 
-    narrador "A brisa da tarde assoprava fria e o céu se estendia como uma folha de ouro sob suas cabeças, e iluminava resplandecia toda a cidade"
+    narrador "A brisa da manhã, a qual assoprava fria, foi substituida pelos raios do meio dia que se estendia no céu como uma folha de ouro sob suas cabeças, e iluminava resplandecia toda a cidade."
     narrador "Caminhando pela praça, a atmosfera acolhedora do vilarejo os envolvia."
-    narrador "Passaros cantavam, a natureza era vivída e o grupo de amigos conversava animadamente"
+    narrador "Passaros cantavam, a natureza era vivída e o grupo de amigos conversava animadamente."
 
     show sofia at Position(xpos=.85, ypos=.75) with dissolve
 
-    narrador "Ao se aproximarem de um banco perto da fonte, avistaram uma mulher sentada, muito concentrada na leitura de um pequeno livro de capa cor de vinho, sem título" 
+    narrador "Ao se aproximarem de um banco perto da fonte, avistaram uma mulher sentada, muito concentrada na leitura de um pequeno livro de capa cor de vinho, sem título." 
     
     hide dante feliz
     hide helena feliz
@@ -290,18 +351,16 @@ label capitulo2:
     hide vitoria feliz with dissolve
     show helena feliz at Position(xpos=.2, ypos=.77) with dissolve
 
-    sofia "Helena, Vitória! Quem é o rapaz?"
-
-    helena "Boa tarde, Sofia"
-    helena "Este é Dante, o amigo meu de infância"
-    helena "Ele está aqui para passar alguns dias conosco"
+    helena "Boa tarde, Sofia."
+    helena "Este é Dante, o meu amigo de infância."
+    helena "Ele está aqui para passar alguns dias conosco e me ajudar em minha pesquisa."
 
     hide helena feliz with dissolve
 
     show sofia at Position(xpos=.5, ypos=.75) with move
 
-    sofia "Seja bem-vindo, Dante"
-    sofia "Espero que goste da nossa cidade"
+    sofia "Seja bem-vindo, Dante."
+    sofia "Espero que goste da nossa cidade!"
 
     show sofia at Position(xpos=.85, ypos=.75) with move
     show dante feliz at Position(xpos = .165, ypos=.75) with dissolve
@@ -309,13 +368,12 @@ label capitulo2:
     dante "Muito prazer em conhecê-la! Até agora têm sido uma viajem maravilhosa."
 
     sofia "Que bom ouvir isso."
-    sofia "A Encosta da Saudade é um lugar especial e historicamente rico."
-    sofia "Se quiser saber sobre as curiosidades e fatos históricos daqui, não hesite em me procurar."
+    sofia "A Encosta da Saudade é um lugar especial para todos, especialmente para essa menina curiosa."
+    sofia "Se quiser saber sobre as curiosidades e fatos históricos daqui, não hesite em me procurar, assim como Helena faz diariamente."
 
     hide dante normal
     hide sofia normal
     with dissolve
-
     show isabel feliz at Position(xpos=.5, ypos=.75) with dissolve
 
     narrador "Enquanto conversavam, Isabel, a esposa do fazendeiro, se aproximou, carregando uma cesta de frutas."
@@ -333,7 +391,7 @@ label capitulo2:
     hide vitoria feliz with dissolve
     show isabel feliz at Position(xpos=.5, ypos=.75) with move
 
-    isabel " Bem-vindo, Dante."
+    isabel "Bem-vindo, Dante."
     isabel "Espero que aproveite sua estadia."
     isabel "Aceite uma maçã fresca da fazenda."
 
@@ -352,12 +410,13 @@ label capitulo2:
             with dissolve
 
             dante "Obrigado, Isabel. É um prazer conhecê-la!"
-            
-            isabel " O prazer é todo meu pequeno."
 
             hide maça-mordida with dissolve
+            
+            isabel "O prazer é todo meu, pequeno."
 
         "Aceitar maça e guardar no bolso":
+            $ historia.maca_guardada()
             show dante feliz at Position(xpos = .165, ypos=.75)
             show isabel at Position(xpos = .85, ypos=.75)
             with move
@@ -371,8 +430,6 @@ label capitulo2:
             show maça at Position(xpos=.29, ypos=.8) with move
             hide maça with dissolve
 
-            $ historia.maca_guardada()
-
             dante "Obrigado Isabel, comerei ela depois"
 
             isabel " Tenham um bom passeio crianças."
@@ -384,28 +441,31 @@ label capitulo2:
             
             dante "Muito obrigado, Isabel, mas dispenso, estou cheio de nosso lanche agora a pouco. É um imenso prazer conhecê-la!"
             
-            isabel " Que pena que está cheio, fica para a proxima então a maça."
+            isabel " Que pena que está cheio, fica para a proxima então."
             isabel " Tenham um bom passeio crianças."
 
     hide dante with dissolve
+    show isabel feliz at Position(xpos=.5, ypos=.75) with move
 
-    narrador "Isabel continua seu caminho"
+
+    narrador "Isabel continua seu caminho."
 
     show isabel at Position(xpos=.15, ypos=.75) with move 
     hide isabel with dissolve
 
     show sofia at Position(xpos=.5, ypos=.75) with dissolve
 
-    narrador "Sofia se despede e volta a ler seu livro"
+    narrador "Sofia se despede e volta a ler seu livro."
 
+    show sofia at Position(xpos=.85, ypos=.75) with move
     hide sofia with dissolve
 
     show vitoria feliz at Position(xpos=.15, ypos=.75)
-    show helena feliz at Position(xpos=.25, ypos=.75)
+    show helena feliz at Position(xpos=.25, ypos=.77)
     show dante feliz at Position(xpos=.45, ypos=.75)
     with dissolve
     show vitoria feliz at Position(xpos=.75, ypos=.75) 
-    show helena feliz at Position(xpos=.86, ypos=.75) 
+    show helena feliz at Position(xpos=.86, ypos=.77) 
     show dante feliz at Position(xpos=.95, ypos=.75)
     with move 
     hide vitoria normal
@@ -414,17 +474,16 @@ label capitulo2:
     with dissolve
 
     narrador "Os jovens dão continuidade ao passeio."
-
     narrador "Enquanto continuavam a conversar, Rocha, o policial, aproximou-se do grupo, acenando com um sorriso."
 
     show policial at Position(xpos=.5, ypos=.75) with dissolve
     
-    rocha "Boa tarde, pessoal. Parece que temos um novo rosto na cidade"   
+    rocha "Boa tarde, pessoal. Parece que temos um novo rosto na cidade."   
 
     show policial at Position(xpos=.825, ypos=.75) with move
     show vitoria feliz at Position(xpos=.15, ypos=.75) with dissolve 
 
-    vitoria "Boa tarde, Rocha. Este é Dante, amigo de infância da Helena"  
+    vitoria "Boa tarde, Rocha. Este é Dante, amigo de infância da Helena."  
 
     hide vitoria with dissolve
 
@@ -442,23 +501,23 @@ label capitulo2:
             show policial at Position(xpos=.65,ypos=.75)
             with move
             
-            rocha "Prazer em conhecê-lo, Dante"
+            rocha "Prazer em conhecê-lo, Dante."
             rocha "Espero que aproveite sua estadia."
 
             show dante feliz at Position(xpos=.165,ypos=.75)
             show policial at Position(xpos=.85,ypos=.75)
             with move
             
-            dante "Obrigado, Rocha. Até agora, tudo tem sido ótimo"
+            dante "Obrigado, Rocha. Até agora, tudo tem sido ótimo."
 
-            rocha "Isso é bom de ouvir"
+            rocha "Isso é bom de ouvir."
 
         "Acenar mão a distância":
             show dante feliz at Position(xpos=.165,ypos=.75)
             show policial at Position(xpos=.85,ypos=.75)
             with move
 
-            dante "Oi seu policial"
+            dante "Oi seu policial."
             
             rocha "Meio arisco, não é mesmo?!."
             
@@ -485,7 +544,7 @@ label capitulo2:
     show policial at Position(xpos=.5, ypos=.75) with move
 
     rocha "Recebemos uma denúncia de que algumas pessoas viram luzes estranhas perto da Igreja nesta madrugada."
-    rocha "Não sabemos o que pode ter causado isso, mas é algo que estamos investigando"
+    rocha "Não sabemos o que pode ter causado isso, mas é algo que estamos investigando."
 
     show policial at Position(xpos=.85, ypos=.75) with move
     
@@ -498,7 +557,7 @@ label capitulo2:
 
     show policial at Position(xpos=.5, ypos=.75) with move
 
-    rocha "Testemunhas dizem que pareciam pequenas esferas de luz flutuando ao redor da igreja, desaparecendo antes de poderem se aproximar"
+    rocha "Testemunhas dizem que pareciam pequenas esferas de luz flutuando ao redor da igreja, desaparecendo antes de poderem se aproximar."
     rocha "Eu sei que pode parecer estranho, mas estamos tratando isso apenas como rumores até o momento."
     rocha "Se virem algo, por favor, me avisem imediatamente."
 
@@ -527,29 +586,29 @@ label capitulo2:
 
     narrador "Depois da conversa com o policial, o grupo se despediu e continuou caminhando pela praça, com uma leve tensão no ar."
 
-    show dante preocupado at Position(xpos = .65, ypos=.95)
-    show vitoria preocupado at Position(xpos=.5, ypos=.95)
-    show helena preocupado at Position(xpos=.35, ypos=.95)
+    show dante preocupado at Position(xpos = .65, ypos=.75)
+    show vitoria preocupado at Position(xpos=.5, ypos=.75)
+    show helena preocupado at Position(xpos=.35, ypos=.75)
+    with move
+
+    show dante preocupado at Position(xpos = .165, ypos=.95)
+    show helena preocupado at Position(xpos=.7, ypos=.95):
+        xzoom -1
+    show vitoria preocupado at Position(xpos=.85, ypos=.95):
+        xzoom -1
     with move
 
     menu:
         "Demonstrar insatisfação":
-            show dante preocupado at Position(xpos=.65, ypos=.75)
-            show vitoria preocupado at Position(xpos=.5, ypos=.75)
-            show helena preocupado at Position(xpos=.35, ypos=.75)
+            show dante preocupado at Position(xpos=.165, ypos=.75)
+            show vitoria preocupado at Position(xpos=.85, ypos=.75)
+            show helena preocupado at Position(xpos=.7, ypos=.75)
             with move
 
             dante "Isso é muito estranho"
 
-    show dante preocupado at Position(xpos = .165, ypos=.75)
-    show helena preocupado at Position(xpos=.7, ypos=.75):
-        xzoom -1
-    show vitoria preocupado at Position(xpos=.85, ypos=.75):
-        xzoom -1
-    with move
-
     vitoria "Concordo"
-    vitoria "Mas vamos tentar não nos preocupar demais"
+    vitoria "Mas vamos tentar não nos preocupar demais."
     vitoria "Amanhã é um novo dia, e vamos descobrir mais sobre essa história."
 
     stop sound fadeout 1.5
@@ -557,7 +616,7 @@ label capitulo2:
     show helena preocupado at Position(xpos=.6, ypos=.75) with move
 
     helena "Sim, vamos descansar por agora."
-    helena "Amanhã vai ser um dia longo"
+    helena "Amanhã vai ser um dia longo."
 
     hide helena preocupado
     hide dante preocupado
@@ -566,23 +625,23 @@ label capitulo2:
 
     scene quarto-helena-noite
 
-    narrador "O grupo chega à casa de Helena, a qual apresenta a Dante o quarto que o acolherá"
+    narrador "O grupo chega à casa de Helena, a qual apresenta a Dante o quarto que o acolherá."
 
     show helena at Position(xpos=.5, ypos=.75) with dissolve
 
-    helena "Espero que goste do quarto. É simples, mas confortável"
+    helena "Espero que goste do quarto. É simples, mas confortável."
     
     show helena at Position(xpos=.35, ypos=.75) with move
     show dante feliz at Position(xpos=.65, ypos=.75) with dissolve
 
-    dante "Está ótimo, Helena. Obrigado por tudo"
+    dante "Está ótimo, Helena. Obrigado por tudo."
 
     show dante feliz at Position(xpos=.85, ypos=.75):
         xzoom -1    
     with move 
     show vitoria feliz at Position(xpos=.15, ypos=.75) with dissolve
 
-    vitoria "Boa noite, Dante. Até amanhã"
+    vitoria "Boa noite, Dante. Até amanhã."
 
     dante "Boa noite, Vitória."
 
@@ -594,12 +653,12 @@ label capitulo2:
         xzoom -1
     with move
     
-    dante "Boa noite, Helena"
+    dante "Boa noite, Helena."
 
     show helena at Position(xpos=.15, ypos=.75):
             xzoom 1
     
-    helena "Boa noite Dante, estaremos no quarto ao lado caso precise"
+    helena "Boa noite Dante, estaremos no quarto ao lado caso precise."
 
     show helena at Position(xpos=.15, ypos=.75):
         xzoom -1
@@ -607,7 +666,7 @@ label capitulo2:
     show helena at Position(xpos=0, ypos=.75) with move
     hide helena with dissolve
 
-    narrador "Com passeios lúdicos e duvidas no ar, chega ao fim o primeiro dia da viagem de dante"
+    narrador "Com passeios lúdicos e duvidas no ar, chega ao fim o primeiro dia da viagem de dante."
 
     menu:
         "Dormir":
