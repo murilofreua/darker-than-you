@@ -281,12 +281,11 @@ style quick_button_text:
 screen navigation():
 
     if main_menu:
-        hbox:
-
-            xpos 0.1
-            ypos 0.86
-
-            spacing 90
+        vbox:
+            xpos 0.02
+            ypos 0.7
+            anchor (0.0, 1.0)
+            spacing 20
 
             if main_menu:
 
@@ -313,7 +312,7 @@ screen navigation():
             if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
                 ## A ajuda não é necessária ou relevante para dispositivos móveis.
-                textbutton _("Ajuda") action ShowMenu("help")
+                textbutton _("Teclas de atalho") action ShowMenu("help")
 
             if renpy.variant("pc"):
 
@@ -747,7 +746,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferências"), scroll="viewport"):
+    use game_menu(_("Configurações"), scroll="viewport"):
 
         vbox:
 
@@ -998,7 +997,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Ajuda"), scroll="viewport"):
+    use game_menu(_("Teclas de atalho"), scroll="viewport"):
 
         style_prefix "help"
 
