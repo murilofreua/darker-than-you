@@ -1,46 +1,52 @@
 label capitulo5:
+    scene quarto-helena with fade
+    show dante at Position(xpos=.85, ypos=.75)
+
+    $ renpy.music.play("audio/Sound effects/Lugares/Natureza_ventania_leve.mp3", loop=True)
+    $ renpy.music.set_volume(1.0, channel='music')
+    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume .2 fadein 2.0
+
+    narrador "Novamente Dante é acordado pelo soar do sino da igreja"
+    narrador "O ambiente é silencioso, exceto pelo som distante dos sinos."
     
-    scene igreja-fora-dia
+    show dante at Position(xpos=.85, ypos=.75):
+        xzoom -1
+    with dissolve
 
     narrador "Dante começa a investigação no dia seguinte ao desaparecimento de Helena."
 
+    show dante at Position(xpos=.25, ypos=.75) with move
+    hide dante with dissolve
+    stop sound
+
+    scene festival-dia with fade
+    show dante at Position(xpos=.165, ypos=.75)
+
     narrador "O ambiente é carregado de tensão e mistério, refletindo a gravidade da situação."
+    narrador "Dante se dirige ao escritório do Padre Iohann, a pessoa que supostamente viu Helena por ultimo."
 
-    narrador "A igreja está envolta em névoa matinal, com a luz do sol filtrando-se através das janelas de vitrais coloridos."
-
-    narrador "O ambiente é silencioso, exceto pelo som distante dos sinos."
-
-    narrador " Dante entra com um olhar determinado, observando a tranquilidade aparente que contrasta com a urgência de sua missão."
-
-    narrador "Dante se dirige ao escritório do Padre Iohann, a luz do dia gradualmente se intensifica conforme ele avança."
-
-    scene escritorio-padre
+    scene escritorio-padre with fade
 
     narrador "O escritório é um espaço acolhedor, mas com uma atmosfera pesada."
-
     narrador "Livros antigos estão empilhados em prateleiras de madeira escura, e um crucifixo pendurado na parede parece observar tudo."
     
-    show dante at Position(xpos = 0.1, ypos = 0.75) with dissolve
-
-    show padre at Position(xpos = 0.9, ypos = 0.75) with dissolve
+    show dante preocupado at Position(xpos = 0.165, ypos = 0.75) with dissolve
+    show padre preocupado at Position(xpos = 0.85, ypos = 0.75) with dissolve
 
     narrador "O Padre Iohann está sentado atrás de uma mesa, sua expressão é de preocupação, misturada com uma leve tensão."
 
+#aqui
     menu:
         "Perguntar diretamente sobre Helena (Confiança Alta)":
+            dante "Padre Iohann, Quando o senhor viu Helena, ela disse o que faria após a procissão?"
 
-            $ historia.incrementar_peso(1)
-
-            dante "Padre Iohann, você viu Helena esta manhã?"
-
-            narrador "O Padre Iohann, visivelmente aliviado, se oferece para ajudar."
-
-            padre "Sim, a vi mais cedo. Ela disse que ia ajudar na montagem da procissão."
+            padre "Sim, a vi naquele dia mais cedo . Ela disse que ia ajudar na montagem da procissão."
 
             padre "Ícaro e Augusto podem ter visto algo. Procure os seminaristas na sala ao lado."
 
         "Perguntar diretamente sobre Helena (Confiança Baixa)":
-            dante "Padre Iohann, você viu Helena esta manhã?"
+            $ historia.incrementar_peso(1)
+            dante "Padre Iohann, você viu aonde Helena foi após auxiliar na procissão?"
 
             narrador "O Padre se mostra evasivo e desinteressado, desviando o olhar e dando respostas vagas."
 
@@ -52,7 +58,7 @@ label capitulo5:
 
     hide padre with dissolve
 
-    narrador "Dante deixa o escritório, passando pelos corredores da igreja que parecem ainda mais sombrios, refletindo sua crescente desconfiança."
+    narrador "Dante deixa o escritório, passando pelos corredores da igreja que parecera ainda mais sombrios, refletindo sua crescente desconfiança."
 
     scene sala-dos-seminaristas
 
@@ -96,11 +102,12 @@ label capitulo5:
 
             augusto "Algo definitivamente não está certo. Precisamos ficar atentos e talvez investigar um pouco mais por conta própria."
 
-    narrador "Dante se despede dos seminaristas e se dirige para a casa de Seu Pedro, passando por ruas que parecem mais escuras e silenciosas."
 
-    hide icaro with dissolve
-    hide augusto with dissolve
-    hide dante with dissolve
+#falar sobre o relicário que está na familia de seu pedro e era interesse do padre e de helena
+
+#relacionar com pedro
+
+    narrador "Dante se despede dos seminaristas e se dirige para a casa de Seu Pedro."
 
     scene casa-pedro
 
@@ -118,7 +125,7 @@ label capitulo5:
             
             narrador "O ambiente se torna carregado de suspense, com Dante recebendo uma nova pista para investigar."
 
-        "Perguntar sobre sombras estranhas":
+        "Perguntar sobre luzes estranhas":
             dante "Você viu algo estranho ultimamente, como sombras ou figuras encapuzadas?"
 
             pedro "Sim, vi uma sombra nas proximidades recentemente. Algo parecia fora do comum."
@@ -128,6 +135,7 @@ label capitulo5:
     hide pedro with dissolve
 
     narrador "Dante se despede e se dirige à biblioteca da igreja, refletindo sobre as novas pistas e o crescente senso de urgência."
+    #foco no objeto relicário
 
     scene biblioteca-noite
 
@@ -150,6 +158,8 @@ label capitulo5:
             narrador "Dante encontra um livro sobre lendas antigas, sugerindo uma conexão com práticas ocultas."
 
             dante "Isso está ficando cada vez mais estranho. Preciso ter cuidado."
+
+    #desenvolver rota comum que fale sobre o relicário e leve ao local secreto
 
     narrador "Dante se prepara para explorar a área secreta mencionada no livro, o ambiente se tornando mais sombrio e carregado de tensão."
 

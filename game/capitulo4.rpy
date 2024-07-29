@@ -1,6 +1,6 @@
 label capitulo4:
 
-    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume 0.04
+    play sound "audio/Sound effects/Objetos/Sinos_tocando_vento_batendo_passaros_fundo.mp3" volume 0.045
 
     scene quarto-helena with fade
     show dante at Position(xpos=.85, ypos=.75)
@@ -679,11 +679,9 @@ label capitulo4:
     dante "Sim, amanhã conversaremos melhor. Boa noite."
 
     hide dante with dissolve
+    scene quarto-helena-noite with fade
+    show dante at Position(xpos=.85, ypos=.75) with dissolve
 
     narrador "Dante se despede dos seminaristas e, em casa, tem uma péssima noite de sono, ainda preocupado com Helena."
-
-    scene quarto-helena-noite with fade
-
-    show dante at Position(xpos=.85, ypos=.75) with dissolve
 
     return

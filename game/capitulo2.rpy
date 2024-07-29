@@ -337,12 +337,8 @@ label capitulo2:
     isabel "Espero que aproveite sua estadia."
     isabel "Aceite uma maçã fresca da fazenda."
 
-    hide vitoria with dissolve
-
-    show dante feliz at Position(xpos = .165, ypos=.75) with dissolve
-    show dante feliz at Position(xpos = .165, ypos=.95)
-    show isabel at Position(xpos = .85, ypos=.95)
-    with move
+    show isabel at Position(xpos = .85, ypos=.95) with move
+    show dante feliz at Position(xpos = .165, ypos=.95) with dissolve
 
     menu:
         "Aceitar maçã e comer":
@@ -605,7 +601,9 @@ label capitulo2:
     
     helena "Boa noite Dante, estaremos no quarto ao lado caso precise"
 
-    show helena at Position(xpos=.15, ypos=.75) with move
+    show helena at Position(xpos=.15, ypos=.75):
+        xzoom -1
+    with move
     show helena at Position(xpos=0, ypos=.75) with move
     hide helena with dissolve
 

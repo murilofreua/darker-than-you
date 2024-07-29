@@ -26,7 +26,7 @@ image policial = im.Scale("personagens/ações/rocha-uniforme.png", 645, 540)
 
 image dante feliz = im.Scale("personagens/felizes/dante-feliz.png", 625, 570)
 image helena feliz = im.Scale("personagens/felizes/helena-feliz.png", 575, 540)
-image isabel feliz = im.Scale("personagens/felizes/isabel-feliz.png", 635, 440)
+image isabel feliz = im.Scale("personagens/felizes/isabel-feliz.png", 735, 440)
 image pedro feliz = im.Scale("personagens/felizes/pedro-feliz.png", 780, 620)
 image rocha feliz = im.Scale("personagens/felizes/rocha-feliz.png", 575, 540)
 image sofia feliz = im.Scale("personagens/felizes/sofia-feliz.png", 635, 440)

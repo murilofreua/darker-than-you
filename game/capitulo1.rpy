@@ -81,7 +81,7 @@ label capitulo1:
 
     hide helena normal with dissolve
 
-    show dante at Position(xpos=.5, ypos=.75) with move
+    show dante feliz at Position(xpos=.5, ypos=.75) with move
 
     narrador "Animado por relembrar alguns de seus bons momentos com Helena, após horas de conversas, Dante decide visitar o vilarejo."
     narrador "Após colocar seu tênis de corrida na mala, sai preparado para conhecer o belo vilarejo de Encosta da Saudade e rever Helena."
