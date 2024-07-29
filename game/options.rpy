@@ -192,6 +192,7 @@ init python:
 
     # build.classify('game/**.png', 'archive')
     # build.classify('game/**.jpg', 'archive')
+    build.classify('game', 'archive')
 
     ## Os arquivos que correspondem aos padrões de documentação são duplicados
     ## em uma compilação de aplicativo para Mac, de modo que aparecem tanto no
