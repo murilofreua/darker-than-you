@@ -10,6 +10,8 @@ label capitulo7:
     #     call finalMedio
     # else:
     #     call finalRuim
+    
+    show text "Você alcançou [peso_final] pontos nessa run" at Position(xpos=0.5, ypos=0.19)
 
     menu:
         "Escolher final"
