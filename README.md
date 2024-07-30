@@ -1,7 +1,7 @@
 > Repositório para o jogo desenvolvido durante a disciplina de Experiência do Usuário de Software.
 # *Darker than You*
 
-- *Título*: Darker than you
+- **Título**: Darker than you
 - *Gênero*: Suspense, Slice of Life
 - *Formato*: Visual Novel
 
