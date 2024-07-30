@@ -109,20 +109,28 @@ default persistent.finalRuim = False
 
 label start:
 
-    call capitulo1 from _call_capitulo1
+    call capitulo1
 
-    call capitulo2 from _call_capitulo2
+    call capitulo2
 
-    call capitulo3 from _call_capitulo3
+    call capitulo3
     
-    call capitulo4 from _call_capitulo4
+    call capitulo4
 
-    call capitulo5 from _call_capitulo5
+    call capitulo5
 
-    call capitulo6 from _call_capitulo6
+    call capitulo6
 
-    call capitulo7 from _call_capitulo7
+    call capitulo7
 
-    call creditos from _call_creditos
+    # call finalOtimo
+
+    # call finalBom
+
+    # call finalMedio
+
+    # call finalRuim
+
+    call creditos
     
 return

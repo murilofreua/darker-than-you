@@ -329,7 +329,10 @@ label capitulo3:
 
     $ renpy.music.set_volume(0.01, channel='music')
 
-    scene vista-da-torre with fade
+    scene vista-da-torre:
+        xsize 1920
+        ysize 1080
+    with fade
 
     show dante at Position(xpos=.67, ypos=.25):
         xzoom -1
