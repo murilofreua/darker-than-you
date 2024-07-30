@@ -249,9 +249,6 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Voltar") action Rollback()
-
-
 ## Esse código garante que a tela quick_menu seja exibida no jogo, sempre que o
 ## jogador não tiver ocultado explicitamente a interface.
 init python:

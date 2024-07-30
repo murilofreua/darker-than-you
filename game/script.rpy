@@ -67,8 +67,6 @@ image helena dormindo = im.Scale("personagens/dormindo/helena-dormindo.png", 575
 
 init python:
 
-    config.rollback_enabled = True 
-
     class Historia:
         def __init__(self):
             self.maca = False
