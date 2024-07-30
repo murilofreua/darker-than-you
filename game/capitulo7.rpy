@@ -2,27 +2,16 @@ label capitulo7:
     
     $ peso_final = historia.get_peso_bom()
 
-    # if peso_final == 15:
-    #     call finalOtimo
-    # elif peso_final >= 9:
-    #     call finalBom
-    # elif peso_final >= 3:
-    #     call finalMedio
-    # else:
-    #     call finalRuim
+    if peso_final == 15:
+        call finalOtimo
+    elif peso_final >= 9:
+        call finalBom
+    elif peso_final >= 3:
+        call finalMedio
+    else:
+        call finalRuim
     
     show text "Você alcançou [peso_final] pontos nessa run" at Position(xpos=0.5, ypos=0.19)
-
-    menu:
-        "Escolher final"
-        "Final ótimo":
-            call finalOtimo from _call_finalOtimo
-        "Final Bom":
-            call finalBom from _call_finalBom
-        "Final Medio":
-            call finalMedio from _call_finalMedio
-        "Final Ruim":
-            call finalRuim from _call_finalRuim
 
     scene textura-madeira2
 

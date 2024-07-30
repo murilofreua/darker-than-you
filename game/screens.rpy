@@ -761,12 +761,6 @@ screen preferences():
                         textbutton _("Janela") action Preference("display", "window")
                         textbutton _("Tela cheia") action Preference("display", "fullscreen")
 
-                vbox:
-                    style_prefix "check"
-                    label _("Pular")
-                    textbutton _("Texto invisível") action Preference("skip", "toggle")
-                    textbutton _("Após as escolhas") action Preference("after choices", "toggle")
-                    textbutton _("Transições") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Vboxes adicionais do tipo "radio_pref" ou "check_pref" podem
                 ## ser adicionadas aqui para acrescentar outras preferências
@@ -1541,11 +1535,6 @@ screen quick_menu():
 
             xalign 0.5
             yalign 1.0
-
-            textbutton _("Voltar") action Rollback()
-            textbutton _("Pular") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Automotivo") action Preference("auto-forward", "toggle")
-            textbutton _("Menu") action ShowMenu()
 
 
 style window:
