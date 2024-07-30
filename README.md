@@ -2,7 +2,6 @@
 Repositório para o jogo desenvolvido durante a disciplina de Experiência do Usuário de Software.
 
 Retire o botão de voltar.
-Retirar o menu de escolher o final
 
 # Resumo
 - Um jovem jocoso é convidado por sua amiga de infância a visitar um vilarejo no interior de Minas Gerais, lá ele conhece os moradores e interaje com a história de criação do povoado por meio de um festival cultural. As coisas ficam estranhas quando ao final do primeiro dia de festividades sua amiga some sem deixar rastros aparentes. O gajo tem de procurar pistas que o levem até ela. CUIDADO, cada escolha importa e mudará o final encontrado.
