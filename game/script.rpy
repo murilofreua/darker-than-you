@@ -123,13 +123,13 @@ label start:
 
     call capitulo7
 
-    # call finalOtimo
-
-    # call finalBom
+    # call finalRuim
 
     # call finalMedio
 
-    # call finalRuim
+    # call finalBom
+
+    # call finalOtimo
 
     call creditos
     

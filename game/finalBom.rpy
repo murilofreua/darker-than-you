@@ -1,4 +1,3 @@
-
 label finalBom:
     
     scene festival-noite

@@ -1,8 +1,6 @@
-
-
 label finalMedio:
     
-    scene 
+    scene hospital
 
     $ persistent.finalMedio = True
 

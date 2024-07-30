@@ -1,6 +1,6 @@
 label finalOtimo:
     
-    scene igreja-dentro-noite
+    scene igreja-dentro
 
     $ persistent.finalOtimo = True
 
