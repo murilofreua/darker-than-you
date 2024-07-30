@@ -215,7 +215,7 @@ label capitulo4:
             show padre orando pequeno at Position(xpos=.57, ypos=.64) with dissolve 
             $ renpy.music.set_volume(0.2, channel='music')
 
-            narrador "O grupo participa da procissão"
+            narrador "O grupo participa da procissão."
 
             pause 10
 
@@ -539,7 +539,7 @@ label capitulo4:
     with move
 
     menu:
-        "Confirmar":
+        "Realmente não iria!":
             show vitoria triste at Position(xpos=.15, ypos=.75)
             show dante preocupado at Position(xpos=.85, ypos=.75)
             with move
@@ -557,7 +557,7 @@ label capitulo4:
 
             narrador "Padre Iohann dispara para acalmar os cordeirinhos"
 
-        "Discordar":
+        "questionar se ocorreu antes":
             $ historia.incrementar_peso(1)
 
             show vitoria triste at Position(xpos=.15, ypos=.75)
@@ -610,7 +610,7 @@ label capitulo4:
     stop sound
     scene quarto-helena-noite
     play sound "audio/Sound effects/Lugares/Natureza_ventania_leve.mp3" volume 1.0 loop
-    show dante at Position(xpos=.85, ypos=.75) with dissolve
+    show dante dormindo at Position(xpos=.85, ypos=.75) with dissolve
 
     narrador "Naquela noite, Dante tem um sonho estranho."
 
@@ -696,7 +696,7 @@ label capitulo4:
 
     hide dante with dissolve
     scene quarto-helena-noite with fade
-    show dante at Position(xpos=.85, ypos=.75) with dissolve
+    show dante dormindo at Position(xpos=.85, ypos=.75) with dissolve
 
     narrador "Dante se despede dos seminaristas e, em casa, tem uma péssima noite de sono, ainda preocupado com Helena."
 

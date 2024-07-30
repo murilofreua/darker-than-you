@@ -329,41 +329,53 @@ label capitulo3:
 
     $ renpy.music.set_volume(0.01, channel='music')
 
-    scene torre-do-sino with dissolve
+    scene vista-da-torre with fade
+
+    show dante at Position(xpos=.67, ypos=.25):
+        xzoom -1
+    show helena feliz at Position(xpos=.15, ypos=.77)
+    show vitoria feliz at Position(xpos=.35, ypos=.75)
+    with dissolve
+
     stop sound
 
-    narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
-    narrador "A escada para a torre era estreita e íngreme."
-    narrador "Quando chegaram ao topo, a vista realmente era de tirar o fôlego."
-    narrador "O vilarejo parecia um cenário de conto de fadas, cercado por colinas verdejantes e banhado pela luz suave da manhã."
-    narrador "Enquanto admiravam a vista, Dante sentiu um arrepio ao lembrar-se das luzes estranhas."
-    narrador "Algo naquele lugar parecia fora do comum, e ele estava determinado a descobrir o que era."
-
     dante "A vista realmente é de tirar o fólego."
-    dante "Mas não consigo parar de pensar naquele barulho estranho, vou lá investigar."
+    dante "Mas não consigo parar de pensar que algo estranho está acontecendo aqui, vou lá investigar."
+
+    show helena preocupado at Position(xpos=.15, ypos=.75)
+    show vitoria preocupado at Position(xpos=.35, ypos=.75)
+    with dissolve
 
     vitoria "Você não pode ir sozinho Dante."
     vitoria "Vamos descer todos juntos."
 
     play sound "audio/Sound effects/Lugares/Escadaria_subida_e_descida.mp3" volume 0.5
 
-    narrador "Assim desce o grupo unido indo em peso ao causador do barulho."
+    $ renpy.music.set_volume(0.04, channel='music')
+
+    scene igreja-corredor with fade
+    show padre at Position(xpos=.05, ypos=.1):
+        xzoom -1
+    show dante at Position(xpos=.35, ypos=.2):
+        xzoom -1
+    show vitoria at Position(xpos=.55, ypos=.25):
+        xzoom -1
+    show helena at Position(xpos=.75, ypos=.25):
+        xzoom -1
+    with dissolve
 
     stop sound
-    $ renpy.music.set_volume(0.04, channel='music')
+
+    padre "Filhos, preciso fazer meus afazeres."
+    padre "Teremos que encerrar essa visita, está ficando tarde e logo teremos a missa das sete."
 
     scene igreja-dentro with fade
     show dante at Position(xpos=.165, ypos=.75)
     show vitoria at Position(xpos=.35, ypos=.75)
-    show helena at Position(xpos=.5, ypos=.75)
+    show helena at Position(xpos=.55, ypos=.75)
+    show padre at Position(xpos=.85, ypos=.75)
     with dissolve
 
-    narrador "Quando desceram, Padre Iohann prostravasse em frente a porta."
-
-    show padre at Position(xpos=.85, ypos=.75) with dissolve
-
-    padre "Filhos, preciso fazer meus afazeres."
-    padre "Teremos que encerrar essa visita, está ficando tarde e logo teremos a missa das sete."
     padre "Tenho que ajudar também nos preparativos do festival da cidade."
     padre "É um evento muito importante para nós."
 
@@ -482,11 +494,10 @@ label capitulo3:
     narrador "Com um último pensamento sobre as luzes estranhas e o olhar enigmático do Padre Iohann, ele finalmente fechou os olhos."
     narrador "esperando que o dia seguinte trouxesse mais respostas."
 
-    show dante at Position(xpos=.85, ypos=.95) with move
+    show dante dormindo at Position(xpos=.85, ypos=.75) with dissolve
 
     menu:
         "Dormir":
-            show dante at Position(xpos=.85, ypos=.75) with move
 
             dante "ZzZzZzZz"
 

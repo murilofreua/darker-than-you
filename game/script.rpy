@@ -58,6 +58,11 @@ image helena triste = im.Scale("personagens/tristes/helena-triste.png", 575, 540
 image rocha triste = im.Scale("personagens/tristes/rocha-triste.png", 680, 540)
 image vitoria triste = im.Scale("personagens/tristes/vitória-triste.png", 575, 540)
 
+# Personagens dormindo
+
+image dante dormindo = im.Scale("personagens/dormindo/dante-dormindo.png", 645, 590)
+image helena dormindo = im.Scale("personagens/dormindo/helena-dormindo.png", 575, 540)
+
 # Variáveis
 
 init python:

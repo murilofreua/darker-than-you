@@ -45,7 +45,7 @@ label capitulo1:
     show dante preocupado at Position(xpos=.15, ypos=.75) with move
 
     hide smartphone
-    show helena feliz at Position(xpos=.7, ypos=.25):
+    show helena feliz at Position(xpos=.7, ypos=.27):
         xzoom -1
     with dissolve
 

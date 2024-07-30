@@ -59,6 +59,7 @@ label capitulo6:
 
 
         "Verificar sala primeiro":
+            $ historia.incrementar_peso(1)
 
             narrador "A tensão aumenta, e o ambiente parece carregar uma sensação de urgência e perigo iminente."
             
@@ -71,7 +72,7 @@ label capitulo6:
             dante "Vou abrir essa porta, para trás!"
     
     scene local-abandonado with fade
-    show helena at Position(xpos=.15, ypos=.75)
+    show helena dormindo at Position(xpos=.15, ypos=.75)
     narrador "A atmosfera é opressiva, com a sensação de que algo sombrio aconteceu ali."
     narrador "Helena é encontrada no chão"
 

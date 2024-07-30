@@ -11,7 +11,7 @@ label capitulo2:
     narrador "O sol acabará de raiar, pintando o céu de tons claros e fazendo com que as casas da vila parecessem ainda mais charmosas."
 
     show helena feliz at Position(xpos=.3, ypos=.77) with dissolve
-    show vitoria feliz at Position(xpos=.45, ypos=.25):
+    show vitoria feliz at Position(xpos=.45, ypos=.27):
         xzoom -1
     with dissolve
 
@@ -134,10 +134,10 @@ label capitulo2:
     narrador "Os jovens dão continuidade ao passeio."
 
     scene padaria-fora
-    narrador "Após uma manhã de conversa, os três se dirigiram para a padaria favorita de Vitória, próxima à praça principal da cidade."
-
     $ renpy.music.play("audio/Sound effects/pessoas/Homem_cantarolar_senior_trabalhando_corte.mp3", loop=True)
     $ renpy.music.set_volume(.5, channel='music')
+
+    narrador "Após uma manhã de conversa, os três se dirigiram para a padaria favorita de Vitória, próxima à praça principal da cidade."
 
     narrador "Lá, foram recebidos por Seu Pedro, o padeiro."
     
@@ -665,6 +665,8 @@ label capitulo2:
     with move
     show helena at Position(xpos=0, ypos=.75) with move
     hide helena with dissolve
+    
+    show dante dormindo at Position(xpos=.85, ypos=.75)
 
     narrador "Com passeios lúdicos e duvidas no ar, chega ao fim o primeiro dia da viagem de dante."
 

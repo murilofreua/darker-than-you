@@ -45,7 +45,7 @@ label capitulo5:
     show padre preocupado at Position(xpos=.85, ypos=.95)
     with move
     menu:
-        "Objetivo de Helena ao vir sozinha":
+        "Por que Helena veio sozinha?":
             show dante at Position(xpos=.165, ypos=.75)
             show padre preocupado at Position(xpos=.85, ypos=.75)
             with move
@@ -59,7 +59,7 @@ label capitulo5:
 
             narrador "Dante fica pensativo quanto ao objeto e sai do escritório comprometido a encontrar mais informações sobre tal cruz pela igreja!"
 
-        "Destino de Helena após ajudar":
+        "Aonde ela foi após ajudar":
             $ historia.incrementar_peso(1)
             show dante at Position(xpos=.165, ypos=.75)
             show padre preocupado at Position(xpos=.85, ypos=.75)
@@ -75,9 +75,10 @@ label capitulo5:
 
             narrador "Dante percebe uma sensação de desconforto, levando-o a procurar pistas com os coroinha."
     
-            padre "Ah, ela também citou estar atrás de um objeto que poderia estar aqui"
+            padre "Ah, ela também citou estar atrás de um objeto que poderia estar aqui, ela sempre o procura na biblioteca."
+            padre "Se tiver um livro lá sem poeira, foi Helena que tirou lendo."
 
-            narrador "Repete o padre, como se tivesse esquecido de já ter dito isso"
+            narrador "Repete o padre, adicionado informações de onde Helena poderia ter passado."
 
     padre "Esse objeto era um relicário dourado, meu filho"
 
