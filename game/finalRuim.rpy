@@ -1,18 +1,16 @@
-
-
 label finalRuim:
     
-    scene final-ruim
+    scene local-abandonado
 
     $ persistent.finalRuim = True
 
-    show text "Helena desaparece sem deixar rastros." at truecenter with dissolve
+    show text "Helena é encontrada já sem vida." at truecenter with dissolve
     pause 15
 
-    show text "O local é macabro, com sinais do ritual já completado." at truecenter with dissolve
+    show text "O local é macabro, com sinais de falha crítica no ritual." at truecenter with dissolve
     pause 15
 
-    show text "As paredes estão marcadas por símbolos sombrios e restos de uma cerimônia perturbadora." at truecenter with dissolve
+    show text "As paredes estão marcadas por sinais da explosão e no chão há restos de um objeto dourado." at truecenter with dissolve
     pause 15
 
     show text "A atmosfera é opressiva e carregada, o ar parece pesado com a presença do mal que ali se concretizou." at truecenter with dissolve
@@ -33,10 +31,7 @@ label finalRuim:
     show text "Um evento sombrio marca a conclusão da história." at truecenter with dissolve
     pause 15
 
-    show text "A cidade luta para se recuperar da tragédia." at truecenter with dissolve
-    pause 15
-
-    show text "Padre Iohann, o principal suspeito, enfrenta uma onda de acusações e desconfiança." at truecenter with dissolve
+    show text "Padre Iohann, o principal suspeito, juntamente com seu Pedro, que tinha ligações com o passado do relicário, enfrentam uma onda de acusações e desconfiança." at truecenter with dissolve
     pause 15
 
     show text "A igreja está em ruínas, e o clérigo é cercado por uma multidão enfurecida." at truecenter with dissolve

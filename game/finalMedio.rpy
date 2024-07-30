@@ -2,7 +2,7 @@
 
 label finalMedio:
     
-    scene final-medio
+    scene 
 
     $ persistent.finalMedio = True
 

@@ -1,7 +1,7 @@
 
 label finalBom:
     
-    scene final-bom
+    scene festival-noite
 
     $ persistent.finalBom = True
 
